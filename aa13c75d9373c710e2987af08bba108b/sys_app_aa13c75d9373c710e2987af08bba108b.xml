@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app">
+    <sys_app action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <can_edit_in_studio>true</can_edit_in_studio>
+        <enforce_license>none</enforce_license>
+        <guided_setup_guid/>
+        <hide_on_ui>false</hide_on_ui>
+        <ide_created>AES</ide_created>
+        <installed_as_dependency>false</installed_as_dependency>
+        <js_level>es_latest</js_level>
+        <licensable>true</licensable>
+        <license/>
+        <license_category>none</license_category>
+        <license_definition/>
+        <license_model>none</license_model>
+        <logo>1dd697999377c710e2987af08bba10b2</logo>
+        <menu/>
+        <name>GSTIN Compliance &amp;amp; Verification</name>
+        <package_json/>
+        <package_resolver_version>1.0.0</package_resolver_version>
+        <private>false</private>
+        <restrict_table_access>false</restrict_table_access>
+        <runtime_access_tracking>permissive</runtime_access_tracking>
+        <scope>x_2078844_gstin_0</scope>
+        <scoped_administration>false</scoped_administration>
+        <short_description>GSTIN verification and ongoing GST compliance monitoring for Indian suppliers in Supplier Lifecycle Operations: validation, provider check, name match, audit log, activation gate, daily re-check and compliance hold.</short_description>
+        <source>x_2078844_gstin_0</source>
+        <store_correlation_id/>
+        <store_url/>
+        <subscription_entitlement/>
+        <sys_class_name>sys_app</sys_class_name>
+        <sys_code/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 10:32:34</sys_created_on>
+        <sys_id>aa13c75d9373c710e2987af08bba108b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-07 11:58:46</sys_updated_on>
+        <template/>
+        <trackable>true</trackable>
+        <uninstall_blocked>false</uninstall_blocked>
+        <user_role/>
+        <vendor/>
+        <vendor_prefix/>
+        <version>1.0.0</version>
+    </sys_app>
+    <sys_translated_text action="delete_multiple" query="documentkey=aa13c75d9373c710e2987af08bba108b"/>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <encryption_context/>
+        <file_name>gstin_compliance_logo_v2.svg</file_name>
+        <hash>6e9b0f05ea4f59d8f1e14de757f87fe7503fe3a0218e18989d5de55fe427a22a</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>3379</size_bytes>
+        <size_compressed>1107</size_compressed>
+        <state>available</state>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-07 11:58:46</sys_created_on>
+        <sys_id>1dd697999377c710e2987af08bba10b2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-07 11:58:46</sys_updated_on>
+        <table_name>sys_app</table_name>
+        <table_sys_id>aa13c75d9373c710e2987af08bba108b</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="gstin_compliance_logo_v2.svg" sys_id="1dd697999377c710e2987af08bba10b2">1dd697999377c710e2987af08bba10b2</sys_attachment>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-07 11:58:46</sys_created_on>
+        <sys_id>5dd697999377c710e2987af08bba10b2</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>tVdLb+M2EL7vr5hq0WIDxLEoSorU2gtsEiddoO0lbQ69KRIts5FFg2Jib399ZyhRlu1k47RbA4HI4Ty+eZKZNE8lbJZV3Uy9hTGrH8fj9Xp9tuZnSpfjwPf9MXJ4sJaFWUy9iAUeLIQsF6bbPEmxvlCbqeeDD0ihP+/jO4CJkaYSH29uf//8G1yq5aqSWZ0L+CFbrn6CO6HlXOaZkaqejFtWEirEvKEFLitZi0zf6KyQojYgi6l3j0g2DG158KX9bIKpx3BnP60gijZGrUDN540wlov2o1xVSk+99+yCXYcX3vgF7rMo2hMIOPfj2UsCbI/bn51fJrHjnox33eiotMuqHd/KSq09yDcWAi6+0CLECOsO1HHeRdczfuWIapXl0rSaomMdeEHD1qNd8C9nS8vlc+ny35au6+s05fwr6Trgp9+xzjKeJH7ySrae8W2e5eIb1OLbwF5dzS623MeDNWJjvgLWPxLs/9AHz4DNFyJ/+Aah5bOZnxwdWv/6Uxq/VgdzWRmhLcpmkRXUr9iuI+5/j9DcopuULKaNG5V21yOZiyutVrdWBRQbi71ABcz6UFyJJ2kHI1Kw/+eVUsUWqP056qDBebRF3wI9RH2fFaW4qRzwyAGPBsBx5g+A292rwA9x+/u4u3Qc4j5/Fvdk3N4EtPxuNAIjKwGjkT3SIjeEn8UWPX067GHib6HbjSY+i0ZW1dR71NWH9/flSWvyP2uime10EUql76UBLesSPuSqNrJ+VI8NLFUtjSLyifMhlzpHj2jcB1Hcjvsg8u20Z2lvpVa1oNhq9SB2RjMRhlEMop7aecB7QpFhtWqdIWMMLOzwPocgbgGcO/PO4IEEISQBjtcKSUS9RDeuYYAtPZQPw06B9RUVhAMFdiQOFdi+dDFuFlJUBebJLMBoSfX1qDHmSxfaEtoy6nLUdupJV8STVYZy2Aq/otOQBPALTxNgPIC7IEzgknach8BDH3gaA3GFeHrJzgNLYCy0DPQliTuS/XOnKhDLSV/TO/aY76NBtMrC0BnEHQ9IJxpMWGsQdV8yOkACowNkoG9rEGV3DdJl5MpwXG5DpUUpsQZsTwJNtOaghSj8tvKT7eTigzceDSCq/LjPT3cLDPPDkv1+cmrToFeb/jutzpe10sUy0w/OA7rTwNUuNQ/pJ+IIX5kLGjlLWRSV8LrZBTDHhhzNs6WskP1WlErAH59P4WdRPQmDT9FT+KTxXXMKTVY3o4YeqF4r1Mi/sfvSuNuuOy9SnMO99koYrLlRQ/jrEvHsZIiAYQniYxgfu7jei1brAqfp4pIQDOZP0kZr2yPd3TqMVjQM1pN9XYsC7MB/oTH6y6DvjUGD8rgbCXaBIvGuQ/aWHtbc0eJ7I821++7wYm7m9O3DeQw8Psf2ibBDk7RtXB7yt+mNthnrTqgv8myFz1X1WBfekPyXkrWjI5wJ/Sv08d0/YrlrzjMNAAA=</data>
+        <length>1464</length>
+        <position>1</position>
+        <sys_attachment display_value="gstin_compliance_logo_v2.svg" sys_id="1dd697999377c710e2987af08bba10b2">1dd697999377c710e2987af08bba10b2</sys_attachment>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-07 11:58:46</sys_created_on>
+        <sys_id>11d697999377c710e2987af08bba10b3</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <encryption_context/>
+        <file_name>gstin_compliance_logo_v2.svg</file_name>
+        <hash>6e9b0f05ea4f59d8f1e14de757f87fe7503fe3a0218e18989d5de55fe427a22a</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>3379</size_bytes>
+        <size_compressed>1107</size_compressed>
+        <state>available</state>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-07 11:58:29</sys_created_on>
+        <sys_id>4dc693999377c710e2987af08bba105e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-07 11:58:30</sys_updated_on>
+        <table_name>sys_app</table_name>
+        <table_sys_id>aa13c75d9373c710e2987af08bba108b</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="gstin_compliance_logo_v2.svg" sys_id="4dc693999377c710e2987af08bba105e">4dc693999377c710e2987af08bba105e</sys_attachment>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-07 11:58:29</sys_created_on>
+        <sys_id>8dc693999377c710e2987af08bba105e</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>tVdLb+M2EL7vr5hq0WIDxLEoSorU2gtsEiddoO0lbQ69KRIts5FFg2Jib399ZyhRlu1k47RbA4HI4Ty+eZKZNE8lbJZV3Uy9hTGrH8fj9Xp9tuZnSpfjwPf9MXJ4sJaFWUy9iAUeLIQsF6bbPEmxvlCbqeeDD0ihP+/jO4CJkaYSH29uf//8G1yq5aqSWZ0L+CFbrn6CO6HlXOaZkaqejFtWEirEvKEFLitZi0zf6KyQojYgi6l3j0g2DG158KX9bIKpx3BnP60gijZGrUDN540wlov2o1xVSk+99+yCXYcX3vgF7rMo2hMIOPfj2UsCbI/bn51fJrHjnox33eiotMuqHd/KSq09yDcWAi6+0CLECOsO1HHeRdczfuWIapXl0rSaomMdeEHD1qNd8C9nS8vlc+ny35au6+s05fwr6Trgp9+xzjKeJH7ySrae8W2e5eIb1OLbwF5dzS623MeDNWJjvgLWPxLs/9AHz4DNFyJ/+Aah5bOZnxwdWv/6Uxq/VgdzWRmhLcpmkRXUr9iuI+5/j9DcopuULKaNG5V21yOZiyutVrdWBRQbi71ABcz6UFyJJ2kHI1Kw/+eVUsUWqP056qDBebRF3wI9RH2fFaW4qRzwyAGPBsBx5g+A292rwA9x+/u4u3Qc4j5/Fvdk3N4EtPxuNAIjKwGjkT3SIjeEn8UWPX067GHib6HbjSY+i0ZW1dR71NWH9/flSWvyP2uime10EUql76UBLesSPuSqNrJ+VI8NLFUtjSLyifMhlzpHj2jcB1Hcjvsg8u20Z2lvpVa1oNhq9SB2RjMRhlEMop7aecB7QpFhtWqdIWMMLOzwPocgbgGcO/PO4IEEISQBjtcKSUS9RDeuYYAtPZQPw06B9RUVhAMFdiQOFdi+dDFuFlJUBebJLMBoSfX1qDHmSxfaEtoy6nLUdupJV8STVYZy2Aq/otOQBPALTxNgPIC7IEzgknach8BDH3gaA3GFeHrJzgNLYCy0DPQliTuS/XOnKhDLSV/TO/aY76NBtMrC0BnEHQ9IJxpMWGsQdV8yOkACowNkoG9rEGV3DdJl5MpwXG5DpUUpsQZsTwJNtOaghSj8tvKT7eTigzceDSCq/LjPT3cLDPPDkv1+cmrToFeb/jutzpe10sUy0w/OA7rTwNUuNQ/pJ+IIX5kLGjlLWRSV8LrZBTDHhhzNs6WskP1WlErAH59P4WdRPQmDT9FT+KTxXXMKTVY3o4YeqF4r1Mi/sfvSuNuuOy9SnMO99koYrLlRQ/jrEvHsZIiAYQniYxgfu7jei1brAqfp4pIQDOZP0kZr2yPd3TqMVjQM1pN9XYsC7MB/oTH6y6DvjUGD8rgbCXaBIvGuQ/aWHtbc0eJ7I821++7wYm7m9O3DeQw8Psf2ibBDk7RtXB7yt+mNthnrTqgv8myFz1X1WBfekPyXkrWjI5wJ/Sv08d0/YrlrzjMNAAA=</data>
+        <length>1464</length>
+        <position>1</position>
+        <sys_attachment display_value="gstin_compliance_logo_v2.svg" sys_id="4dc693999377c710e2987af08bba105e">4dc693999377c710e2987af08bba105e</sys_attachment>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-07 11:58:29</sys_created_on>
+        <sys_id>41c693999377c710e2987af08bba105f</sys_id>
+    </sys_attachment_doc>
+</record_update>

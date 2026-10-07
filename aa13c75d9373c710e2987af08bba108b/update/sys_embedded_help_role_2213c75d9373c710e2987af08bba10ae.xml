@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_2078844_gstin_0.user" name="x_2078844_gstin_0.user">6e13c75d9373c710e2987af08bba10ab</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 10:32:35</sys_created_on>
+        <sys_id>2213c75d9373c710e2987af08bba10ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>6e13c75d9373c710e2987af08bba10ab</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp;amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp;amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_embedded_help_role_2213c75d9373c710e2987af08bba10ae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 10:32:35</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
