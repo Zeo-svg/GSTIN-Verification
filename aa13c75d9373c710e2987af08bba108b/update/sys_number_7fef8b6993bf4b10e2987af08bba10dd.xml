@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_2078844_gstin_0_gst_compliance_profile">x_2078844_gstin_0_gst_compliance_profile</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>GSTP</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>rutul.jadhav</sys_created_by>
+        <sys_created_on>2026-10-08 06:07:07</sys_created_on>
+        <sys_id>7fef8b6993bf4b10e2987af08bba10dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GSTP</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_number_7fef8b6993bf4b10e2987af08bba10dd</sys_update_name>
+        <sys_updated_by>rutul.jadhav</sys_updated_by>
+        <sys_updated_on>2026-10-08 06:07:07</sys_updated_on>
+    </sys_number>
+</record_update>

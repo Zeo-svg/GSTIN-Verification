@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>563310bd93bb8b10e2987af08bba1046</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_group_has_role">
+    <sys_group_has_role action="INSERT_OR_UPDATE">
+        <granted_by display_value="">not-applicable</granted_by>
+        <group display_value="GST Compliance Approvers" name="GST Compliance Approvers">fe621cf993bb8b10e2987af08bba107f</group>
+        <inherits>true</inherits>
+        <role display_value="x_2078844_gstin_0.gst_compliance_reviewer" name="x_2078844_gstin_0.gst_compliance_reviewer">4fb01cb593bb8b10e2987af08bba10a4</role>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-08 11:01:06</sys_created_on>
+        <sys_id>563310bd93bb8b10e2987af08bba1046</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-08 11:01:06</sys_updated_on>
+    </sys_group_has_role>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-08 13:41:17</sys_created_on>
+        <sys_id>3ce778719373cb10e2987af08bba104a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2026-10-08 04:01:06</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_metadata_link_3ce778719373cb10e2987af08bba104a</sys_update_name>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-08 13:41:17</sys_updated_on>
+        <tablename>sys_group_has_role</tablename>
+    </sys_metadata_link>
+</record_update>

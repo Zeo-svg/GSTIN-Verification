@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="159edb2993738b10e2987af08bba1086" label="GST Verification Log" max_length="40" name="x_2078844_gstin_0_gst_verification_log" type="collection">
+        <element label="Provider reference" max_length="100" name="provider_reference" type="string"/>
+        <element choice="1" label="Decision" max_length="40" name="decision" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Override" sequence="300" value="override"/>
+                <element inactive_on_update="false" label="Ask Correct" sequence="200" value="ask_correct"/>
+                <element inactive_on_update="false" label="Accept" sequence="100" value="accept"/>
+                <element inactive_on_update="false" label="Reject" sequence="400" value="reject"/>
+            </choice>
+        </element>
+        <element label="Decided by" max_length="32" name="decided_by" reference="sys_user" type="reference"/>
+        <element choice="1" label="Trigger" mandatory="true" max_length="40" name="trigger" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="AI" sequence="500" value="ai"/>
+                <element inactive_on_update="false" label="Scheduled" sequence="300" value="scheduled"/>
+                <element inactive_on_update="false" label="Verify Now" sequence="200" value="verify_now"/>
+                <element inactive_on_update="false" label="Onboarding" sequence="100" value="onboarding"/>
+                <element inactive_on_update="false" label="GSTIN Change" sequence="400" value="gstin_change"/>
+            </choice>
+        </element>
+        <element default="1" label="Attempt number" mandatory="true" max_length="40" name="attempt_number" type="integer"/>
+        <element label="HTTP status" max_length="40" name="http_status" type="integer"/>
+        <element choice="1" label="Result" max_length="40" name="result" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Verified" sequence="200" value="verified"/>
+                <element inactive_on_update="false" label="Failed" sequence="400" value="failed"/>
+                <element inactive_on_update="false" label="Flagged" sequence="300" value="flagged"/>
+                <element inactive_on_update="false" label="Pending" sequence="100" value="pending"/>
+                <element inactive_on_update="false" label="Rejected" sequence="500" value="rejected"/>
+            </choice>
+        </element>
+        <element label="Result reason" max_length="500" name="result_reason" type="string"/>
+        <element label="GSTIN" mandatory="true" max_length="15" name="gstin" type="string"/>
+        <element label="Decision reason" max_length="1000" name="decision_reason" type="string"/>
+        <element choice="1" label="Name match" max_length="40" name="name_match" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Match" sequence="100" value="match"/>
+                <element inactive_on_update="false" label="Partial" sequence="200" value="partial"/>
+                <element inactive_on_update="false" label="Mismatch" sequence="300" value="mismatch"/>
+            </choice>
+        </element>
+        <element label="Match score" max_length="20" name="match_score" type="decimal"/>
+        <element choice="1" label="GST status" max_length="40" name="gst_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Active" sequence="100" value="active"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="200" value="cancelled"/>
+                <element inactive_on_update="false" label="Not Found" sequence="600" value="not_found"/>
+                <element inactive_on_update="false" label="Suspended" sequence="300" value="suspended"/>
+                <element inactive_on_update="false" label="Provisional" sequence="500" value="provisional"/>
+                <element inactive_on_update="false" label="Inactive" sequence="400" value="inactive"/>
+            </choice>
+        </element>
+        <element label="Raw response" max_length="4000" name="raw_response" type="string"/>
+        <element label="Profile" mandatory="true" max_length="32" name="profile" reference="x_2078844_gstin_0_gst_compliance_profile" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" mandatory="true" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="decided_by"/>
+        </index>
+        <index name="index2">
+            <element name="profile"/>
+        </index>
+    </element>
+</database>

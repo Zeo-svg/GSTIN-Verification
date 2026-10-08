@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_actsub_module">
+    <sn_actsub_module action="DELETE">
+        <active>true</active>
+        <disable_notifications>false</disable_notifications>
+        <name>GST Properties</name>
+        <order/>
+        <roles>x_2078844_gstin_0.gst_compliance_admin</roles>
+        <sys_class_name>sn_actsub_module</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-08 13:28:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7eb430799333cb10e2987af08bba10e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GST Properties</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sn_actsub_module_7eb430799333cb10e2987af08bba10e6</sys_update_name>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-08 13:28:02</sys_updated_on>
+    </sn_actsub_module>
+    <sys_translated_text action="DELETE" query="documentkey=7eb430799333cb10e2987af08bba10e6"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</application>
+        <file_path/>
+        <instance_id>3eada58eebff9a108326ff72dad0cd14</instance_id>
+        <instance_name>dev297253</instance_name>
+        <name>sn_actsub_module_7eb430799333cb10e2987af08bba10e6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_actsub_module"><sn_actsub_module action="INSERT_OR_UPDATE"><active>true</active><disable_notifications>false</disable_notifications><name>GST Properties</name><order/><roles>x_2078844_gstin_0.gst_compliance_admin</roles><sys_class_name>sn_actsub_module</sys_class_name><sys_created_by>hitesh.gohad</sys_created_by><sys_created_on>2026-10-08 13:28:02</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>7eb430799333cb10e2987af08bba10e6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>GST Properties</sys_name><sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package><sys_policy/><sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope><sys_update_name>sn_actsub_module_7eb430799333cb10e2987af08bba10e6</sys_update_name><sys_updated_by>hitesh.gohad</sys_updated_by><sys_updated_on>2026-10-08 13:28:02</sys_updated_on></sn_actsub_module><sys_translated_text action="delete_multiple" query="documentkey=7eb430799333cb10e2987af08bba10e6"/></record_update>]]></payload>
+        <payload_hash>-231760236</payload_hash>
+        <record_name>GST Properties</record_name>
+        <reverted_from/>
+        <source>3088f76193b78b10e2987af08bba102d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-08 13:28:02</sys_created_on>
+        <sys_id>6ad470799333cb10e2987af08bba10da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a11bb30f9a0000001</sys_recorded_at>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-08 13:28:02</sys_updated_on>
+        <type>Module</type>
+        <update_guid>2ad470793f33cb10975c622028c1dbd9</update_guid>
+        <update_guid_history>2ad470793f33cb10975c622028c1dbd9:-231760236</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="GST Properties">da057c799333cb10e2987af08bba1081</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-08 13:28:50</sys_created_on>
+        <sys_db_object display_value="" name="sn_actsub_module">sn_actsub_module</sys_db_object>
+        <sys_id>11770fce885543878353f066c958d259</sys_id>
+        <sys_metadata>7eb430799333cb10e2987af08bba10e6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GST Properties</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_scope_delete display_value="">98144267b5ce4cfaaa6e4c5c012ea504</sys_scope_delete>
+        <sys_update_name>sn_actsub_module_7eb430799333cb10e2987af08bba10e6</sys_update_name>
+        <sys_update_version display_value="sn_actsub_module_7eb430799333cb10e2987af08bba10e6">6ad470799333cb10e2987af08bba10da</sys_update_version>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-08 13:28:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

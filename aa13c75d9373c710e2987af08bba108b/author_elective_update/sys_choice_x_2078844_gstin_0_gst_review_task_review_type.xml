@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="review_type" table="x_2078844_gstin_0_gst_review_task" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>review_type</element>
+            <name>x_2078844_gstin_0_gst_review_task</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-08 09:43:29</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>review_type</sys_name>
+            <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+            <sys_update_name>sys_choice_x_2078844_gstin_0_gst_review_task_review_type</sys_update_name>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-08 09:43:29</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>review_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Review</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_review_task</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-08 09:43:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-08 09:43:38</sys_updated_on>
+            <value>review</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>review_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Critical</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_review_task</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-08 09:43:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-08 09:43:56</sys_updated_on>
+            <value>critical</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>review_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Api Failure</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_review_task</name>
+            <sequence>300</sequence>
+            <synonyms/>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-08 09:44:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-08 09:44:24</sys_updated_on>
+            <value>api_failure</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

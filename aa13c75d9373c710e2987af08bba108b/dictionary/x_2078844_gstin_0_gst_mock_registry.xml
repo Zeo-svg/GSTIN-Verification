@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="6eef876993bf4b10e2987af08bba1036" label="GST Mock Registry" max_length="40" name="x_2078844_gstin_0_gst_mock_registry" type="collection">
+        <element label="Registration date" max_length="40" name="registration_date" type="glide_date"/>
+        <element label="State code" mandatory="true" max_length="2" name="state_code" type="string"/>
+        <element choice="3" default="active" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled" sequence="20" value="cancelled"/>
+                <element inactive_on_update="false" label="Inactive" sequence="40" value="inactive"/>
+                <element inactive_on_update="false" label="Suspended" sequence="30" value="suspended"/>
+                <element inactive_on_update="false" label="Active" sequence="10" value="active"/>
+                <element inactive_on_update="false" label="Provisional" sequence="50" value="provisional"/>
+            </choice>
+        </element>
+        <element label="Trade name" max_length="255" name="trade_name" type="string"/>
+        <element label="GSTIN" mandatory="true" max_length="15" name="gstin" type="string"/>
+        <element choice="3" default="none" label="Simulate" mandatory="true" max_length="40" name="simulate" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="HTTP 503" sequence="50" value="http_503"/>
+                <element inactive_on_update="false" label="HTTP 429" sequence="30" value="http_429"/>
+                <element inactive_on_update="false" label="None" sequence="10" value="none"/>
+                <element inactive_on_update="false" label="Timeout" sequence="20" value="timeout"/>
+                <element inactive_on_update="false" label="HTTP 500" sequence="40" value="http_500"/>
+            </choice>
+        </element>
+        <element label="Legal name" mandatory="true" max_length="255" name="legal_name" type="string"/>
+        <index name="index" unique="true">
+            <element name="gstin"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="a48c13e193738b10e2987af08bba106c" extends="sys_import_set_row" label="GST Mock Registry Import" max_length="40" name="x_2078844_gstin_0_gst_mock_registry_import" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=simulate" label="simulate" max_length="40" name="u_simulate" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=gstin" label="gstin" max_length="40" name="u_gstin" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=status" label="status" max_length="40" name="u_status" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=registration_date" label="registration_date" max_length="40" name="u_registration_date" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=state_code" label="state_code" max_length="40" name="u_state_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=legal_name" label="legal_name" max_length="40" name="u_legal_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=trade_name" label="trade_name" max_length="40" name="u_trade_name" type="string"/>
+    </element>
+</database>

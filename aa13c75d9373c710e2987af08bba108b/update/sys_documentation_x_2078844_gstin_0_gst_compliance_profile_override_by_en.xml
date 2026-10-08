@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="override_by" label="Override by" language="en" table="x_2078844_gstin_0_gst_compliance_profile">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>override_by</element>
+            <help/>
+            <hint/>
+            <label>Override by</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_compliance_profile</name>
+            <plural>Override by</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-08 06:59:30</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Override by</sys_name>
+            <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+            <sys_update_name>sys_documentation_x_2078844_gstin_0_gst_compliance_profile_override_by_en</sys_update_name>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-08 06:59:30</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

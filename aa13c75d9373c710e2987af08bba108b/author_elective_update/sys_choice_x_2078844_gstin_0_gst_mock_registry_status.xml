@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="status" table="x_2078844_gstin_0_gst_mock_registry" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <name>x_2078844_gstin_0_gst_mock_registry</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>hitesh.gohad</sys_created_by>
+            <sys_created_on>2026-10-08 06:26:35</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>status</sys_name>
+            <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+            <sys_update_name>sys_choice_x_2078844_gstin_0_gst_mock_registry_status</sys_update_name>
+            <sys_updated_by>hitesh.gohad</sys_updated_by>
+            <sys_updated_on>2026-10-08 06:26:35</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Active</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_mock_registry</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>hitesh.gohad</sys_created_by>
+            <sys_created_on>2026-10-08 06:26:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>hitesh.gohad</sys_updated_by>
+            <sys_updated_on>2026-10-08 06:51:59</sys_updated_on>
+            <value>active</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cancelled</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_mock_registry</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>hitesh.gohad</sys_created_by>
+            <sys_created_on>2026-10-08 06:27:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>hitesh.gohad</sys_updated_by>
+            <sys_updated_on>2026-10-08 06:51:22</sys_updated_on>
+            <value>cancelled</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Suspended</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_mock_registry</name>
+            <sequence>30</sequence>
+            <synonyms/>
+            <sys_created_by>hitesh.gohad</sys_created_by>
+            <sys_created_on>2026-10-08 06:27:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>hitesh.gohad</sys_updated_by>
+            <sys_updated_on>2026-10-08 06:51:56</sys_updated_on>
+            <value>suspended</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Inactive</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_mock_registry</name>
+            <sequence>40</sequence>
+            <synonyms/>
+            <sys_created_by>hitesh.gohad</sys_created_by>
+            <sys_created_on>2026-10-08 06:27:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>hitesh.gohad</sys_updated_by>
+            <sys_updated_on>2026-10-08 06:51:27</sys_updated_on>
+            <value>inactive</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Provisional</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_mock_registry</name>
+            <sequence>50</sequence>
+            <synonyms/>
+            <sys_created_by>hitesh.gohad</sys_created_by>
+            <sys_created_on>2026-10-08 06:28:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>hitesh.gohad</sys_updated_by>
+            <sys_updated_on>2026-10-08 06:52:02</sys_updated_on>
+            <value>provisional</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

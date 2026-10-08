@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="decision" table="x_2078844_gstin_0_gst_verification_log" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>decision</element>
+            <name>x_2078844_gstin_0_gst_verification_log</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-08 09:20:53</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>decision</sys_name>
+            <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+            <sys_update_name>sys_choice_x_2078844_gstin_0_gst_verification_log_decision</sys_update_name>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-08 09:20:53</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>decision</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Accept</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_verification_log</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-08 09:20:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-08 09:21:02</sys_updated_on>
+            <value>accept</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>decision</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Ask Correct</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_verification_log</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-08 09:21:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-08 09:21:26</sys_updated_on>
+            <value>ask_correct</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>decision</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Override</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_verification_log</name>
+            <sequence>300</sequence>
+            <synonyms/>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-08 09:21:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-08 09:21:46</sys_updated_on>
+            <value>override</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>decision</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Reject</label>
+            <language>en</language>
+            <name>x_2078844_gstin_0_gst_verification_log</name>
+            <sequence>400</sequence>
+            <synonyms/>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-08 09:21:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-08 09:22:05</sys_updated_on>
+            <value>reject</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

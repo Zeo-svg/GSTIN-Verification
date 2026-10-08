@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="db8e436593bf4b10e2987af08bba10a5" label="GST Compliance Profile" max_length="40" name="x_2078844_gstin_0_gst_compliance_profile" type="collection">
+        <element label="Compliance hold" max_length="40" name="compliance_hold" type="boolean"/>
+        <element choice="3" default="pending" label="Result" mandatory="true" max_length="500" name="result" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="100" value="pending"/>
+                <element inactive_on_update="false" label="Rejected" sequence="500" value="rejected"/>
+                <element inactive_on_update="false" label="Flagged" sequence="300" value="flagged"/>
+                <element inactive_on_update="false" label="Failed" sequence="400" value="failed"/>
+                <element inactive_on_update="false" label="Verified" sequence="200" value="verified"/>
+            </choice>
+        </element>
+        <element label="Next verification" max_length="40" name="next_verification" type="glide_date"/>
+        <element choice="1" label="Name match" max_length="40" name="name_match" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Partial" sequence="200" value="partial"/>
+                <element inactive_on_update="false" label="Mismatch" sequence="300" value="mismatch"/>
+                <element inactive_on_update="false" label="Match" sequence="100" value="match"/>
+            </choice>
+        </element>
+        <element label="State" max_length="60" name="state" type="string"/>
+        <element label="GSTIN" mandatory="true" max_length="15" name="gstin" type="string"/>
+        <element label="Last verified" max_length="40" name="last_verified" type="glide_date_time"/>
+        <element label="Tax detail" max_length="32" name="tax_detail" reference="sn_fin_org_tax_detail" type="reference"/>
+        <element label="Onboarding case" max_length="32" name="onboarding_case" reference="sn_slm_case" type="reference"/>
+        <element label="Reason for entry on behalf" max_length="500" name="reason_for_entry_on_behalf" type="string"/>
+        <element label="Override reason" max_length="1000" name="override_reason" type="string"/>
+        <element label="Legal name (submitted)" mandatory="true" max_length="255" name="legal_name_submitted" type="string"/>
+        <element label="Result reason" max_length="500" name="result_reason" type="string"/>
+        <element label="Legal name (GST registry)" max_length="255" name="legal_name_gst_registry" type="string"/>
+        <element label="Entered by Procurement" max_length="40" name="entered_by_procurement" type="boolean"/>
+        <element label="Override by" max_length="32" name="override_by" reference="sys_user" type="reference"/>
+        <element label="Match score" max_length="20" name="match_score" type="decimal"/>
+        <element label="Trade name (submitted)" max_length="255" name="trade_name_submitted" type="string"/>
+        <element label="Override approved" max_length="40" name="override_approved" type="boolean"/>
+        <element label="Trade name (GST registry)" max_length="255" name="trade_name_gst_registry" type="string"/>
+        <element choice="1" label="GST status" max_length="40" name="gst_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Inactive" sequence="400" value="inactive"/>
+                <element inactive_on_update="false" label="Not Found" sequence="600" value="not_found"/>
+                <element inactive_on_update="false" label="Provisional" sequence="500" value="provisional"/>
+                <element inactive_on_update="false" label="Active" sequence="100" value="active"/>
+                <element inactive_on_update="false" label="Suspended" sequence="300" value="suspended"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="200" value="cancelled"/>
+            </choice>
+        </element>
+        <element label="Supplier" mandatory="true" max_length="32" name="supplier" reference="sn_fin_supplier" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" mandatory="true" max_length="40" name="number" read_only="true" read_only_option="display_read_only" type="string"/>
+        <element label="State code" max_length="2" name="state_code" type="string"/>
+        <index name="index">
+            <element name="onboarding_case"/>
+        </index>
+        <index name="index2">
+            <element name="override_by"/>
+        </index>
+        <index name="index3">
+            <element name="supplier"/>
+        </index>
+        <index name="index4">
+            <element name="tax_detail"/>
+        </index>
+    </element>
+</database>

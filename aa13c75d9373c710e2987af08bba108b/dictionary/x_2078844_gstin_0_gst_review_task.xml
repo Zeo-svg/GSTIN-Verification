@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="2aad776193f78b10e2987af08bba10bf" extends="task" label="GST Review Task" max_length="40" name="x_2078844_gstin_0_gst_review_task" type="collection">
+        <element choice="1" label="Decision" max_length="40" name="decision" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Override" sequence="300" value="override"/>
+                <element inactive_on_update="false" label="Accept" sequence="100" value="accept"/>
+                <element inactive_on_update="false" label="Reject" sequence="400" value="reject"/>
+                <element inactive_on_update="false" label="Ask Correct" sequence="200" value="ask_correct"/>
+            </choice>
+        </element>
+        <element label="Profile" mandatory="true" max_length="32" name="profile" reference="x_2078844_gstin_0_gst_compliance_profile" type="reference"/>
+        <element label="Decision reason" max_length="1000" name="decision_reason" type="string"/>
+        <element label="Onboarding case" max_length="32" name="onboarding_case" reference="sn_slm_case" type="reference"/>
+        <element choice="1" default="review" label="Review type" mandatory="true" max_length="40" name="review_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Review" sequence="100" value="review"/>
+                <element inactive_on_update="false" label="Critical" sequence="200" value="critical"/>
+                <element inactive_on_update="false" label="Api Failure" sequence="300" value="api_failure"/>
+            </choice>
+        </element>
+    </element>
+</database>
