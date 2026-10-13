@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Returns the GST Compliance Profile of a supplier. Used by the GST gate in the India GST playbook variant.</description>
+        <flow_priority/>
+        <ih_action>false</ih_action>
+        <internal_name>get_gst_profile_for_supplier</internal_name>
+        <label_cache>[{"name":"{{action.supplier}}","label":"action➛Supplier","type":"action","ref":"","reference_display":"Supplier","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[091fcc8b-c6bc-4e47-acaa-3d3ba3aff96c].record}}","label":"step➛Look Up Record step➛GST Compliance Profile Record","type":"step","ref":"x_2078844_gstin_0_gst_compliance_profile","reference_display":"","base_type":"document_id","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
+        <master_snapshot>f0df84cf937fc750e2987af08bba1031</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Get GST profile for supplier</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:52:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e96ec0cb937fc750e2987af08bba10dc</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Get GST profile for supplier</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_e96ec0cb937fc750e2987af08bba10dc</sys_update_name>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 11:20:44</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=e96ec0cb937fc750e2987af08bba10dc"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e96ec0cb937fc750e2987af08bba10dc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>e96ec0cb937fc750e2987af08bba10dc</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:22</sys_created_on>
+        <sys_id>50cf80cf937fc750e2987af08bba10b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:22</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">dccf80cf937fc750e2987af08bba1091</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>e96ec0cb937fc750e2987af08bba10dc</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:22</sys_created_on>
+        <sys_id>94cf80cf937fc750e2987af08bba10b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:22</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <variable display_value="Action Status">dccf80cf937fc750e2987af08bba1073</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e96ec0cb937fc750e2987af08bba10dc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>profile</field>
+        <id>e96ec0cb937fc750e2987af08bba10dc</id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:22</sys_created_on>
+        <sys_id>9ccf80cf937fc750e2987af08bba10b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:22</sys_updated_on>
+        <table>var__m_sys_hub_action_output_e96ec0cb937fc750e2987af08bba10dc</table>
+        <value>{{step[091fcc8b-c6bc-4e47-acaa-3d3ba3aff96c].record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>e96ec0cb937fc750e2987af08bba10dc</id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:22</sys_created_on>
+        <sys_id>58cf80cf937fc750e2987af08bba10b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:22</sys_updated_on>
+        <table>var__m_sys_hub_action_output_e96ec0cb937fc750e2987af08bba10dc</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>e96ec0cb937fc750e2987af08bba10dc</id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:22</sys_created_on>
+        <sys_id>14cf80cf937fc750e2987af08bba10b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:22</sys_updated_on>
+        <table>var__m_sys_hub_action_output_e96ec0cb937fc750e2987af08bba10dc</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=e96ec0cb937fc750e2987af08bba10dc^sys_idNOT IN98cf80cf937fc750e2987af08bba1061"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Get GST profile for supplier">e96ec0cb937fc750e2987af08bba10dc</action>
+        <cid>091fcc8b-c6bc-4e47-acaa-3d3ba3aff96c</cid>
+        <error_handling_type>2</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Look Up Record step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Look Up Record">dc9c26043b23220057a4a2e334efc447</step_type>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>98cf80cf937fc750e2987af08bba1061</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:21</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=98cf80cf937fc750e2987af08bba1061"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>98cf80cf937fc750e2987af08bba1061</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>98cf80cf937fc750e2987af08bba1071</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:21</sys_updated_on>
+        <value>x_2078844_gstin_0_gst_compliance_profile</value>
+        <variable display_value="Table">f9cc66043b23220057a4a2e334efc42f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=98cf80cf937fc750e2987af08bba1061"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>98cf80cf937fc750e2987af08bba1061</id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>d4cf80cf937fc750e2987af08bba1071</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_dc9c26043b23220057a4a2e334efc447</table>
+        <value>supplier={{action.supplier}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>lookup_table_name</field>
+        <id>98cf80cf937fc750e2987af08bba1061</id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>90cf80cf937fc750e2987af08bba1071</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_dc9c26043b23220057a4a2e334efc447</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_translated_text action="delete_multiple" query="documentkey=98cf80cf937fc750e2987af08bba1061"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=98cf80cf937fc750e2987af08bba1061"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=98cf80cf937fc750e2987af08bba1061"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=98cf80cf937fc750e2987af08bba1061"/>
+    <sys_hub_action_input action="delete_multiple" query="model=e96ec0cb937fc750e2987af08bba10dc^sys_idNOT IN88cf40cf937fc750e2987af08bba10bc"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=98929e02-bad6-4312-8f0f-fcb370579f15</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sn_fin_supplier</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>supplier</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Supplier</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get GST profile for supplier">e96ec0cb937fc750e2987af08bba10dc</model>
+        <model_id>e96ec0cb937fc750e2987af08bba10dc</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_e96ec0cb937fc750e2987af08bba10dc</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sn_fin_supplier">sn_fin_supplier</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>88cf40cf937fc750e2987af08bba10bc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=88cf40cf937fc750e2987af08bba10bc"/>
+    <sys_hub_action_output action="delete_multiple" query="model=e96ec0cb937fc750e2987af08bba10dc^sys_idNOT IN9ccf80cf937fc750e2987af08bba1088,dccf80cf937fc750e2987af08bba1073,dccf80cf937fc750e2987af08bba1091"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=bab15fc9-abb3-4885-8e92-c3e7dce462c8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_2078844_gstin_0_gst_compliance_profile</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>profile</element>
+        <element_prototype display_value="Record" element="record" name="var__m_sys_flow_step_definition_output_dc9c26043b23220057a4a2e334efc447">d3e627913b23220057a4a2e334efc45e</element_prototype>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Profile</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get GST profile for supplier">e96ec0cb937fc750e2987af08bba10dc</model>
+        <model_id>e96ec0cb937fc750e2987af08bba10dc</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_e96ec0cb937fc750e2987af08bba10dc</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_2078844_gstin_0_gst_compliance_profile">x_2078844_gstin_0_gst_compliance_profile</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>9ccf80cf937fc750e2987af08bba1088</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 11:20:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9ccf80cf937fc750e2987af08bba1088"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9ccf80cf937fc750e2987af08bba1088"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=6c345e1f-5f6f-4f5e-a451-dd5d351601e8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Get GST profile for supplier">e96ec0cb937fc750e2987af08bba10dc</model>
+        <model_id>e96ec0cb937fc750e2987af08bba10dc</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_e96ec0cb937fc750e2987af08bba10dc</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>dccf80cf937fc750e2987af08bba1073</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=dccf80cf937fc750e2987af08bba1073"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dccf80cf937fc750e2987af08bba1073"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=e9d5bbb3-b28a-4f4b-b80c-d2db0e6eb960,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Get GST profile for supplier">e96ec0cb937fc750e2987af08bba10dc</model>
+        <model_id>e96ec0cb937fc750e2987af08bba10dc</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_e96ec0cb937fc750e2987af08bba10dc</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>dccf80cf937fc750e2987af08bba1091</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 11:20:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=dccf80cf937fc750e2987af08bba1091"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dccf80cf937fc750e2987af08bba1091"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=e96ec0cb937fc750e2987af08bba10dc"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=e96ec0cb937fc750e2987af08bba10dc^sys_idNOT IN58cf80cf937fc750e2987af08bba10c4"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Get GST profile for supplier">e96ec0cb937fc750e2987af08bba10dc</action_type_id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:22</sys_created_on>
+        <sys_id>58cf80cf937fc750e2987af08bba10c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:22</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=58cf80cf937fc750e2987af08bba10c4"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>supplier</element>
+        <help/>
+        <hint/>
+        <label>Supplier</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_e96ec0cb937fc750e2987af08bba10dc</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>9ccf80cf937fc750e2987af08bba1059</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_e96ec0cb937fc750e2987af08bba10dc"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_e96ec0cb937fc750e2987af08bba10dc</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>18cf80cf937fc750e2987af08bba109a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_e96ec0cb937fc750e2987af08bba10dc</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>9ccf80cf937fc750e2987af08bba1086</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>profile</element>
+        <help/>
+        <hint/>
+        <label>Profile</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_e96ec0cb937fc750e2987af08bba10dc</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:21</sys_created_on>
+        <sys_id>dccf80cf937fc750e2987af08bba108f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_e96ec0cb937fc750e2987af08bba10dc"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=e96ec0cb937fc750e2987af08bba10dc^sys_idNOT IN09df84cf937fc750e2987af08bba10d2"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Get GST profile for supplier">e96ec0cb937fc750e2987af08bba10dc</action_id>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_hub_action_plan","id":"09df84cf937fc750e2987af08bba10d2","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <snapshot>f41ef40f93b70b50e2987af08bba10b5</snapshot>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>09df84cf937fc750e2987af08bba10d2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 11:20:44</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Returns the GST Compliance Profile of a supplier. Used by the GST gate in the India GST playbook variant.</description>
+        <flow_priority/>
+        <internal_name>get_gst_profile_for_supplier</internal_name>
+        <label_cache>[{"name":"{{action.supplier}}","label":"action➛Supplier","type":"action","ref":"","reference_display":"Supplier","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[091fcc8b-c6bc-4e47-acaa-3d3ba3aff96c].record}}","label":"step➛Look Up Record step➛GST Compliance Profile Record","type":"step","ref":"x_2078844_gstin_0_gst_compliance_profile","reference_display":"","base_type":"document_id","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Get GST profile for supplier</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="Get GST profile for supplier">e96ec0cb937fc750e2987af08bba10dc</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f0df84cf937fc750e2987af08bba1031</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 11:20:43</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=f0df84cf937fc750e2987af08bba1031"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f0df84cf937fc750e2987af08bba1031"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>f0df84cf937fc750e2987af08bba1031</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:41</sys_created_on>
+        <sys_id>8ddf84cf937fc750e2987af08bba10c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:41</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">c9df84cf937fc750e2987af08bba1066</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>f0df84cf937fc750e2987af08bba1031</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:41</sys_created_on>
+        <sys_id>c1df84cf937fc750e2987af08bba10c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:41</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <variable display_value="Action Status">b4df84cf937fc750e2987af08bba1055</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f0df84cf937fc750e2987af08bba1031"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>profile</field>
+        <id>f0df84cf937fc750e2987af08bba1031</id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:41</sys_created_on>
+        <sys_id>c9df84cf937fc750e2987af08bba10c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:41</sys_updated_on>
+        <table>var__m_sys_hub_action_output_f0df84cf937fc750e2987af08bba1031</table>
+        <value>{{step[091fcc8b-c6bc-4e47-acaa-3d3ba3aff96c].record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>f0df84cf937fc750e2987af08bba1031</id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:41</sys_created_on>
+        <sys_id>85df84cf937fc750e2987af08bba10c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:41</sys_updated_on>
+        <table>var__m_sys_hub_action_output_f0df84cf937fc750e2987af08bba1031</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>f0df84cf937fc750e2987af08bba1031</id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:41</sys_created_on>
+        <sys_id>41df84cf937fc750e2987af08bba10c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:41</sys_updated_on>
+        <table>var__m_sys_hub_action_output_f0df84cf937fc750e2987af08bba1031</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=f0df84cf937fc750e2987af08bba1031^sys_idNOT INfcdf84cf937fc750e2987af08bba1045"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Get GST profile for supplier">f0df84cf937fc750e2987af08bba1031</action>
+        <cid>091fcc8b-c6bc-4e47-acaa-3d3ba3aff96c</cid>
+        <error_handling_type>2</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Look Up Record step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Look Up Record">dc9c26043b23220057a4a2e334efc447</step_type>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:40</sys_created_on>
+        <sys_id>fcdf84cf937fc750e2987af08bba1045</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:40</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fcdf84cf937fc750e2987af08bba1045"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcdf84cf937fc750e2987af08bba1045</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:40</sys_created_on>
+        <sys_id>70df84cf937fc750e2987af08bba1053</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:40</sys_updated_on>
+        <value>x_2078844_gstin_0_gst_compliance_profile</value>
+        <variable display_value="Table">f9cc66043b23220057a4a2e334efc42f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fcdf84cf937fc750e2987af08bba1045"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>fcdf84cf937fc750e2987af08bba1045</id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:40</sys_created_on>
+        <sys_id>bcdf84cf937fc750e2987af08bba1052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:40</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_dc9c26043b23220057a4a2e334efc447</table>
+        <value>supplier={{action.supplier}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>lookup_table_name</field>
+        <id>fcdf84cf937fc750e2987af08bba1045</id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:40</sys_created_on>
+        <sys_id>78df84cf937fc750e2987af08bba1052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:40</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_dc9c26043b23220057a4a2e334efc447</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_translated_text action="delete_multiple" query="documentkey=fcdf84cf937fc750e2987af08bba1045"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=fcdf84cf937fc750e2987af08bba1045"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=fcdf84cf937fc750e2987af08bba1045"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fcdf84cf937fc750e2987af08bba1045"/>
+    <sys_hub_action_input action="delete_multiple" query="model=f0df84cf937fc750e2987af08bba1031^sys_idNOT IN30df84cf937fc750e2987af08bba1036"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=98929e02-bad6-4312-8f0f-fcb370579f15</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sn_fin_supplier</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>supplier</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Supplier</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get GST profile for supplier">f0df84cf937fc750e2987af08bba1031</model>
+        <model_id>f0df84cf937fc750e2987af08bba1031</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_f0df84cf937fc750e2987af08bba1031</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sn_fin_supplier">sn_fin_supplier</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:40</sys_created_on>
+        <sys_id>30df84cf937fc750e2987af08bba1036</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=30df84cf937fc750e2987af08bba1036"/>
+    <sys_hub_action_output action="delete_multiple" query="model=f0df84cf937fc750e2987af08bba1031^sys_idNOT IN0ddf84cf937fc750e2987af08bba105d,b4df84cf937fc750e2987af08bba1055,c9df84cf937fc750e2987af08bba1066"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=bab15fc9-abb3-4885-8e92-c3e7dce462c8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_2078844_gstin_0_gst_compliance_profile</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>profile</element>
+        <element_prototype display_value="Record" element="record" name="var__m_sys_flow_step_definition_output_dc9c26043b23220057a4a2e334efc447">d3e627913b23220057a4a2e334efc45e</element_prototype>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Profile</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get GST profile for supplier">f0df84cf937fc750e2987af08bba1031</model>
+        <model_id>f0df84cf937fc750e2987af08bba1031</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_f0df84cf937fc750e2987af08bba1031</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_2078844_gstin_0_gst_compliance_profile">x_2078844_gstin_0_gst_compliance_profile</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:40</sys_created_on>
+        <sys_id>0ddf84cf937fc750e2987af08bba105d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 11:20:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0ddf84cf937fc750e2987af08bba105d"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0ddf84cf937fc750e2987af08bba105d"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=6c345e1f-5f6f-4f5e-a451-dd5d351601e8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Get GST profile for supplier">f0df84cf937fc750e2987af08bba1031</model>
+        <model_id>f0df84cf937fc750e2987af08bba1031</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_f0df84cf937fc750e2987af08bba1031</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:40</sys_created_on>
+        <sys_id>b4df84cf937fc750e2987af08bba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b4df84cf937fc750e2987af08bba1055"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b4df84cf937fc750e2987af08bba1055"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=e9d5bbb3-b28a-4f4b-b80c-d2db0e6eb960,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Get GST profile for supplier">f0df84cf937fc750e2987af08bba1031</model>
+        <model_id>f0df84cf937fc750e2987af08bba1031</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_f0df84cf937fc750e2987af08bba1031</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:41</sys_created_on>
+        <sys_id>c9df84cf937fc750e2987af08bba1066</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 11:20:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c9df84cf937fc750e2987af08bba1066"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c9df84cf937fc750e2987af08bba1066"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=f0df84cf937fc750e2987af08bba1031"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=f0df84cf937fc750e2987af08bba1031^sys_idNOT INcddf84cf937fc750e2987af08bba10ca"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Get GST profile for supplier">f0df84cf937fc750e2987af08bba1031</action_type_id>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:41</sys_created_on>
+        <sys_id>cddf84cf937fc750e2987af08bba10ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:41</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=cddf84cf937fc750e2987af08bba10ca"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>supplier</element>
+        <help/>
+        <hint/>
+        <label>Supplier</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_f0df84cf937fc750e2987af08bba1031</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:40</sys_created_on>
+        <sys_id>b0df84cf937fc750e2987af08bba103e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_f0df84cf937fc750e2987af08bba1031"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_f0df84cf937fc750e2987af08bba1031</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:40</sys_created_on>
+        <sys_id>0ddf84cf937fc750e2987af08bba105b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_f0df84cf937fc750e2987af08bba1031</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:41</sys_created_on>
+        <sys_id>4ddf84cf937fc750e2987af08bba10b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>profile</element>
+        <help/>
+        <hint/>
+        <label>Profile</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_f0df84cf937fc750e2987af08bba1031</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 07:58:41</sys_created_on>
+        <sys_id>c9df84cf937fc750e2987af08bba1064</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:58:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_f0df84cf937fc750e2987af08bba1031"/>
+    <sys_hub_action_type_definition action="UPDATE">
+        <sys_id>e96ec0cb937fc750e2987af08bba10dc</sys_id>
+        <latest_snapshot>f0df84cf937fc750e2987af08bba1031</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch3-05-25-2026_06-12-2026_1106.zip</compiler_build>
+    </sys_hub_action_type_definition>
+</record_update>

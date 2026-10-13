@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="DELETE">
+        <operation>execute</operation>
+        <source_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 07:46:51</sys_created_on>
+        <sys_id>6e50fc0293bb4f10e2987af08bba10b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GlideRecord.setWorkflow</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_scope_privilege_6e50fc0293bb4f10e2987af08bba10b5</sys_update_name>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 07:46:51</sys_updated_on>
+        <target_name>GlideRecord.setWorkflow</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>scriptable</target_type>
+    </sys_scope_privilege>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</application>
+        <file_path/>
+        <instance_id>3eada58eebff9a108326ff72dad0cd14</instance_id>
+        <instance_name>dev297253</instance_name>
+        <name>sys_scope_privilege_6e50fc0293bb4f10e2987af08bba10b5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>execute</operation><source_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>rahul.basutkar</sys_created_by><sys_created_on>2026-10-09 07:46:51</sys_created_on><sys_id>6e50fc0293bb4f10e2987af08bba10b5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>GlideRecord.setWorkflow</sys_name><sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package><sys_policy/><sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope><sys_update_name>sys_scope_privilege_6e50fc0293bb4f10e2987af08bba10b5</sys_update_name><sys_updated_by>rahul.basutkar</sys_updated_by><sys_updated_on>2026-10-09 07:46:51</sys_updated_on><target_name>GlideRecord.setWorkflow</target_name><target_scope display_value="Global">global</target_scope><target_type>scriptable</target_type></sys_scope_privilege></record_update>]]></payload>
+        <payload_hash>-2089338847</payload_hash>
+        <record_name>GlideRecord.setWorkflow</record_name>
+        <reverted_from/>
+        <source>f81b6082937b4f10e2987af08bba107d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 07:46:51</sys_created_on>
+        <sys_id>ae50fc0293bb4f10e2987af08bba10b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a11fa1100d0000001</sys_recorded_at>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 07:46:51</sys_updated_on>
+        <type>Cross scope privilege</type>
+        <update_guid>6a50fc02a0bb4f109d0ddbf94dbd42b8</update_guid>
+        <update_guid_history>6a50fc02a0bb4f109d0ddbf94dbd42b8:-2089338847</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-12 06:33:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_scope_privilege">sys_scope_privilege</sys_db_object>
+        <sys_id>c169a6944cba4a7599d0c48f98b43799</sys_id>
+        <sys_metadata>6e50fc0293bb4f10e2987af08bba10b5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GlideRecord.setWorkflow</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_scope_delete display_value="">98144267b5ce4cfaaa6e4c5c012ea504</sys_scope_delete>
+        <sys_update_name>sys_scope_privilege_6e50fc0293bb4f10e2987af08bba10b5</sys_update_name>
+        <sys_update_version display_value="sys_scope_privilege_6e50fc0293bb4f10e2987af08bba10b5">ae50fc0293bb4f10e2987af08bba10b9</sys_update_version>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-12 06:33:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

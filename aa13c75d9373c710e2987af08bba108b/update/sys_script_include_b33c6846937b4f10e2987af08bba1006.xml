@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2078844_gstin_0.GSTVerifier</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>GST verification decision engine: validate → provider → compare → decide → update profile → log. Called only from the Verify GSTIN subflow (E2-06). GST-E2-05.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>GSTVerifier</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var GSTVerifier = Class.create();
+GSTVerifier.prototype = {
+
+    PROFILE_TABLE: 'x_2078844_gstin_0_gst_compliance_profile',
+    LOG_TABLE: 'x_2078844_gstin_0_gst_verification_log',
+    PROP: 'x_2078844_gstin_0.gstin.',
+    TRIGGERS: ['onboarding', 'verify_now', 'scheduled', 'gstin_change', 'ai'],
+
+    initialize: function() {
+        this.util = new GSTINUtil();
+        this.provider = new GSTProvider();
+    },
+
+    /**
+     * profile : GlideRecord or sys_id of a GST Compliance Profile
+     * trigger : onboarding | verify_now | scheduled | gstin_change | ai
+     * options : { attempt: 1, lastAttempt: true }
+     * returns : { result, reason, category, retryable, logId }
+     */
+    verify: function(profile, trigger, options) {
+        options = options || {};
+        var attempt = parseInt(options.attempt, 10) || 1;
+        var lastAttempt = (options.lastAttempt !== false);
+
+        var p = this._getProfile(profile);
+        if (!p)
+            return { result: 'failed', reason: 'Profile not found', category: 'error', retryable: false, logId: '' };
+
+        var d = {
+            gstin: this.util.normalize(p.getValue('gstin')),
+            attempt: attempt,
+            trigger: (this.TRIGGERS.indexOf(trigger) > -1) ? trigger : 'verify_now',
+            httpStatus: '', providerRef: '', raw: '',
+            gstStatus: '', legalName: '', tradeName: '', stateCode: '',
+            nameMatch: '', score: ''
+        };
+
+        // 1. Validate format + check digit (GST-E2-01)
+        var v = this.util.validate(d.gstin);
+        if (!v.valid)
+            return this._finish(p, d, 'flagged', 'Invalid format: ' + v.reason, 'invalid_format');
+        d.stateCode = v.stateCode;
+
+        // 2. Ask the provider (GST-E2-03)
+        var r = this.provider.lookup(d.gstin);
+        d.httpStatus = (r.httpStatus === null || r.httpStatus === undefined) ? '' : r.httpStatus;
+        d.providerRef = r.providerRef || '';
+        d.raw = r.raw ? JSON.stringify(r.raw) : '';
+
+        if (!r.found) {
+            if (r.httpStatus == 404) {
+                d.gstStatus = 'not_found';
+                return this._finish(p, d, 'flagged', 'Not found: GSTIN is not in the GST registry', 'not_found');
+            }
+            var err = 'API failure: ' + (r.error || ('HTTP ' + r.httpStatus));
+            if (!lastAttempt) {
+                // Retryable: log this attempt only, leave the profile unchanged
+                var logId = this._writeLog(p, d, 'failed', err + ' (attempt ' + attempt + ', will retry)');
+                return { result: 'failed', reason: err, category: 'api_failure', retryable: true, logId: logId };
+            }
+            return this._finish(p, d, 'failed', err + ' (after ' + attempt + ' attempt(s))', 'api_failure');
+        }
+
+        d.gstStatus = String(r.status || '').toLowerCase();
+        d.legalName = r.legalName || '';
+        d.tradeName = r.tradeName || '';
+        if (r.stateCode) d.stateCode = r.stateCode;
+
+        // 3. Registration status rules
+        if (d.gstStatus == 'cancelled' || d.gstStatus == 'suspended')
+            return this._finish(p, d, 'flagged', 'Critical: GST registration is ' + d.gstStatus, 'critical');
+        if (d.gstStatus == 'inactive' || d.gstStatus == 'provisional')
+            return this._finish(p, d, 'flagged', 'Status review: GST registration is ' + d.gstStatus, 'status_review');
+        if (d.gstStatus != 'active')
+            return this._finish(p, d, 'flagged', 'Status review: unexpected status "' + d.gstStatus + '"', 'status_review');
+
+        // 4. Compare names (GST-E2-02)
+        if (typeof this.util.compareNames != 'function')
+            return this._finish(p, d, 'failed', 'Configuration error: name comparison (GST-E2-02) not available', 'error');
+        var cmp = this.util.compareNames(p.getValue('legal_name_submitted'), d.legalName, d.tradeName);
+        d.nameMatch = cmp.match;
+        d.score = cmp.score;
+
+        // 5. Decide
+        if (cmp.match == 'match')
+            return this._finish(p, d, 'verified', 'Verified: GSTIN is active and the name matches the GST registry', 'verified');
+        if (cmp.match == 'partial')
+            return this._finish(p, d, 'flagged', 'Mismatch: partial name match (score ' + cmp.score + ')', 'mismatch');
+        return this._finish(p, d, 'flagged', 'Mismatch (high priority): name does not match the GST registry (score ' + cmp.score + ')', 'mismatch_high');
+    },
+
+    // Update the profile, write the log, return the outcome. 
+    _finish: function(p, d, result, reason, category) {
+        p.setValue('result', result);
+        p.setValue('result_reason', reason.substring(0, 500));
+        if (d.gstStatus) p.setValue('gst_status', d.gstStatus);
+        if (d.legalName) p.setValue('legal_name_gst_registry', d.legalName);   // full value, never truncated
+        if (d.tradeName) p.setValue('trade_name_gst_registry', d.tradeName);
+        if (d.stateCode) {
+            p.setValue('state_code', d.stateCode);
+            if (this.util.STATES[d.stateCode]) p.setValue('state', this.util.STATES[d.stateCode]);
+        }
+        p.setValue('name_match', d.nameMatch);          // empty when names were not compared
+        p.setValue('match_score', d.score);
+        p.setValue('last_verified', new GlideDateTime().getValue());
+
+        if (result == 'verified') {
+            var days = parseInt(gs.getProperty(this.PROP + 'recheck.days', '30'), 10) || 30;
+            var next = new GlideDateTime();
+            next.addDaysLocalTime(days);
+            p.setValue('next_verification', next.getLocalDate().getValue());
+        } else {
+            p.setValue('next_verification', '');
+        }
+        p.update();
+
+        var logId = this._writeLog(p, d, result, reason);
+        return { result: result, reason: reason, category: category, retryable: false, logId: logId };
+    },
+
+    // One log record per attempt (AC 4)
+    _writeLog: function(p, d, result, reason) {
+        var l = new GlideRecord(this.LOG_TABLE);
+        l.initialize();
+        l.setValue('profile', p.getUniqueValue());
+        l.setValue('gstin', d.gstin || p.getValue('gstin'));
+        l.setValue('attempt_number', d.attempt);
+        l.setValue('trigger', d.trigger);
+        if (d.providerRef) l.setValue('provider_reference', d.providerRef);
+        if (d.httpStatus !== '') l.setValue('http_status', d.httpStatus);
+        if (d.raw) l.setValue('raw_response', String(d.raw).substring(0, 4000));
+        if (d.gstStatus) l.setValue('gst_status', d.gstStatus);
+        if (d.nameMatch) l.setValue('name_match', d.nameMatch);
+        if (d.score !== '' && d.score !== null && d.score !== undefined) l.setValue('match_score', d.score);
+        l.setValue('result', result);
+        l.setValue('result_reason', reason.substring(0, 500));
+        return l.insert();
+    },
+
+    _getProfile: function(profile) {
+        if (profile && typeof profile.getUniqueValue == 'function')
+            return profile;
+        var gr = new GlideRecord(this.PROFILE_TABLE);
+        return gr.get(String(profile)) ? gr : null;
+    },
+
+    type: 'GSTVerifier'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 07:44:23</sys_created_on>
+        <sys_id>b33c6846937b4f10e2987af08bba1006</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>GSTVerifier</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_script_include_b33c6846937b4f10e2987af08bba1006</sys_update_name>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 07:45:20</sys_updated_on>
+    </sys_script_include>
+</record_update>

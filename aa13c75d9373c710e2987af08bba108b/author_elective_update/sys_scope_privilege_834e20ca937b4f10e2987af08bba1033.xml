@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="DELETE">
+        <operation>execute</operation>
+        <source_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-09 07:37:52</sys_created_on>
+        <sys_id>834e20ca937b4f10e2987af08bba1033</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GlideRecord.insert</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_scope_privilege_834e20ca937b4f10e2987af08bba1033</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-09 07:37:52</sys_updated_on>
+        <target_name>GlideRecord.insert</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>scriptable</target_type>
+    </sys_scope_privilege>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</application>
+        <file_path/>
+        <instance_id>3eada58eebff9a108326ff72dad0cd14</instance_id>
+        <instance_name>dev297253</instance_name>
+        <name>sys_scope_privilege_834e20ca937b4f10e2987af08bba1033</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>execute</operation><source_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-10-09 07:37:52</sys_created_on><sys_id>834e20ca937b4f10e2987af08bba1033</sys_id><sys_mod_count>0</sys_mod_count><sys_name>GlideRecord.insert</sys_name><sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package><sys_policy/><sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope><sys_update_name>sys_scope_privilege_834e20ca937b4f10e2987af08bba1033</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-09 07:37:52</sys_updated_on><target_name>GlideRecord.insert</target_name><target_scope display_value="Global">global</target_scope><target_type>scriptable</target_type></sys_scope_privilege></record_update>]]></payload>
+        <payload_hash>1275457555</payload_hash>
+        <record_name>GlideRecord.insert</record_name>
+        <reverted_from/>
+        <source>2213c75d9373c710e2987af08bba1094</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-09 07:37:52</sys_created_on>
+        <sys_id>cf4e60ca937b4f10e2987af08bba1016</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_recorded_at>1a11f98d84f0000001</sys_recorded_at>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-12 06:12:58</sys_updated_on>
+        <type>Cross scope privilege</type>
+        <update_guid>0f4e20caf67b4f101c6cb7a82d2cec35</update_guid>
+        <update_guid_history>0f4e20caf67b4f101c6cb7a82d2cec35:1275457555</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-12 06:21:11</sys_created_on>
+        <sys_db_object display_value="" name="sys_scope_privilege">sys_scope_privilege</sys_db_object>
+        <sys_id>764014195ae64e7c9966b12a45c9b510</sys_id>
+        <sys_metadata>834e20ca937b4f10e2987af08bba1033</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GlideRecord.insert</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_scope_delete display_value="">98144267b5ce4cfaaa6e4c5c012ea504</sys_scope_delete>
+        <sys_update_name>sys_scope_privilege_834e20ca937b4f10e2987af08bba1033</sys_update_name>
+        <sys_update_version display_value="sys_scope_privilege_834e20ca937b4f10e2987af08bba1033">cf4e60ca937b4f10e2987af08bba1016</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-12 06:21:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

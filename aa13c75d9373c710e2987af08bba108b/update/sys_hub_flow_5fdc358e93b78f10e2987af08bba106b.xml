@@ -1,0 +1,2365 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=2387000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>GST-E2-06 – verifies one GSTIN profile with retries (calls GST Verify Attempt). Used by onboarding, Verify Now, re-checks and GSTIN changes.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>verify_gstin</internal_name>
+        <label_cache>[{"name":"flow_variable.reason","label":"Flow Variables➛reason","type":"string","base_type":"string","usedInstances":{"ac890143-bf2a-4f2b-baa7-004ce8a33630":["reason-1"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"1d39c646-9a2b-4921-9a88-30a3e155bcff"}},{"name":"flow_variable.result","label":"Flow Variables➛result","type":"string","base_type":"string","usedInstances":{"ac890143-bf2a-4f2b-baa7-004ce8a33630":["result-0"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"c767ff87-e6f6-4a1a-a87f-1d6c3c05ea04"}},{"name":"d9c041c0-af5c-4684-817a-c3545072195e.retry","label":"3 - GST Verify Attempt➛retry","reference_display":"retry","type":"boolean","base_type":"boolean","usedInstances":{"1bfceeff-2f51-4a1f-8b92-aa45eba8bd48":["condition"]},"attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"473b5064-6a28-4d19-96fe-30b3af0f762d"}},{"name":"d9c041c0-af5c-4684-817a-c3545072195e.delay_seconds","label":"3 - GST Verify Attempt➛delay_seconds","reference_display":"delay_seconds","type":"integer","base_type":"integer","usedInstances":{"cb77c6a3-e857-4631-b24a-141a06007dd6":["delay_seconds-3"]},"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"9cef040c-4571-4a9f-8b0f-020c6e7be828"}},{"name":"d9c041c0-af5c-4684-817a-c3545072195e.next_attempt","label":"3 - GST Verify Attempt➛next_attempt","reference_display":"next_attempt","type":"integer","base_type":"integer","usedInstances":{"cb77c6a3-e857-4631-b24a-141a06007dd6":["attempt-2"]},"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"2296f022-3a7c-4fcc-8265-7c8c1d5433e2"}},{"name":"d9c041c0-af5c-4684-817a-c3545072195e.reason","label":"3 - GST Verify Attempt➛reason","reference_display":"reason","type":"string","base_type":"string","usedInstances":{"cb77c6a3-e857-4631-b24a-141a06007dd6":["reason-1"]},"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"39ea0108-c6ae-40b1-a151-bae6979b8e04"}},{"name":"d9c041c0-af5c-4684-817a-c3545072195e.result","label":"3 - GST Verify Attempt➛result","reference_display":"result","type":"string","base_type":"string","usedInstances":{"cb77c6a3-e857-4631-b24a-141a06007dd6":["result-0"]},"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"3f2a3a20-7cb1-4115-9f66-6c1f4b4cd713"}},{"name":"flow_variable.attempt","label":"Flow Variables➛attempt","reference":"","reference_display":"","type":"integer","base_type":"integer","usedInstances":{"122a7ff8-d977-47e8-9487-71a38ee8f747":["attempt"],"d9c041c0-af5c-4684-817a-c3545072195e":["attempt"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"88c2a0f7-f3f2-4a98-a078-df19c675a165"}},{"name":"subflow.trigger","label":"Input➛trigger","type":"string","base_type":"string","usedInstances":{"122a7ff8-d977-47e8-9487-71a38ee8f747":["trigger"],"d9c041c0-af5c-4684-817a-c3545072195e":["trigger"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"176aa61b-ad15-436f-9da9-24445cf7eefd"}},{"name":"subflow.profile","label":"Input➛profile","reference":"x_2078844_gstin_0_gst_compliance_profile","reference_display":"GST Compliance Profile","type":"reference","base_type":"reference","usedInstances":{"122a7ff8-d977-47e8-9487-71a38ee8f747":["profile"],"d9c041c0-af5c-4684-817a-c3545072195e":["profile"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"4cfc90e4-79bd-48c4-aed9-0cbff47f505f","uiTypeLabel":"Reference"}},{"name":"flow_variable.done","label":"Flow Variables➛done","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"usedInstances":{"4dac4c9c-bec6-4223-bfd5-5c0d14e725b2":["condition"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"83d95e42-5c39-4228-acfa-6c011abf49b8"}}]</label_cache>
+        <master_snapshot>c2f5c60a933b8f10e2987af08bba10f2</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Verify GSTIN</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:21:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5fdc358e93b78f10e2987af08bba106b</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>Verify GSTIN</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_hub_flow_5fdc358e93b78f10e2987af08bba106b</sys_update_name>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:59</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>97f54a0a933b8f10e2987af08bba109b</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=5fdc358e93b78f10e2987af08bba106b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5fdc358e93b78f10e2987af08bba106b"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_5fdc358e93b78f10e2987af08bba106b^id=5fdc358e93b78f10e2987af08bba106b"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=5fdc358e93b78f10e2987af08bba106b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=5fdc358e93b78f10e2987af08bba106b^sys_idNOT IN57dc358e93b78f10e2987af08bba1070"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>5fdc358e93b78f10e2987af08bba106b</id>
+        <name>Verify GSTIN</name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:21:08</sys_created_on>
+        <sys_id>57dc358e93b78f10e2987af08bba1070</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:21:08</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=57dc358e93b78f10e2987af08bba1070"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=5fdc358e93b78f10e2987af08bba106b^sys_idNOT IN4bcdbd0293f78f10e2987af08bba10d4,c7cdbd0293f78f10e2987af08bba10f7"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=4cfc90e4-79bd-48c4-aed9-0cbff47f505f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_2078844_gstin_0_gst_compliance_profile</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>profile</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>profile</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</model>
+        <model_id>5fdc358e93b78f10e2987af08bba106b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5fdc358e93b78f10e2987af08bba106b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_2078844_gstin_0_gst_compliance_profile">x_2078844_gstin_0_gst_compliance_profile</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:25:13</sys_created_on>
+        <sys_id>4bcdbd0293f78f10e2987af08bba10d4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:25:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4bcdbd0293f78f10e2987af08bba10d4"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=176aa61b-ad15-436f-9da9-24445cf7eefd</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>verify_now</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>trigger</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>trigger</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</model>
+        <model_id>5fdc358e93b78f10e2987af08bba106b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5fdc358e93b78f10e2987af08bba106b</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:25:13</sys_created_on>
+        <sys_id>c7cdbd0293f78f10e2987af08bba10f7</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c7cdbd0293f78f10e2987af08bba10f7"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=5fdc358e93b78f10e2987af08bba106b^sys_idNOT IN13cdfd0293f78f10e2987af08bba1080,1bcdfd0293f78f10e2987af08bba102d"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=fa48be8d-fdbb-425b-bfe6-e5509c2b64f2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>reason</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>reason</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</model>
+        <model_id>5fdc358e93b78f10e2987af08bba106b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_5fdc358e93b78f10e2987af08bba106b</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:25:14</sys_created_on>
+        <sys_id>13cdfd0293f78f10e2987af08bba1080</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:54:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=13cdfd0293f78f10e2987af08bba1080"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=ca920092-3c4b-401a-ad51-b2d4a8bf9fd0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>result</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</model>
+        <model_id>5fdc358e93b78f10e2987af08bba106b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_5fdc358e93b78f10e2987af08bba106b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:25:14</sys_created_on>
+        <sys_id>1bcdfd0293f78f10e2987af08bba102d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:54:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1bcdfd0293f78f10e2987af08bba102d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5fdc358e93b78f10e2987af08bba106b"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=5fdc358e93b78f10e2987af08bba106b"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=5fdc358e93b78f10e2987af08bba106b^sys_idNOT INad40460a93f78f10e2987af08bba1077"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="GST Verify Attempt">118bf58a93b78f10e2987af08bba10a0</action_type>
+        <action_type_parent display_value="GST Verify Attempt">2356318a93778f10e2987af08bba10dc</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>118bf58a93b78f10e2987af08bba10a0</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>4dac4c9c-bec6-4223-bfd5-5c0d14e725b2</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:36:02</sys_created_on>
+        <sys_id>ad40460a93f78f10e2987af08bba1077</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-12 07:06:08</sys_updated_on>
+        <ui_id>d9c041c0-af5c-4684-817a-c3545072195e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+WVX0/bMBTFv8rk56RK04S6fUMgJqRtTCvjBaHo+l9ryXFC4hS6iu8+u3GTlgICqeNlT1WOr+1zj+9PvV0jydAUMYaJSDFMRmSMxTDi8QSPQUSYEBhGkKIAaci5rSyrQkjFrbAE1Thlva4bIlTxMPBrT092lcm6VLC68UVWoQupWMU1mt7eBaiEyh5oeIWm62dL73WkgHBlS392lg48mlXphIoLbo+nW+mb3/lrRy8q5swMA8QfDdeMWxcCVM0DlINmYIpq1SkVB3alVS8spDZtmzk81vKPvXUUBzsXT9FjFkdjjJMkm9dG6ixyvxkt8lJJsCVZb7vblvkY7favs+svZ13xl75pcQ4GZqZqqGmqLutCUl63eTIuoFHmbFdrC65KIwvdbjFA1Adt0kI1uf7Rho66i3bevKltC7x0cbp8fFhitigeuuwvpN4k7xdVQUHtlHKo6OJCcuWmQjc5sbUBAmMqSRrj+lmjRl4fPnQrvvTUXPHc+slyKEup566jpdx4sC3lg7myHwM30dZ7Led6ANTlNLBDAIMLq59v5BuopAvtuz1mY6qRv7W8b/ilsxpRjvEwSsMJ4TRM0giHwACH+CSOKSUJg4ShpwDVq/pMQV33MdomsvvGhdCG6uPL2pdyW2glS3NqTS25T+op8CRP3uSG0J4SG+B8vvF9SLJfe4nkl4s+Bvc7TG7hvu5cHtj2cNdW0fNnZM+2osc6PhrWOIqifbBfAfb4aH4Ocq+g1cW8z1UX9KdAdcLsyEAswlgICJN4LEIMCQ9ZyoBMqBDjMf8XUKVvzStN+um04fG8NHtQbZpe+r4GvuIof5Lv8LXl6LQzduDUc2RHnfdgbd/3slM9SaOjkZT8lxz1Me+D1Af9KSQlNCIkhjhMMR6HCaFJOIkpCU8IGyYTNhqlo+ERSbr7CzITwh9qCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ad40460a93f78f10e2987af08bba1077"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=5fdc358e93b78f10e2987af08bba106b"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=5fdc358e93b78f10e2987af08bba106b^sys_idNOT IN0b80ca0a93f78f10e2987af08bba1041,72ae75c293f78f10e2987af08bba1097,8c810eca93f78f10e2987af08bba10ed,9b5186ca93f78f10e2987af08bba10a0,c0b30a42933b8f10e2987af08bba1054,dd218a8a93f78f10e2987af08bba10ba,eefe350693f78f10e2987af08bba10ac,f0918eca93f78f10e2987af08bba106f"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f5744206933b8f10e2987af08bba10dd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</flow>
+        <flow_variables_assigned>result,reason,attempt,delay_seconds</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>4dac4c9c-bec6-4223-bfd5-5c0d14e725b2</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:37:14</sys_created_on>
+        <sys_id>0b80ca0a93f78f10e2987af08bba1041</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:54</sys_updated_on>
+        <ui_id>cb77c6a3-e857-4631-b24a-141a06007dd6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1ZWWvbQBD+L3r2ml2dq7wFSiDQNtCkeSnFjPawl8qSoiNHjf97Zy35iFsH17VLDPKTdnbn/j5pB8+cvKmLpq7u8suqMuPMufj2feCYzMrweeZkMFXOhVOqqklrZ+A8QtpYwWwmY0F9JigBHQjih9wnnEVAhBf4AY1cFgdq2OrN56gpTVWk8HJ/sAExMaksVRdjASWGVqvSuZhtbdUvhRqlkKgU/dzWpcnGqG4krkQQKx1zN/Z0xDWjyo15BJryJAFGwxDPLRVXKW+XwJrHdbU0nJfSRuEPHPVcq0wqdKQhrdTAmUImoc7Ll5WkVCBvsnQtmJisRmuOPfxcmZ9omlNK7UmtMCWh2t3VctQVshWLSW6Euilqk2etpIYk7XREnjbT7HMbv22B0oA5LFuAkqZCe6qwUdswupj07SR/+rJ0eGWyRYLdZpoLSFcrqLEMSVOryvahMXdbxWklH7eboVI1RY+jKRQFSkZFmT+ahRcMejocp7gY6jR/wugsLocgbIZDrCYMr1D+YSG+h9LYdD+hGVS27r5m5qFR14tmR2GkNY+ICnVIfGBAgEeaMBkKT9BAAfWd+aK0o4fGJtUWqSvHqK0oHqhEaYr6EkN4VF3m88EGN6DCowdww+r9EzdWBo7BDSqRG0zs4IYbveJGl/J2CXZwI+i58c64waQXi9APSQxuQvzYZfjEOfEoeIoFQSK0PgI3sARqWhzw4cgQL6NO+08UORjz11mtxot6LEDP3wS9522Afp3Lb8l1sDcr2x3u2dFw75876te1eQ37dT/+C+45Fy5QHRHtaRe/CTEnQCNOpGbIhygAFgZHwL1U2I9RpUSeyerv0f9K/ZTw999+58sN+G+ntCPTXVTweiq8Myok+IuFyxGEoU98RhkBmQjCdBy7nh8Bdw//BHy3mG+9t4PEvtfvfuDoB45zvVSdeuDY95reDyb9YHKuHDr1YLLvrb8fYPoB5j3e2k49wOw7FvSDTj/onAllTj3oSCVMhVHd2RCul/+d2I0XxI4Rm6KnvPxh81nL5r8Am29UJIUZAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3d744206933b8f10e2987af08bba10d5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</flow>
+        <flow_variables_assigned>attempt,done</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:29:01</sys_created_on>
+        <sys_id>72ae75c293f78f10e2987af08bba1097</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:54</sys_updated_on>
+        <ui_id>3021e30f-bb9b-44e4-add5-ad1c53461437</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1W24rbMBD9Fz3HqS+52HlbWAKBtgttui9lCWN5lIjKkteWk01D/r2j2LltoGxDW2jJm3U0mjlzdBh5w0xti9pWU3NXVXKu2ejrU4dJ7TD63jANObIRA2sxLyzrsCWo2iEBfWeyKhSsH08gvpAqK7FNVEBJ5y2WbLR5tWXXBc4UpKjo5ERbnFMUlc5oGWcJioCHSSSGsQh8DJN4CMKP0xQCP4oobn/ySOyCqatAgDzkNmXmmAQdhi8WdYZUS4CqsMNy0BlYU64PSImQPWh1BBaUiNIxF/xSye+Uu+e7OIHUFMdm77CcteI0MF8YyfGhsNLoBrGQqvYMN6rO9ceGv5MVBdTK7mUlpK4oHxaOsyPRMhKfF2b1aV9wLPWuvXZTGQ7qsCJVSpnWFit3E7Wcvtamgd5f3AcqzKnmLIeikHo+K0qzlLs6RDvvzhUtukKZFfFzBuoCdz12SU3ojgm/38GPUErX8AdK09b7ouVzjZPdfcc8BF8MPRGJ0OtBEnvgD2MvE0HCB8M+BIM+2+7EnT3Xrq1GplaQWaMpBVS8lIW9IwpLbHvfdg4mzozGEwf7lw72r3bwtKzx3dgV3JuY/9zEyYmJW2LnNFv7psYoBH20b/jb7BuFV9o3+iX/ilaVFr6/lPxP2fuo3bm9zy7r7zg8ypI+9kKvz6PE64UhOZwL8AbcDwJIRS9J46sd/uQ83VRvhvZbh+htuN+G+z8/3N86bG+PwO0R+L8fgQy5rIjV1FGY7P/h3caaXCX5KbQy5TfXzxHb/gAeiZsTDQwAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">31744206933b8f10e2987af08bba10e6</block>
+        <comment/>
+        <connected_to>1bfceeff-2f51-4a1f-8b92-aa45eba8bd48</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>4dac4c9c-bec6-4223-bfd5-5c0d14e725b2</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:41:24</sys_created_on>
+        <sys_id>8c810eca93f78f10e2987af08bba10ed</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:54</sys_updated_on>
+        <ui_id>eb03f8a1-f4cd-407c-9ed9-3d054c6a397c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f1744206933b8f10e2987af08bba10e3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</flow>
+        <flow_variables_assigned>done</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id>1bfceeff-2f51-4a1f-8b92-aa45eba8bd48</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:40:48</sys_created_on>
+        <sys_id>9b5186ca93f78f10e2987af08bba10a0</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:54</sys_updated_on>
+        <ui_id>b1d18142-047d-40ad-ad1e-16e42a5c0c2c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9LzonWWynq51bgSJAgW4FtqyXoTBoiUqEypIry0mzIP99ZOykH+hh56E381Hke3yi4L3wXWy62C79VdualRPz3w8jYRxj9L0XDmoUc6G8QzESG7Adhwl9K9M2Fnb3ryC5NlYFHLo0EKg4YhDz/btU3DVYWqjQUuUydPhlAbZlBqMIkapAnci0yPRlrpMppkV+CXqaVxUk06ygc6fiQdhbmdyeosp7i+AI8EGxjHQk8DmiU0gsmhlHoganIPqwOyMBQd05+wKsjYvUTvDh59b8od5Zyuc00kQS+9w5LAdneliuvZF410TjaXiRsTyo7FAkve1q971Xz6aihs7Gk6l6cGWAr99aPqVM1xIfNjwTixwU659rv/1xErQw7jj+kLRegj1HEGMwVRex5WvqzPK9dz10+9FlocWaaMsamsa4VdkEvzFHKhqsnqwsBRNt/ZYk8nZNQLINEzIcJgvCr4/wPQTDlnyjNlTMlL+ceerwhpchz1RxgbN0fCGzYjxL03wMUsP4q5wmCVR6VlS5OBz9L586nqw3cvCkPNrOB1oZTBOvSMIGh/EPD7zTPXu/7/+6f5/v4vNd/N/vQqE0LalasoSb0x+BEzvaKiNfQ1sfHnmeF+zwFy2brhZbBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b9744206933b8f10e2987af08bba10ed</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>10</order>
+        <outputs_assigned>result,reason</outputs_assigned>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:50:58</sys_created_on>
+        <sys_id>c0b30a42933b8f10e2987af08bba1054</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:55</sys_updated_on>
+        <ui_id>ac890143-bf2a-4f2b-baa7-004ce8a33630</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VwW7bMAz9F51jw3aS1u6twFCgwLYCa9bLMBiURCXCZMu15KRZkH8fFdtJEGBtMeyww458eiL5nkhox2znm867hb11Ti9rdvNtx7RkNyzlQiqZZMVUXecqTTAr8mtQSc45pEkm2YTVUCExW3Sd8RSvwXQB2O2UsZtyDa0GbjDuCfs9UaR2jYHt09tMsdJGthg6+j5hDbRUzGPLbnYXR37bYGmAo6GEj77V9ZKuv1fDePEo4lJUSE+xGxPbVoYu0gnDF4+1RCqkwDicsApqCd622yPSIsiH2pyAla49ZWOB/OL0T0qdJ0kSmApJksD+9BiWg2M9LFZWC3xovLZ1j/jg23BoTVfVn/v+g9eogDSMXhPSOcqHTeg6tDH0pB5XdvNlLHin64PA4dBYAeYYgScbeOfRhXfo9OLCnB75ePkYaLCiimUFTUNI2bR2rQ9VqOkqXhoK4sMkSAxTGIMICmNyE+I7wj8c4KdhTD5RGrocyn2t9XOH9+GxBRRZkhRZNBUzHs2SFCKQ8zTimZxBzlVBk8D2B2vL5y6I6k0a7Ch7R4ngRKsbf0strHFQvp+MWzF9baLy5HyAwFHK17YiEN63FUfmX9mKtzWctmIQcSnqN1uR/d+Kf2wrFMxyjrmMlOS0FdmcR1zhVYTzeVKIjF/NVPbHW0FzpuvwffQzNw7sEEoU2lHDi4Ddn/HklsZJi3NoY9sfQeoJ2/8CSLYGJZwGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3d744206933b8f10e2987af08bba10e0</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>4dac4c9c-bec6-4223-bfd5-5c0d14e725b2</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:39:51</sys_created_on>
+        <sys_id>dd218a8a93f78f10e2987af08bba10ba</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:54</sys_updated_on>
+        <ui_id>1bfceeff-2f51-4a1f-8b92-aa45eba8bd48</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2Uy27bMBBFf0XQWhaol2N7F7QIEKBtgCbIpg0EihzFRClSJSk7ruF/71APx2gc9LnsTrwkZ+4dHmgf6s61nbN3+tJa8ajC1aeHKBTKa/i9DxVtIFyFTCsunNCq7IUo3FDZ+Y3rOlA6MODMLhA2UAAceBRYp9vArSGQWrd4nAvbSrq7/71bbC0kNzC6aqnB3g5MuNr/sOV2LZSSViCx+K0zQj3idcFxVRNaJ0uWsCydZykh6SJPqnlWJSnPKNAMz00X30whg3e9Er2a3vdD3U6dtOHeVkKiEJ4cKEwTrmoqLURhQxWnTpvdUTFA+Y2Sz8JaKIflQn/4yYpvWDstCn+wBszIYNg8LstxnIPM1lowuGm9wUFxtJLjHaZl16gPQw7/EFDTTrrpIVDpLNaD1pv2LkZL9e1abz9ODa+E6gOOm1IzKo8r6nAMVefA+ocBCQ0WKhvatjicsjV6I/rL6KWJHyUu4lrqLTb1xMWUeeMxzojGV6i/7eV7aoRP8R7L4OXBZkWtYGVPJ5ZzBiMc+rGUXztvaAg4RimHaeABy4xo3SX22cDo+hC9RPuE6v2eLxnJE0ZmtC7YLJ8v8tkiuaAzlhV5QS7SZFlA3AN8OHzuCMl4X/cl6n9T6l/wv6RFXSSkOM9/Pj/H/xnyX4c+/Qn0/pl+kXlCyH/oT6EXthzgHbMNYPwp8w8e8KGDHbjhwIRFI3deu57++n5jhwAIdipttfniIzxrh+950XlgPwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b5744206933b8f10e2987af08bba10d9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Do the following until">eaeb040687210300e6c2c88fc0e3ec89</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:30:23</sys_created_on>
+        <sys_id>eefe350693f78f10e2987af08bba10ac</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:54</sys_updated_on>
+        <ui_id>4dac4c9c-bec6-4223-bfd5-5c0d14e725b2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K0PPxijx0pS8lY3CYFthLX3ZipGl60RMljR9JM2M//uu/JGEtWGl9HF+ko507znn6uCWmBhsDP7OXHkv15qsvj9kROqE4bolmjVAVoQbLWSQRpc9kJEtUzEd4FJIbxXb3x8RvpFKOBi7WeawJoAjq/avo7C3UCpWgcLC2+CkXmO5FLirBJvzir5fFrSYFZRezOZ8vixq/C7YckHx3lT4YRL37nOPZGdVJz7E/cRknEiyZpRmBB4DaAHIXTPlISMN04IF4/YHxAETN1odgY3UYbDcsEcvf2Pz+WKRLtaAJvk4j8O2HGc1jclIDjc2KRyQwCo1zdCo2Oivg5E0ZahZVOFkytFjP7BJdFIxSqpvN2b3bSK8lrp3OB4qw5k67FjAOVQxgE8vAwoabFQ2zFqcTmmd2cq+GLU0+VrhJq+V2SFpikrOeBKe44xYfo34xx6+Z04mF1+wDRZ3vfvyV0y8g49RcTmYxgueO2nDFbbbwiiuy55G7yR1bdsL2Y5cuTAauu5HpLQQwUV4msoXVLxFasVyVlzW51J7yZ9L7TN5PR/V+b+imsy8MKk09fof1Smq+IS+HLI4euvJXx3hh5TXgcEPwRHApUchdwn7NP1k08EeEyD5KbQz7meycMS6P5OLnYmuBQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7d744206933b8f10e2987af08bba10ea</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>eb03f8a1-f4cd-407c-9ed9-3d054c6a397c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:41:43</sys_created_on>
+        <sys_id>f0918eca93f78f10e2987af08bba106f</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:55</sys_updated_on>
+        <ui_id>0bb5f99d-f95f-4d40-b71d-dbb3e6dd91fe</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YWY+bMBD+K4jnNLUhwCZvVbeV+tBDbbQv1QoZMyRWHaDG7DZd7X+vbQxhE5K9sr2lSIlnzJzfDDO5cotalrWs5sWLqmKL3J19Ph+5LNc09fvKzckK3Jmb1oJIVuSxXJfgjtwLwmtNh28lZ5TJuL2geCmrSk7WZ/bKK3vF6V2hS8ZTAVZdSYTSIkG4s6stllYXc5IAV5JeLgtGtXaWqtNkGvnBCZ5EPvKxj1ASYgjDSRQmWUiik0Ddax88tZqdeWP9HqfM10xZYNUUItU2YYRGylEJeQpKcUZ4BSN3RfKUyEKsO4oAkr7P+YawZLlU8lx9+VvFvivhE6TvZaAcpNDwumNsA9eQGyuaJLR+DIXyUCasA+h6tJHxEbhiX8CQDGF5AzJwX8YHEBRySRaDUsqOOyDHu1ZZTSEjNZcvj+ciPoKL3pFc9LWLTfrel4Y1c30NL5Jwm3Na8HqVv2tg6HYBOTtUVc2V09uLq66UVVBquGr8WTBmn5bF5ccWa69Zbmy1TF5QwrsTkVKwpJY6NVcucFgpQfGKlCXLF3EpigtmHlZurMYLrg7jjBeXSqluIWNCtSFjVR1k/FrRTw35jAimA/BWiVEPXxvgx19rrbcJgbU4NgHTFyoqWClfUJ0va5xOka3eXg4kW4GITdeKlVrQ5162dnvSg1vQqZL+fN6IN10oyXAa4hAnkR96qgv5ExpSCKcAGJOph3pdqAcpY7BjDHa0wY61+M6u2VZlgm/osWU8Qc8ysu7TtDrU3wv0fwpyVeKruIGm9c0oPwKim1xvkv80EH6TS1g0fmgAnyDf99GUBn7UAThNAbIsSrAHeBDAG6gO2GyxyTo9/zH5p2Ny4BWIpxF6hrD6OAjNEJ4htAtS7LxluXL94f12o9igFTI8Cei+oS+BgaFvG6s9X2520d2B4BcOfv/x+hi87kx5caHU6qz1EEwyaUzZwmxLPsaOklIywSjYA1cv7MF1bkYCsT26Oj3D7+7ink3G/202mTbI27kY2lgSyArRfxl2hG74P7xT3KIM30uZ9+jpvsPd4ETfcrfqWIr6dyzj1kK6jg9tWL1rFpob0N1W8ze39Ac3gJ+8F+DMC9K9lR/5Byp/dx+4g0+3LQSTv+Bd9sgaGH7ljP652qjoEtKaP1EldJlpKyFLgkANbXsqIfRujmwqAY5cgpMVXEVWn3rm7nPDxk30VFvYB0eEve/dhD1d5X0jhkrg04b9L4x1Dx3fzjUSG0lVA6kUKKuUwrmmvWn/jtaMtQIBo33SZSG+aFM3tOsfA2IsstgWAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=5fdc358e93b78f10e2987af08bba106b"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=5fdc358e93b78f10e2987af08bba106b^sys_idNOT IN0d9ef1c293f78f10e2987af08bba1027,4d9ef1c293f78f10e2987af08bba102d,8d9ef1c293f78f10e2987af08bba1033,c59ef98293f78f10e2987af08bba1066,cd9ef1c293f78f10e2987af08bba1039"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1d39c646-9a2b-4921-9a88-30a3e155bcff</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>reason</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>reason</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</model>
+        <model_id>5fdc358e93b78f10e2987af08bba106b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5fdc358e93b78f10e2987af08bba106b</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:28:38</sys_created_on>
+        <sys_id>0d9ef1c293f78f10e2987af08bba1027</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:54:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=bbbb9c28-4664-4101-adbc-1f992347a82f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>delay_seconds</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>delay_seconds</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</model>
+        <model_id>5fdc358e93b78f10e2987af08bba106b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5fdc358e93b78f10e2987af08bba106b</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:28:38</sys_created_on>
+        <sys_id>4d9ef1c293f78f10e2987af08bba102d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:54:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=88c2a0f7-f3f2-4a98-a078-df19c675a165</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>attempt</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>attempt</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</model>
+        <model_id>5fdc358e93b78f10e2987af08bba106b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5fdc358e93b78f10e2987af08bba106b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:28:38</sys_created_on>
+        <sys_id>8d9ef1c293f78f10e2987af08bba1033</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:54:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c767ff87-e6f6-4a1a-a87f-1d6c3c05ea04</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>result</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</model>
+        <model_id>5fdc358e93b78f10e2987af08bba106b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5fdc358e93b78f10e2987af08bba106b</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:28:38</sys_created_on>
+        <sys_id>c59ef98293f78f10e2987af08bba1066</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:54:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=83d95e42-5c39-4228-acfa-6c011abf49b8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>false</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>done</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>done</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</model>
+        <model_id>5fdc358e93b78f10e2987af08bba106b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5fdc358e93b78f10e2987af08bba106b</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:28:38</sys_created_on>
+        <sys_id>cd9ef1c293f78f10e2987af08bba1039</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-10 14:24:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>trigger</element>
+        <help/>
+        <hint/>
+        <label>trigger</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5fdc358e93b78f10e2987af08bba106b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:25:13</sys_created_on>
+        <sys_id>03cdbd0293f78f10e2987af08bba10ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:25:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>profile</element>
+        <help/>
+        <hint/>
+        <label>profile</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5fdc358e93b78f10e2987af08bba106b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:25:13</sys_created_on>
+        <sys_id>87cdbd0293f78f10e2987af08bba10f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:25:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_5fdc358e93b78f10e2987af08bba106b"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>result</element>
+        <help/>
+        <hint/>
+        <label>result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_5fdc358e93b78f10e2987af08bba106b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:25:14</sys_created_on>
+        <sys_id>9fcdfd0293f78f10e2987af08bba107d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:25:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>reason</element>
+        <help/>
+        <hint/>
+        <label>reason</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_5fdc358e93b78f10e2987af08bba106b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 13:25:14</sys_created_on>
+        <sys_id>dfcdfd0293f78f10e2987af08bba1083</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 13:25:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_5fdc358e93b78f10e2987af08bba106b"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>GST-E2-06 – verifies one GSTIN profile with retries (calls GST Verify Attempt). Used by onboarding, Verify Now, re-checks and GSTIN changes.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>verify_gstin</internal_name>
+        <label_cache>[{"name":"flow_variable.reason","label":"Flow Variables➛reason","type":"string","base_type":"string","usedInstances":{"ac890143-bf2a-4f2b-baa7-004ce8a33630":["reason-1"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"1d39c646-9a2b-4921-9a88-30a3e155bcff"}},{"name":"flow_variable.result","label":"Flow Variables➛result","type":"string","base_type":"string","usedInstances":{"ac890143-bf2a-4f2b-baa7-004ce8a33630":["result-0"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"c767ff87-e6f6-4a1a-a87f-1d6c3c05ea04"}},{"name":"d9c041c0-af5c-4684-817a-c3545072195e.retry","label":"3 - GST Verify Attempt➛retry","reference_display":"retry","type":"boolean","base_type":"boolean","usedInstances":{"1bfceeff-2f51-4a1f-8b92-aa45eba8bd48":["condition"]},"attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"473b5064-6a28-4d19-96fe-30b3af0f762d"}},{"name":"d9c041c0-af5c-4684-817a-c3545072195e.delay_seconds","label":"3 - GST Verify Attempt➛delay_seconds","reference_display":"delay_seconds","type":"integer","base_type":"integer","usedInstances":{"cb77c6a3-e857-4631-b24a-141a06007dd6":["delay_seconds-3"]},"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"9cef040c-4571-4a9f-8b0f-020c6e7be828"}},{"name":"d9c041c0-af5c-4684-817a-c3545072195e.next_attempt","label":"3 - GST Verify Attempt➛next_attempt","reference_display":"next_attempt","type":"integer","base_type":"integer","usedInstances":{"cb77c6a3-e857-4631-b24a-141a06007dd6":["attempt-2"]},"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"2296f022-3a7c-4fcc-8265-7c8c1d5433e2"}},{"name":"d9c041c0-af5c-4684-817a-c3545072195e.reason","label":"3 - GST Verify Attempt➛reason","reference_display":"reason","type":"string","base_type":"string","usedInstances":{"cb77c6a3-e857-4631-b24a-141a06007dd6":["reason-1"]},"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"39ea0108-c6ae-40b1-a151-bae6979b8e04"}},{"name":"d9c041c0-af5c-4684-817a-c3545072195e.result","label":"3 - GST Verify Attempt➛result","reference_display":"result","type":"string","base_type":"string","usedInstances":{"cb77c6a3-e857-4631-b24a-141a06007dd6":["result-0"]},"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"3f2a3a20-7cb1-4115-9f66-6c1f4b4cd713"}},{"name":"flow_variable.attempt","label":"Flow Variables➛attempt","reference":"","reference_display":"","type":"integer","base_type":"integer","usedInstances":{"122a7ff8-d977-47e8-9487-71a38ee8f747":["attempt"],"d9c041c0-af5c-4684-817a-c3545072195e":["attempt"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"88c2a0f7-f3f2-4a98-a078-df19c675a165"}},{"name":"subflow.trigger","label":"Input➛trigger","type":"string","base_type":"string","usedInstances":{"122a7ff8-d977-47e8-9487-71a38ee8f747":["trigger"],"d9c041c0-af5c-4684-817a-c3545072195e":["trigger"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"176aa61b-ad15-436f-9da9-24445cf7eefd"}},{"name":"subflow.profile","label":"Input➛profile","reference":"x_2078844_gstin_0_gst_compliance_profile","reference_display":"GST Compliance Profile","type":"reference","base_type":"reference","usedInstances":{"122a7ff8-d977-47e8-9487-71a38ee8f747":["profile"],"d9c041c0-af5c-4684-817a-c3545072195e":["profile"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"4cfc90e4-79bd-48c4-aed9-0cbff47f505f","uiTypeLabel":"Reference"}},{"name":"flow_variable.done","label":"Flow Variables➛done","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"usedInstances":{"4dac4c9c-bec6-4223-bfd5-5c0d14e725b2":["condition"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"83d95e42-5c39-4228-acfa-6c011abf49b8"}}]</label_cache>
+        <master>true</master>
+        <name>Verify GSTIN</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c2f5c60a933b8f10e2987af08bba10f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:55</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=c2f5c60a933b8f10e2987af08bba10f2"/>
+    <sys_variable_value action="delete_multiple" query="document_key=c2f5c60a933b8f10e2987af08bba10f2"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_c2f5c60a933b8f10e2987af08bba10f2^id=c2f5c60a933b8f10e2987af08bba10f2"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=c2f5c60a933b8f10e2987af08bba10f2"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=c2f5c60a933b8f10e2987af08bba10f2^sys_idNOT IN82f5c60a933b8f10e2987af08bba10f4"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>c2f5c60a933b8f10e2987af08bba10f2</id>
+        <name>Verify GSTIN</name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:55</sys_created_on>
+        <sys_id>82f5c60a933b8f10e2987af08bba10f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:55</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=82f5c60a933b8f10e2987af08bba10f4"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=c2f5c60a933b8f10e2987af08bba10f2^sys_idNOT IN46f50a0a933b8f10e2987af08bba1003,d2f50a0a933b8f10e2987af08bba101b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=4cfc90e4-79bd-48c4-aed9-0cbff47f505f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_2078844_gstin_0_gst_compliance_profile</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>profile</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>profile</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</model>
+        <model_id>c2f5c60a933b8f10e2987af08bba10f2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_2078844_gstin_0_gst_compliance_profile">x_2078844_gstin_0_gst_compliance_profile</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:56</sys_created_on>
+        <sys_id>46f50a0a933b8f10e2987af08bba1003</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=46f50a0a933b8f10e2987af08bba1003"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=176aa61b-ad15-436f-9da9-24445cf7eefd</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>verify_now</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>trigger</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>trigger</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</model>
+        <model_id>c2f5c60a933b8f10e2987af08bba10f2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:56</sys_created_on>
+        <sys_id>d2f50a0a933b8f10e2987af08bba101b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d2f50a0a933b8f10e2987af08bba101b"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=c2f5c60a933b8f10e2987af08bba10f2^sys_idNOT IN52f50a0a933b8f10e2987af08bba1049,56f50a0a933b8f10e2987af08bba103c"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=fa48be8d-fdbb-425b-bfe6-e5509c2b64f2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>reason</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>reason</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</model>
+        <model_id>c2f5c60a933b8f10e2987af08bba10f2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:56</sys_created_on>
+        <sys_id>52f50a0a933b8f10e2987af08bba1049</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=52f50a0a933b8f10e2987af08bba1049"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=ca920092-3c4b-401a-ad51-b2d4a8bf9fd0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>result</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</model>
+        <model_id>c2f5c60a933b8f10e2987af08bba10f2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:56</sys_created_on>
+        <sys_id>56f50a0a933b8f10e2987af08bba103c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=56f50a0a933b8f10e2987af08bba103c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c2f5c60a933b8f10e2987af08bba10f2"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=c2f5c60a933b8f10e2987af08bba10f2"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=c2f5c60a933b8f10e2987af08bba10f2^sys_idNOT INa2f50a0a933b8f10e2987af08bba10de"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="GST Verify Attempt">118bf58a93b78f10e2987af08bba10a0</action_type>
+        <action_type_parent display_value="GST Verify Attempt">2356318a93778f10e2987af08bba10dc</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>118bf58a93b78f10e2987af08bba10a0</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>4dac4c9c-bec6-4223-bfd5-5c0d14e725b2</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>a2f50a0a933b8f10e2987af08bba10de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <ui_id>d9c041c0-af5c-4684-817a-c3545072195e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+WVX0/bMBTFv8rk56RK04S6fUMgJqRtTCvjBaHo+l9ryXFC4hS6iu8+u3GTlgICqeNlT1WOr+1zj+9PvV0jydAUMYaJSDFMRmSMxTDi8QSPQUSYEBhGkKIAaci5rSyrQkjFrbAE1Thlva4bIlTxMPBrT092lcm6VLC68UVWoQupWMU1mt7eBaiEyh5oeIWm62dL73WkgHBlS392lg48mlXphIoLbo+nW+mb3/lrRy8q5swMA8QfDdeMWxcCVM0DlINmYIpq1SkVB3alVS8spDZtmzk81vKPvXUUBzsXT9FjFkdjjJMkm9dG6ixyvxkt8lJJsCVZb7vblvkY7favs+svZ13xl75pcQ4GZqZqqGmqLutCUl63eTIuoFHmbFdrC65KIwvdbjFA1Adt0kI1uf7Rho66i3bevKltC7x0cbp8fFhitigeuuwvpN4k7xdVQUHtlHKo6OJCcuWmQjc5sbUBAmMqSRrj+lmjRl4fPnQrvvTUXPHc+slyKEup566jpdx4sC3lg7myHwM30dZ7Led6ANTlNLBDAIMLq59v5BuopAvtuz1mY6qRv7W8b/ilsxpRjvEwSsMJ4TRM0giHwACH+CSOKSUJg4ShpwDVq/pMQV33MdomsvvGhdCG6uPL2pdyW2glS3NqTS25T+op8CRP3uSG0J4SG+B8vvF9SLJfe4nkl4s+Bvc7TG7hvu5cHtj2cNdW0fNnZM+2osc6PhrWOIqifbBfAfb4aH4Ocq+g1cW8z1UX9KdAdcLsyEAswlgICJN4LEIMCQ9ZyoBMqBDjMf8XUKVvzStN+um04fG8NHtQbZpe+r4GvuIof5Lv8LXl6LQzduDUc2RHnfdgbd/3slM9SaOjkZT8lxz1Me+D1Af9KSQlNCIkhjhMMR6HCaFJOIkpCU8IGyYTNhqlo+ERSbr7CzITwh9qCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a2f50a0a933b8f10e2987af08bba10de"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=c2f5c60a933b8f10e2987af08bba10f2"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=c2f5c60a933b8f10e2987af08bba10f2^sys_idNOT IN22f50a0a933b8f10e2987af08bba10d2,2ef50a0a933b8f10e2987af08bba10db,62f50a0a933b8f10e2987af08bba10d7,66f50a0a933b8f10e2987af08bba10d8,6af50a0a933b8f10e2987af08bba10d9,a2f50a0a933b8f10e2987af08bba10d0,e2f50a0a933b8f10e2987af08bba10d5,eef50a0a933b8f10e2987af08bba10d3"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b5744206933b8f10e2987af08bba10d9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Do the following until">eaeb040687210300e6c2c88fc0e3ec89</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>22f50a0a933b8f10e2987af08bba10d2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <ui_id>4dac4c9c-bec6-4223-bfd5-5c0d14e725b2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K0PPxjj20pS8lZTCoFthLX3ZirmR5ERMljx9JM2M//uubNkJ/WAt2+P8JB3p3nvO8bFbor1rvLN3+sJasVFk+e0hIUIFDNctUVBzsiRUKyac0KrsgYTsQPpwgEsmbCPhcH9E6FZIZnjs1oDBGscNWbZPjgTDgjWDnK6zj4siK2ZFlp3NcpovigqfM1jMM2woYc0lXl2NND5c90jyKj93aAJunRFqE/fXscvtCGrDAqtZliWEPzquGEdCFUjLE1KDYuC0OUyI4cBulDwCW6HcoLiGRyt+4cR8Pg8XK44aabRj2pbRqgGuLsEBcvHUeTM5pwXldnCH8Qq8dKtTbLhw0wStQ4mDtRyrtfS1+jJYQqYGJ2/GWyTBm6A0UI86qtut3n8dWV4J1dsSD6WmIKcdODRv7V3g0xIueY2NyhqaBi0tG6N3oi9GLnW6kbhJK6n3ODTEKwUaiKdoLKRXiF/28D0YEVR8xjZY3CXEHuxKgrVHLWhi+dMHJoOyqKEcbAgl1IjGXeCAHY90u+R5gE+y27Y9tV2cnjKteNd991lWMHwt/Hm231Dxvuyzxaw4r17L/jl9KfsvpP6dgc//FPig5Y15z0Kv/4H/q8BjGGw55Ddq64f/ww/hIaR+mDl5TYVFancB+zT+8MPBAdMl6Cm01+ZHEHXEut80ckpYOgYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b9744206933b8f10e2987af08bba10ed</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>10</order>
+        <outputs_assigned>result,reason</outputs_assigned>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>2ef50a0a933b8f10e2987af08bba10db</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <ui_id>ac890143-bf2a-4f2b-baa7-004ce8a33630</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8F54tQ5btRPYtSBAgQNoAjZtLUQhLcmkToSiFpOy4hv+9S0t+IAHyQHsqevOOltyZ4Q68YVUT6ib4WXXhvZ5bNv2xYVqyKRtwIZVMs8lQnedqkGI2yc9BpTnnMEgzyXrMQonU6dA3JlC9BNNEYLNRploVS3AauMF+27DdUovUvjawfni/Uyy0kQ4jo589VoOjYQEdmxI/Sz8smFttH+mSV80f5W+AozkV8FJQWNex9sFpO+/q2+7Q/R6snIy0Bj2GzwGtRJquwHjssRKshFC59QFxCPLOmiOwIDGthhKevf5F8/I0TWOnQlIksP16KIvOwhZWVxCAqDQiNA73ZlRaoG+9kKiAxFyeYm3DXR10ZdsjIbrfna5MU9qvrRPscMH+xQhpPJHAOkqN3Dsh6n5Rrb7tWV5ru3Ol+2gqAeZQQSDveBMinw1r9OyFzS3yymg0WNLEooS6JqSoXbXUuylEuuzPDRX93T5JjLvcBxEV9ukJoH9N+NUOfuiW7QtdQ4fjuO9WPzV4E9dGwCRL00mWDMWIJ6N0AAnI8SDhmRxBztWEdopte8yv/aUB749G0QsVT02U2drWGVS0Hscjwuk6XBCpJXZebHv7tA3f2tY8PV1O8HTlW2mLDR9L26Hzj9P2Pv9j2joBLwV9Jm3Z/7T9C2lTMMo55jJRklPasjFPuMKzBMfjdCIyfjZS2V9MW9xWG//u2pfZB+HweEJ7kjCL2M1Jn1zTqmpxCq0q9xjFH7Htbwa2lshMBwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f1744206933b8f10e2987af08bba10e3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</flow>
+        <flow_variables_assigned>done</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id>1bfceeff-2f51-4a1f-8b92-aa45eba8bd48</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>62f50a0a933b8f10e2987af08bba10d7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <ui_id>b1d18142-047d-40ad-ad1e-16e42a5c0c2c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW8aMRD9Lz4DZXdJw3KLgpAitY3U0FyqCM3aY7DqtTf+gFDEf++YXT4S9dBDj9x23sx43ntja3fMxtDE4Of2znu1NGzy86XHlEkYfe+YEmzCuChRZjwvC3k7ltkQ83J8C3I4rirIhkXJesxAjVQprEGK1qBjCjP6Fso3GrbPFxBfKS0cdtMacNQc0LHJ7kPqX6drqFCfx78nE7ZNiiprNYLpgC9dx9xF/DQD7VOldSKxyHsM3wIagTReplyP1WAEBOu2J8QhiEejz8BKmUAnslT85tVvGlrkqU4iCeLY5k7hojOmheUUAjwFF3mIrivlK6s4+tYKgRKiDveXWFvw2ARlyTBWJG1Q6WO71bE231ov2OmE4yJkJ7qDp+/XNKRM9EQSm2REUtbJlE8ru/l+VDFT5uBZl9SWgz5FEIJTVQyJ745FNf+4iRb66y5QY01jFzU0jTLLRePsWh1GkbB6sNQUDKS2G6KYbu4AeLJhQFuCwYzw6QF+BqeSJV/pGGpOI38Y9RrxIV2tcSHKGxzl/RtelP1Rno/7wCX0P/NhlkElR2U1Zvse81t/r8H7s5m0xsVrTFpbazuXFodFHFq4U024I1Jr7AzZv6SX0fK5vq7r67q+rv/9ugRy5YnnPJF6OP7FUmJLt1bxS2hj3a+k8Izt/wCESdxnDwcAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">31744206933b8f10e2987af08bba10e6</block>
+        <comment/>
+        <connected_to>1bfceeff-2f51-4a1f-8b92-aa45eba8bd48</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>4dac4c9c-bec6-4223-bfd5-5c0d14e725b2</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>66f50a0a933b8f10e2987af08bba10d8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <ui_id>eb03f8a1-f4cd-407c-9ed9-3d054c6a397c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7d744206933b8f10e2987af08bba10ea</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>eb03f8a1-f4cd-407c-9ed9-3d054c6a397c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>6af50a0a933b8f10e2987af08bba10d9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <ui_id>0bb5f99d-f95f-4d40-b71d-dbb3e6dd91fe</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1ZXW/bOgz9K4afs1zLTpwmb0O7AgP2cdEGfRkGQ5bpRJhie7LcLrfof7+ULX8kcbJmS4cMKFCgNalQh+Q5tJQ+2mmhskLl8/RtnvNFYs++fB3YPNE2/PvRTugK7JkdFZIqniaBWmdgD+x7Kgpthx+Z4IyroF6AvojnmaDrO7PknVlidZawJReRBLNdRiXuokDas8ctF48wwmg68cYXZDTxHI94jhP6BHx/NPHD2KeTizEGFDQEgUuvzB7WvMK5B375a4Z7pZzVzx9MiMvamMpIQyKOM8A8FSQRIJqYihwG9oomEVWpXDcWCTT6nIjWsOSJwni2Xvwj5//hjiNHr4sB82NQ+ZrHwNStMsdXVNFbJQumCmmWVnCrvtQJ91X3UHNMUs7ToI1xAwLd99AXQxpfTwzSjfEvSAaJooveKFnj7YnjPmGjI4hpIdTl6VIkJ0jRPVGKnk6xat/nrHTNbE/zjoaibm4qilXyqeKr3RTk7pDQqiVXP9dbkSMqyDSFNScNQePbZfpwU/PvmiclVuMUKaOieaJKSR4WSrfm0QYBKwwUrGiW8WQRZDK95+WHMY3VcCHwYRiL9AE31VNlSJkGMkTF0OE12q9K8x2VXBfgI4bBDz8N7HydXwqa520ZUB7B90IjqYpicgjKEpYfYZJn6i3THTRwddOM8DtdUXwFMihHW4BAQD93+rc7uI6eU2FMIp/4JJx4votzyhsxn4E/BSCETl2nM6c6XCpxWSUuS+OyDLBnZ2CGWVn10h50HPVUw3EC/8wr+wsMtjLWKSZb3yjY1c5R0vlb+I8syoOKzia3cvMX0UVFpZZbpxXCheN5njNlY2/SCCGKAOJ4EhIXSK8QWsr3gDMcR+LBoixVl9vvG+srs1+ZXZKn5wVNphPnjUPwx3KcmUNmjrNLdWJ95AkW42jKQ0xGY7bvjBpCzxl1m/AdzJsjfdP+YTdMfVo5w5PqK+v/IOt3TrJBikB08zs6oLEqwW0xvzYfR/uI0RFxxnto7/od2s/Lc47cPohbHYjPT+aYC5x3hrJobxV13bfb03dRCyFOZfdd3RiaO8/hq9RPNiNHbeb+9qWmoWLvRab2bokdS3qOWq8RsnVw6GLZWWY43BLx+MGw+b3GL0+Jl7kOkdgdR3tnw8Q7MBt2r0HPgP6r96DRGc6HP/La/E0l9b/dBq8Kw7IsISrEifUUh+MxHjL36Ml3N4+YWHlLLcGKU4El1U8dVPvQmoK1DN4Uz03HbsQzPqF4PHdTPGyVdMH1Cem2dZ+BoI4/h8a3QCVbXnMQusVlX/62b9u+apZXsZtKM54jhLm2va//maAda8yQs67pIZXfNPjW9vQ/MmDgXJYYAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3d744206933b8f10e2987af08bba10d5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</flow>
+        <flow_variables_assigned>attempt,done</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>a2f50a0a933b8f10e2987af08bba10d0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <ui_id>3021e30f-bb9b-44e4-add5-ad1c53461437</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Xy27bMBD8F54tVw87lnILYhgI0DZA4+ZSBMaKWtpEKVIhqSSukX8vadGvGAgSIE0vvonDJXd2loOFVkS1tmmtmaoLY/hckvNfdz3Cpcfc94rwipyTvCqQJTQtMjbKWRJjWuQjYHFelpDEWUZ6REKNLhKsxbqxDngA0Xokcd8VN42A5e0eRBdcVBpDwga0O29Rk/PVi623EhBQojhgcETJLhsPcGlx7lJ1wNdw7mqLKl15IkmP4JNFWaFjwEAY7JEaZAVW6eUW0QjVtRQ7YOGud9cRH/xk+B+XcRD7OIauJord3nY5C9p0MBuDhRurW2pbHULpQnGKplOjQgatsJf7WBdw3ViuZHfEQik2p5Voa/m9k4JsL9i0wiGtcSSw8YV65qEMdrNQjz82LCdcrjUJm0JRENuVE1jzsrWez4q0fPpS5g46FhoF1i7nrIam4XI+a7R64Os8jnbdnwu36DOhHh0//zj7QH2NfdcC6E8cPl7Dt6C5L/ibuybk+yn5fYtX66eT0xRiNopYxtJoAEUeQTzKo4olBT0bDSE5G5LnHjFLcynAmJ1Urkez+9YX2gkXJJp1KvsjVPPGXjhSDxjUeO4Fy9DXX2yxe5+Vkrjnl/jYL/G7/fKG7Bu/hPSHZIJTSqUEgnzhlKlu8cvEV7szS/phZsnSzzRL9i63sFB0gMfHbfpXZtp14tBMB734HD9lVTHEQRoNaVZEgzR1fqIMojMaJwmUbFCU+Qf66c47o+NzGkingXQaSKeBdBpIp4H0XwdShZQbx3PqSV1t/pX8xtK9Wk73oUelf/sKd9jzX6c03Bp1DQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3d744206933b8f10e2987af08bba10e0</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>4dac4c9c-bec6-4223-bfd5-5c0d14e725b2</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>e2f50a0a933b8f10e2987af08bba10d5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <ui_id>1bfceeff-2f51-4a1f-8b92-aa45eba8bd48</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9K5GfA3ISQoG3iqpSpW6V1qovWxVdbAesGTuzHShD/PddJ+FDLdOGuse94eP7cc6Jj9gSU/uq9u7JXDsn55pMvr7EROqA4e8t0bAUZEKY0Vx6aXTRADFZgarDxV0ZaRNZ4e0mki7SQnDB48h5U0V+ISJlTIXlXLpKweb5si62kIpb0bGqwOJuLyyZbN9cSY5DSwplMmYJy9JhllKajgbJbJjNkpRnICDDgQpmQmHpdC8num+Q+Lc6/aYKuPNW6nl3vu+mPO5BY3lgldCYiFcvNIohkxKUEzFZgubgjd0cECuAP2h1BBZSexxHQvGrkz9xYZrnobAUKJGJ9vJwLDo3W7i8AQ9IpWa+tl0pWxjJhGvN4aKEWvnpKdYWPFRBatviYab23UbVS/25dYQcBuw/HiK1QxKiCkoD9U5H+bgw6y97lrdSN650l8owUIcTePRuVvvAZ0uEEkscVCyhqtDRorJmJZtm5LLszxUe+qUya1waXmkfWCDeR2Ohf4v4TQM/g5VBxSccg80tzRk4yYrmReM4tEmQXUzcxk0VOHcUie4WP+pAsZXciStaf0ILs7Ly17h5JTodu/h9QE6ysd3yMaODhNEelDnrDYajQW+UXEGPZfkgp1dpMs5Fv4nBbvetpjTjzdz3gfnIqMtSNIa8zBOan0/RYHguRWfyc2F00j9EJ3y3v0wOpfR/dD4cHemK9sF32trH9O+S8xJi0u48eM2kQ2pPAbvb/wOFiw0+LslOobWx34OoI7b7BVXGn3HLBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f5744206933b8f10e2987af08bba10dd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</flow>
+        <flow_variables_assigned>result,reason,attempt,delay_seconds</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>4dac4c9c-bec6-4223-bfd5-5c0d14e725b2</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>eef50a0a933b8f10e2987af08bba10d3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <ui_id>cb77c6a3-e857-4631-b24a-141a06007dd6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2ZbU/bMBDHv0te11WcR4d3CISEtA1pMN5MqLr4AaylSYgToKv63Xdu0qaUgSiDCUH6Kr747P+d7yfn1LlTNHXZ1Oas2DdGX+bO3s+LkaNza8PnuaOFs+fwMJEqYV7iq5gp6kovYTEol6UpUDeKnJGTw1TizEqaJqtxfANZYw3zuUi4G1DuElAhJ0HEAsJoDIT7YRC6sUeTUI5bv8UCPYU2ZQaz8xcvwK90JirZxVJChdJqWTl7861Xz40tg1Rmm8FtB1vPSjs2daXzy278pXM6XRmLSlgRwciRd7XMhcTdFWRGjpwp5ALqopqtLZUEcZJnveFK5zWu5tjJd0b/xv2Y67p2ppIYEZft2/Vw0uWxNatDqAGlNLxuqm4qvyo0l6bNhZAKMJiDTVs74aSsdZG3LjWk2cq7yJpp/q3NhLNeYHVsaGkMipClDdVq7wJRp1fF7feVyiOdL7PSvcwKDtl6BDXmLm1qq2fuNPpsK82t5UGiZSanuONkCmWJlklZFTd6uQuKno4vMxyMVVbcojpb82PgNsIxHgGMj9B+uDSfQ6VtuF9xGXS22/3I9XUjj5dlE0exUiwmMlIRCYACARYrQkXEfe6GEtzAWYwcMzMHGRjTJwpPaHLd2DDbtHUJmrQ5ti680mW9j6JuZJeLxagj0RVYrZQ/Uq1evFmcYHDJF5Bo/f6JxPUCu5H4jNh6ErvgtoPdhcRwIPEjkEiFn/AoiEgCXkqCxKP4xBjxXfAlDcOUK/UGJLInq9X3++LE5Mlp+YJLMcfynHTefwNyZ8KeoXlFWC/6QRQdY4iBvFwexyZkx2trRxl9NcqCT8lYn+b7kPWJ/i+UMcY9cFVMlK88vO8SRsCNGRGKIn1xCDQK34Cy4Ok7QfT1KSQe/8RIXuTC7M7aPfdXge0Z0lewbWt/JKTdwPMH8D4CeCn+Eu4xLNwoIAF1KQGRckJVknh+EAPzXvN6u7DktHqGBnBoAN8lme/is3NoAIcGcCDxPZA4NIBDA/iBGXsn36FDAzg0gAN4n6IBFJJrgzrPrKjj1X+B9sUMC1PzTdNtUf2yEfa2xR+k9zHsVRwAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=c2f5c60a933b8f10e2987af08bba10f2"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=c2f5c60a933b8f10e2987af08bba10f2^sys_idNOT IN2ef50a0a933b8f10e2987af08bba10c5,52f50a0a933b8f10e2987af08bba1085,5af50a0a933b8f10e2987af08bba108c,5af50a0a933b8f10e2987af08bba1094,5ef50a0a933b8f10e2987af08bba10bf"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1d39c646-9a2b-4921-9a88-30a3e155bcff</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>reason</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>reason</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</model>
+        <model_id>c2f5c60a933b8f10e2987af08bba10f2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>2ef50a0a933b8f10e2987af08bba10c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=88c2a0f7-f3f2-4a98-a078-df19c675a165</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>attempt</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>attempt</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</model>
+        <model_id>c2f5c60a933b8f10e2987af08bba10f2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>52f50a0a933b8f10e2987af08bba1085</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=83d95e42-5c39-4228-acfa-6c011abf49b8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>false</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>done</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>done</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</model>
+        <model_id>c2f5c60a933b8f10e2987af08bba10f2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>5af50a0a933b8f10e2987af08bba108c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=bbbb9c28-4664-4101-adbc-1f992347a82f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>delay_seconds</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>delay_seconds</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</model>
+        <model_id>c2f5c60a933b8f10e2987af08bba10f2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>5af50a0a933b8f10e2987af08bba1094</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c767ff87-e6f6-4a1a-a87f-1d6c3c05ea04</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>result</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Verify GSTIN">c2f5c60a933b8f10e2987af08bba10f2</model>
+        <model_id>c2f5c60a933b8f10e2987af08bba10f2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:57</sys_created_on>
+        <sys_id>5ef50a0a933b8f10e2987af08bba10bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>profile</element>
+        <help/>
+        <hint/>
+        <label>profile</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:56</sys_created_on>
+        <sys_id>5ef50a0a933b8f10e2987af08bba1016</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>trigger</element>
+        <help/>
+        <hint/>
+        <label>trigger</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:56</sys_created_on>
+        <sys_id>def50a0a933b8f10e2987af08bba1034</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_c2f5c60a933b8f10e2987af08bba10f2"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>reason</element>
+        <help/>
+        <hint/>
+        <label>reason</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:56</sys_created_on>
+        <sys_id>16f50a0a933b8f10e2987af08bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>result</element>
+        <help/>
+        <hint/>
+        <label>result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_c2f5c60a933b8f10e2987af08bba10f2</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:56</sys_created_on>
+        <sys_id>daf50a0a933b8f10e2987af08bba1044</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_c2f5c60a933b8f10e2987af08bba10f2"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>5fdc358e93b78f10e2987af08bba106b</sys_id>
+        <latest_snapshot>c2f5c60a933b8f10e2987af08bba10f2</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch3-05-25-2026_06-12-2026_1106.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=5fdc358e93b78f10e2987af08bba106b"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=5fdc358e93b78f10e2987af08bba106b^sys_idNOT INf2f50a0a933b8f10e2987af08bba10ff"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_subflow_plan","id":"f2f50a0a933b8f10e2987af08bba10ff","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id display_value="Verify GSTIN">5fdc358e93b78f10e2987af08bba106b</plan_id>
+        <snapshot>b2c3cc4793fbc750e2987af08bba1013</snapshot>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-09 14:00:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f2f50a0a933b8f10e2987af08bba10ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-09 14:00:59</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>

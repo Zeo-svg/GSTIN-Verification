@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2078844_gstin_0.GSTProvider</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>GSTProvider</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var GSTProvider = Class.create();
+GSTProvider.prototype = {
+    initialize: function() {
+    },
+
+    lookup: function(gstin) {
+        var result = {
+            found: false,
+            status: null,
+            legalName: null,
+            tradeName: null,
+            stateCode: null,
+            providerRef: null,
+            raw: null,
+            httpStatus: null,
+            error: null
+        };
+
+        // Read the configured provider mode
+        var mode = gs.getProperty('x_2078844_gstin_0.gstin.provider.mode', 'mock')
+
+        // Live provider implementation will be added in GST-E2-04
+        if (mode !== 'mock') {
+            result.error = 'Live provider is not implemented yet';
+            result.httpStatus = 501;
+            return result;
+        }
+
+        if (!gstin) {
+            result.error = 'GSTIN is required';
+            return result;
+        }
+
+        // Find GSTIN in the GST Mock Registry
+        var registry = new GlideRecord(
+            'x_2078844_gstin_0_gst_mock_registry'
+        );
+
+        registry.addQuery('gstin', String(gstin).trim().toUpperCase());
+        registry.setLimit(1);
+        registry.query();
+
+        if (!registry.next()) {
+            result.found = false;
+            result.httpStatus = 404;
+            result.error = 'GSTIN not found in mock registry';
+            result.raw = {
+                gstin: String(gstin),
+                message: 'No matching registry record'
+            };
+            return result;
+        }
+
+        var simulate = registry.getValue('simulate');
+
+        // Simulate provider failures for retry testing
+        if (simulate === 'timeout') {
+            result.httpStatus = 0;
+            result.error = 'Simulated provider timeout';
+            result.raw = {
+                simulation: 'timeout'
+            };
+            return result;
+        }
+
+        if (simulate === 'http_429') {
+            result.httpStatus = 429;
+            result.error = 'Simulated HTTP 429 - Too Many Requests';
+            result.raw = {
+                simulation: 'http_429'
+            };
+            return result;
+        }
+
+        if (simulate === 'http_500') {
+            result.httpStatus = 500;
+            result.error = 'Simulated HTTP 500 - Internal Server Error';
+            result.raw = {
+                simulation: 'http_500'
+            };
+            return result;
+        }
+
+        if (simulate === 'http_503') {
+            result.httpStatus = 503;
+            result.error = 'Simulated HTTP 503 - Service Unavailable';
+            result.raw = {
+                simulation: 'http_503'
+            };
+            return result;
+        }
+
+        result.found = true;
+        result.status = registry.getValue('status');
+        result.legalName = registry.getValue('legal_name');
+        result.tradeName = registry.getValue('trade_name');
+        result.stateCode = registry.getValue('state_code');
+        result.providerRef = 'MOCK-' +
+            registry.getValue('gstin');
+        result.httpStatus = 200;
+
+        result.raw = {
+            gstin: registry.getValue('gstin'),
+            status: registry.getValue('status'),
+            legalName: registry.getValue('legal_name'),
+            tradeName: registry.getValue('trade_name'),
+            stateCode: registry.getValue('state_code')
+        };
+
+        return result;
+    },
+
+    type: 'GSTProvider'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-09 06:16:48</sys_created_on>
+        <sys_id>bb7bdc0693b74f10e2987af08bba10d4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>GSTProvider</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_script_include_bb7bdc0693b74f10e2987af08bba10d4</sys_update_name>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-10 14:35:58</sys_updated_on>
+    </sys_script_include>
+</record_update>
