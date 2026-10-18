@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>create</operation>
+        <source_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-14 08:14:25</sys_created_on>
+        <sys_id>4396e26b933f8f50e2987af08bba1058</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_slm_task</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_scope_privilege_4396e26b933f8f50e2987af08bba1058</sys_update_name>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-14 08:14:25</sys_updated_on>
+        <target_name>sn_slm_task</target_name>
+        <target_scope display_value="Supplier Common Architecture">d03afd50c36d11103af7aaafc840dd50</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme">
+    <m2m_app_config_theme action="INSERT_OR_UPDATE">
+        <applicability/>
+        <order>0</order>
+        <sys_class_name>m2m_app_config_theme</sys_class_name>
+        <sys_created_by>rutul.jadhav</sys_created_by>
+        <sys_created_on>2026-10-13 06:02:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>70befcdb5a33cb502a80c88ea92e489d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>m2m_app_config_theme_70befcdb5a33cb502a80c88ea92e489d</sys_update_name>
+        <sys_updated_by>rutul.jadhav</sys_updated_by>
+        <sys_updated_on>2026-10-13 06:02:55</sys_updated_on>
+        <theme display_value="Base Agent Workspace theme">c012213bc39b10101d590cf06e40dd32</theme>
+        <ux_app_configuration display_value="GST Compliance Workspace App Config">74befcdb7033cb503ec923f0e01a2f9e</ux_app_configuration>
+    </m2m_app_config_theme>
+</record_update>

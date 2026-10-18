@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="DELETE">
+        <operation>read</operation>
+        <source_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-13 12:40:03</sys_created_on>
+        <sys_id>a4d95a5f93330f50e2987af08bba108b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sys_script</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_scope_privilege_a4d95a5f93330f50e2987af08bba108b</sys_update_name>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-13 12:40:03</sys_updated_on>
+        <target_name>sys_script</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</application>
+        <file_path/>
+        <instance_id>3eada58eebff9a108326ff72dad0cd14</instance_id>
+        <instance_name>dev297253</instance_name>
+        <name>sys_scope_privilege_a4d95a5f93330f50e2987af08bba108b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>read</operation><source_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>hitesh.gohad</sys_created_by><sys_created_on>2026-10-13 12:40:03</sys_created_on><sys_id>a4d95a5f93330f50e2987af08bba108b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sys_script</sys_name><sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package><sys_policy/><sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope><sys_update_name>sys_scope_privilege_a4d95a5f93330f50e2987af08bba108b</sys_update_name><sys_updated_by>hitesh.gohad</sys_updated_by><sys_updated_on>2026-10-13 12:40:03</sys_updated_on><target_name>sys_script</target_name><target_scope display_value="Global">global</target_scope><target_type>sys_db_object</target_type></sys_scope_privilege></record_update>]]></payload>
+        <payload_hash>-1943678089</payload_hash>
+        <record_name>sys_script</record_name>
+        <reverted_from/>
+        <source>fcc7c9db93b3cb50e2987af08bba1031</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-13 12:40:04</sys_created_on>
+        <sys_id>68d95a5f93330f50e2987af08bba10b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a13546f27c0000001</sys_recorded_at>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-13 12:40:04</sys_updated_on>
+        <type>Cross scope privilege</type>
+        <update_guid>24d95a5f76330f5021cb076105ad0cb3</update_guid>
+        <update_guid_history>24d95a5f76330f5021cb076105ad0cb3:-1943678089</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-15 08:53:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_scope_privilege">sys_scope_privilege</sys_db_object>
+        <sys_id>709cf9e35fee49f8a0c9ffbc40f236a4</sys_id>
+        <sys_metadata>a4d95a5f93330f50e2987af08bba108b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sys_script</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_scope_delete display_value="">98144267b5ce4cfaaa6e4c5c012ea504</sys_scope_delete>
+        <sys_update_name>sys_scope_privilege_a4d95a5f93330f50e2987af08bba108b</sys_update_name>
+        <sys_update_version display_value="sys_scope_privilege_a4d95a5f93330f50e2987af08bba108b">68d95a5f93330f50e2987af08bba10b4</sys_update_version>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:53:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

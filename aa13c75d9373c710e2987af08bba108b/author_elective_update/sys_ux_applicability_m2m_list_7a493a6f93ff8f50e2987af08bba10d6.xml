@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_list">
+    <sys_ux_applicability_m2m_list action="DELETE">
+        <active>true</active>
+        <applicability display_value="Audience for app gst-compliance-workspace">0d1fb45f9333cb50e2987af08bba10d8</applicability>
+        <list display_value="All">190a0b3a53b81010d4f9ddeeff7b12d9</list>
+        <order>0</order>
+        <sys_class_name>sys_ux_applicability_m2m_list</sys_class_name>
+        <sys_created_by>rutul.jadhav</sys_created_by>
+        <sys_created_on>2026-10-14 09:36:18</sys_created_on>
+        <sys_id>7a493a6f93ff8f50e2987af08bba10d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_ux_applicability_m2m_list_7a493a6f93ff8f50e2987af08bba10d6</sys_update_name>
+        <sys_updated_by>rutul.jadhav</sys_updated_by>
+        <sys_updated_on>2026-10-14 09:36:18</sys_updated_on>
+    </sys_ux_applicability_m2m_list>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</application>
+        <file_path/>
+        <instance_id>3eada58eebff9a108326ff72dad0cd14</instance_id>
+        <instance_name>dev297253</instance_name>
+        <name>sys_ux_applicability_m2m_list_7a493a6f93ff8f50e2987af08bba10d6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_list"><sys_ux_applicability_m2m_list action="INSERT_OR_UPDATE"><active>true</active><applicability display_value="Audience for app gst-compliance-workspace">0d1fb45f9333cb50e2987af08bba10d8</applicability><list display_value="All">190a0b3a53b81010d4f9ddeeff7b12d9</list><order>0</order><sys_class_name>sys_ux_applicability_m2m_list</sys_class_name><sys_created_by>rutul.jadhav</sys_created_by><sys_created_on>2026-10-14 09:36:18</sys_created_on><sys_id>7a493a6f93ff8f50e2987af08bba10d6</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package><sys_policy/><sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope><sys_update_name>sys_ux_applicability_m2m_list_7a493a6f93ff8f50e2987af08bba10d6</sys_update_name><sys_updated_by>rutul.jadhav</sys_updated_by><sys_updated_on>2026-10-14 09:36:18</sys_updated_on></sys_ux_applicability_m2m_list></record_update>]]></payload>
+        <payload_hash>1545499386</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>f287c25f937fcb50e2987af08bba107c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rutul.jadhav</sys_created_by>
+        <sys_created_on>2026-10-14 09:36:18</sys_created_on>
+        <sys_id>ee59fa6f93ff8f50e2987af08bba1077</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a139c510a30000001</sys_recorded_at>
+        <sys_updated_by>rutul.jadhav</sys_updated_by>
+        <sys_updated_on>2026-10-14 09:36:18</sys_updated_on>
+        <type>List Applicability</type>
+        <update_guid>ae59fa6f6cff8f50c20a1e00921af376</update_guid>
+        <update_guid_history>ae59fa6f6cff8f50c20a1e00921af376:1545499386</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rutul.jadhav</sys_created_by>
+        <sys_created_on>2026-10-14 09:46:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_applicability_m2m_list">sys_ux_applicability_m2m_list</sys_db_object>
+        <sys_id>02685a06cceb4cff852dd381d7d3cc79</sys_id>
+        <sys_metadata>7a493a6f93ff8f50e2987af08bba10d6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_scope_delete display_value="">98144267b5ce4cfaaa6e4c5c012ea504</sys_scope_delete>
+        <sys_update_name>sys_ux_applicability_m2m_list_7a493a6f93ff8f50e2987af08bba10d6</sys_update_name>
+        <sys_update_version display_value="sys_ux_applicability_m2m_list_7a493a6f93ff8f50e2987af08bba10d6">ee59fa6f93ff8f50e2987af08bba1077</sys_update_version>
+        <sys_updated_by>rutul.jadhav</sys_updated_by>
+        <sys_updated_on>2026-10-14 09:46:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

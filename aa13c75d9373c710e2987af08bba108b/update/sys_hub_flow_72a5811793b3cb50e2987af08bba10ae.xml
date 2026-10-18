@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=179561000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow for submitting the gst related details by contact supplier</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>gst__apply_submitted_gst_details</internal_name>
+        <label_cache>[{"name":"2a575fab-90fe-405f-a0cc-e95dbe65b4bc.Record","label":"13 - Look Up Record➛Supplier Task Record","reference":"sn_slm_task","reference_display":"Supplier Task","type":"reference","base_type":"reference","usedInstances":{"7ee9b7c2-f840-4737-9214-13f3aaf8d92c":["record"],"9e55df9c-290b-43f1-9c93-96580e2544d2":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"84ed4963-e2ff-4173-b438-ce772c13f70b.Table","label":"2 - Look Up Record➛Supplier Case Table","reference":"sn_slm_case","reference_display":"Supplier Case","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"84ed4963-e2ff-4173-b438-ce772c13f70b.Record","label":"2 - Look Up Record➛Supplier Case Record","reference":"sn_slm_case","reference_display":"Supplier Case","type":"reference","base_type":"reference","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["onboarding_case"],"94cfa590-39b4-4acf-84aa-6166a520436e":["condition"],"75fb1098-7588-450d-9000-061a019d45f4":["onboarding_case"],"2a575fab-90fe-405f-a0cc-e95dbe65b4bc":[null],"7ee9b7c2-f840-4737-9214-13f3aaf8d92c":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Supplier Task Record","reference":"sn_slm_task","reference_display":"Supplier Task","type":"reference","base_type":"reference","usedInstances":{"468aa3ef-1b8b-42e7-b92a-201761a0511f":["requested_item"],"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["onboarding_case"],"19ce7f4e-faa9-4677-9fd5-38b3bef3f466":["record"],"9a4da9e7-3b3d-4c99-86f2-cd2ced87a9f5":["record"]},"attributes":{}},{"name":"468aa3ef-1b8b-42e7-b92a-201761a0511f.supplier","label":"1 - Get Catalog Variables➛supplier","reference":"sn_fin_supplier","reference_display":"Supplier","type":"reference","base_type":"reference","usedInstances":{"b6980aa9-d02c-414d-9a44-c0a11c6559c6":[null],"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["supplier"],"84ed4963-e2ff-4173-b438-ce772c13f70b":[null]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"b6980aa9-d02c-414d-9a44-c0a11c6559c6.Record","label":"3 - Look Up Record➛GST Compliance Profile Record","reference":"x_2078844_gstin_0_gst_compliance_profile","reference_display":"GST Compliance Profile","type":"reference","base_type":"reference","usedInstances":{"a5d15bd4-f5df-413b-bd6c-5dfba13a8f8d":["condition"],"3562cae1-5362-47e6-8ba1-b8fe119abc60":["record"],"e7f121af-be85-414f-a293-af8f62fd17f1":["target_record"],"75fb1098-7588-450d-9000-061a019d45f4":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"468aa3ef-1b8b-42e7-b92a-201761a0511f.gst_gstin","label":"1 - Get Catalog Variables➛gst_gstin","reference":"","reference_display":"gst_gstin","type":"string","base_type":"string","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["gstin"],"3562cae1-5362-47e6-8ba1-b8fe119abc60":["gstin"]},"attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"468aa3ef-1b8b-42e7-b92a-201761a0511f.gst_legal_name","label":"1 - Get Catalog Variables➛gst_legal_name","reference":"","reference_display":"gst_legal_name","type":"string","base_type":"string","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["legal_name_submitted"],"3562cae1-5362-47e6-8ba1-b8fe119abc60":["legal_name_submitted"]},"attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"468aa3ef-1b8b-42e7-b92a-201761a0511f.gst_trade_name","label":"1 - Get Catalog Variables➛gst_trade_name","reference":"","reference_display":"gst_trade_name","type":"string","base_type":"string","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["trade_name_submitted"],"3562cae1-5362-47e6-8ba1-b8fe119abc60":["trade_name_submitted"]},"attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"Created_1.current.supplier.parent","label":"Trigger - Record Created➛Supplier Task Record➛Supplier➛Parent entity","reference":"sn_fin_organization","reference_display":"Organization","type":"reference","base_type":"reference","parent_table_name":"sn_fin_supplier","column_name":"parent","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["onboarding_case"]}},{"name":"Created_1.current.service_request","label":"Trigger - Record Created➛Supplier Task Record➛Related case","reference":"sn_spend_sdc_service_request","reference_display":"Finance Case","type":"reference","base_type":"reference","parent_table_name":"sn_slm_task","column_name":"service_request","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["onboarding_case"]}},{"name":"468aa3ef-1b8b-42e7-b92a-201761a0511f.gst_certificate","label":"1 - Get Catalog Variables➛gst_certificate","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","usedInstances":{"71077c5f-45fb-4475-beee-62e44e0630a9":["attachment_record"],"e7f121af-be85-414f-a293-af8f62fd17f1":["attachment_record"]},"attributes":{"catalogType":"33","catalogTypeLabel":"Attachment"}},{"name":"ffb410c0-17e7-4fcc-ab93-8856af1d97d4.table_name","label":"5 - Create Record➛GST Compliance Profile Table","reference":"x_2078844_gstin_0_gst_compliance_profile","reference_display":"GST Compliance Profile","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ffb410c0-17e7-4fcc-ab93-8856af1d97d4.record","label":"5 - Create Record➛GST Compliance Profile Record","reference":"x_2078844_gstin_0_gst_compliance_profile","reference_display":"GST Compliance Profile","type":"reference","base_type":"reference","usedInstances":{"71077c5f-45fb-4475-beee-62e44e0630a9":["target_record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>935e099f93f3cb50e2987af08bba1034</master_snapshot>
+        <master_snapshot_digest/>
+        <name>GST – Apply submitted GST details</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>9aa2bfb393778390e2987af08bba1082</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:32:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>72a5811793b3cb50e2987af08bba10ae</sys_id>
+        <sys_mod_count>76</sys_mod_count>
+        <sys_name>GST – Apply submitted GST details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_hub_flow_72a5811793b3cb50e2987af08bba10ae</sys_update_name>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:10</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>1ba233f393778390e2987af08bba1025</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=72a5811793b3cb50e2987af08bba10ae"/>
+    <sys_variable_value action="delete_multiple" query="document_key=72a5811793b3cb50e2987af08bba10ae"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="sn_slm_task">correlation_display=gst_details<item endquery="false" field="correlation_display" goto="false" newquery="false" operator="=" or="false" value="gst_details"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 08:25:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9aa2bfb393778390e2987af08bba1082</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:10</sys_updated_on>
+        <table>sn_slm_task</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>72a5811793b3cb50e2987af08bba10ae</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 08:25:10</sys_created_on>
+        <sys_id>96a2bfb393778390e2987af08bba1083</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:10</sys_updated_on>
+        <trigger display_value="">9aa2bfb393778390e2987af08bba1082</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=72a5811793b3cb50e2987af08bba10ae^sys_idNOT IN96a2bfb393778390e2987af08bba1083"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=72a5811793b3cb50e2987af08bba10ae"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=72a5811793b3cb50e2987af08bba10ae^sys_idNOT IN7aa5811793b3cb50e2987af08bba10af"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>72a5811793b3cb50e2987af08bba10ae</id>
+        <name>GST – Apply submitted GST details</name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:32:23</sys_created_on>
+        <sys_id>7aa5811793b3cb50e2987af08bba10af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 06:32:23</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=7aa5811793b3cb50e2987af08bba10af"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=72a5811793b3cb50e2987af08bba10ae^sys_idNOT IN36b5c55793b3cb50e2987af08bba10e9,e2b5c55793b3cb50e2987af08bba1081"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</model>
+        <model_id>72a5811793b3cb50e2987af08bba10ae</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_72a5811793b3cb50e2987af08bba10ae</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:32:40</sys_created_on>
+        <sys_id>36b5c55793b3cb50e2987af08bba10e9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 07:10:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=36b5c55793b3cb50e2987af08bba10e9"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</model>
+        <model_id>72a5811793b3cb50e2987af08bba10ae</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_72a5811793b3cb50e2987af08bba10ae</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:32:39</sys_created_on>
+        <sys_id>e2b5c55793b3cb50e2987af08bba1081</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 07:10:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e2b5c55793b3cb50e2987af08bba1081"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=72a5811793b3cb50e2987af08bba10ae"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=72a5811793b3cb50e2987af08bba10ae"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=72a5811793b3cb50e2987af08bba10ae^sys_idNOT INd2b5455793b3cb50e2987af08bba1054"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:32:38</sys_created_on>
+        <sys_id>d2b5455793b3cb50e2987af08bba1054</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 07:25:46</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227bOBD9FUFPu4AL6GLHcd66SYoN0G0B2919yAYCJZI2UZpyRUqpt8i/71AXW9bFsSOldV4CiGSGZw7PnCF9/8PkyCfcvDLnyOfEHJhMKBIJxOebNYFhpYc9gVZ6boUERiqMNuaVimIyMGkUruZkteZIwWKKuITBMMIkMq/sgZkgHpPZRt5hiAT/n4bJY5r5NHxL4Um+8hSSX2EUMwnxNn/nk7N4veaMRMY8mw6WjOOICPPq/mFgrlEEMZXe70dliulNAxqgiUOswLVdx7Es53Jo+xeubzvYRcSyIGCVgApI1cDDLkPyXRGBCd4mX6MoIgh/FnyzXbEEhjM6Vui7ZP9B9EtLr6MEsAckm9t+ejkf2XCwDFlAPq8VC0U2kuHMJkMer8SnDL9mklAUc1UwCSOxhHhkrSFrEDkiOluGj9Niww9MpNnlkzwMEN9+IaUi5seKSE04ZRyo9zJuZBhHKfrp7fXn6Y33z/v59Z+3U296O5tP767ntzfmU5qX9y3WETOEORYvS+dpe/wfGOH6AEW88gHNwJRBxNbqfaBYUkjtabCT73UoMEtZqUk4KKbkvoSL7A9p2LJaVRyUdiyUHIRRRCAQjBbn9m9sWS5eSAXEK8S4PFnDFxcIYYJaNOzTkobLLDTAVA2ElDM9pOZ85Bg5Dy3rFwk6d6WX6nkVYsJvduFMmFwsQOFMrGOl2XpEQklPhR7C2CvxqJcCpucEnuVWV/nz+o5iASG87QnVVZ4SuWX0I5OQwD3U6Ix8i7NjeAeGRQvy0h1gOf2Y7zCNhRHCycIfI4hBx0IZhQnSuxVa5JRDQE4CVVIJ/SLLX38xKZlYlJJow5ByVoOw3R3EZxQJZ1BkRywPfRpA/UiSCreVVnZy5ds2pT6hjjXWdW9brk9ta2yNEMWuZQVOqfLrYFpRqopgXsUBTqt/mUqVH6HEKsU5eKtcK0fJKNnXYEGClkhuM9f9QLN7guZoaBW7dE/yy60ss+GbfXUeSq3newPCCYL/wMfapl5whD9SHj6CVXf3Rh8FXxdRGAtcdSe9hcGEsVth/JbT+fvr+SQNI3IYz/6Kc3LI3aEUskZi04M3utT2J2RILLBEF9zQH00mfoAcSscXY+LYFW/cwWjE9iY88RnxJU3qbfPHRuEkTXo7wRk7AKy55MkAu/tjLsxGd8zm3oYPPi6J8ABq5HHtdDU7XHCGSTHXb7XXtk529d214unlJBjZ43EwhjcQVDwdEh/ZQ2eEJuML93JUqfgalEMwVQMzP+VlJDcyBdLiBl+yqfN69r+mbCVRSrejzj1cwKU3DYGyPUuNU5+SkXpMGBmfQvHubrfOmBHoh+lr+ZWa+TGg9LEbPxWVH6pl7XIBSP6A8T0k+srawtnZvc4qikr2c+38OiPDy9GEus1+RCdNfrQD0w7z7O8iR9ZP0lqJTZeSY/WfNJZR6y3iBRKuyKR8vThw/+mLFLt3UpzXI8XtfOcqarH1SfoSsG+o36WXkB6bnoZAvJCWvfwmNGDCgD0NRo38N02CDX9jqCUBhjnctWF/Q4PpauIHekwd2VbfvxRXdrevtT4YNvKr2fl1tYpu+n1bEzxGo5HbctOeVN/WTYCewXv2Pe7kmkmaSvBgozstbjVmY6srSXZfEUc2sV6zbu5k3bJu7GXPZd29Sx36ZaABxZn2n4f/Ab+OuR3vHwAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=72a5811793b3cb50e2987af08bba10ae^sys_idNOT IN13019d9f93f3cb50e2987af08bba105c,22e90d5393f3cb50e2987af08bba10df,2d66c5d793b3cb50e2987af08bba1016,42603b3f93378390e2987af08bba1003,52f6815b93b3cb50e2987af08bba10fe,7db1733393778390e2987af08bba101e,81f5019793b3cb50e2987af08bba105f,884f49df93f3cb50e2987af08bba10fd,cbc5e73f93b38390e2987af08bba1032,d1d45ddf9337cb50e2987af08bba10a7,e1b3637793b38390e2987af08bba104d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Copy Attachment">30fe6cdb0f973300dfd3694e68767e5a</action_type>
+        <action_type_parent display_value="Copy Attachment">95849c2a9353130079b5925cf67ffb91</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>30fe6cdb0f973300dfd3694e68767e5a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>564ade7a-5614-4179-971d-09634b0d4166</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:22:07</sys_created_on>
+        <sys_id>13019d9f93f3cb50e2987af08bba105c</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:30:38</sys_updated_on>
+        <ui_id>e7f121af-be85-414f-a293-af8f62fd17f1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/81VyW7bMBD9FUNnyZAsWYtvQYwUBdqkiINegkAYkUObALWUopK4hv+91GJZttssgNMWOnE2znszT7zfGJwaM4MRhj6hic2iwHVtmzLq+pGHfhj4AU7BMI0MUtSRoBSQVYqZiiWSXFLtegRR1b7NxvNDABeZ5SRhYnkTDKwkmoA1sZ3Ad8CeOg4bL0sVE5SKM05A4XarS1BeFgLW37tK2kJWXFCJmTG7fzCNAqS+X6E0Zpsj11sBCEhQ6NBFXkmCo4seyOh2B+QFjGpd1C6JDPXNBDvTl67o7cCuE+o+HdPAZ4UZRd0gA1GiaaSQUVC5XBszJSttkAj0JhPrPmLFM9USkMJzyX/qS92JObh3ZpTrMt63aAyccUejDroYBrA5KFjoG4mqZM9vzgmWLYcUGVRCXQ5tbcBNoXietSkKErHLzkWVZtctX0ZfYDC/qtTtYFHjrxF18NhilT/1ZF3xrKGqc4qcgBiEIkiyuuIomglzgXEzILMekORJpepWNwYKbGaVQlHwbBkXMn/kTV3dZjpeCn0YM5E/6X5KvszGQGpMYz0JGF9p+7wxfwfJa4BfdRmdrBHwu9Oht8bTsW/Nei6XAspyz4pOjH9UNaaWo46NuCW0TiGSF+pC9/OIHfCt2WlS7/ILK+3b+31VIJf4Wz0mfhTaAJFF7QmxPMejVgSeZxEbHIf402lE/HG7/meR4Rt63snwrmn6RHvHWDrd0ZxUzZA5PVLevPOMPs/32pt8lPb+oLZ/oTFknkt86tmgv2Qa2DYJAhYlzA0DYOjuM+YnUz0SZ8vHO7T5lwV4OP1DCQ7n/34RtnS/okTmvbjVwXB763J7BT7HEzsIQ8+L9aPHs9iOm8cvTwvBoV4hTVX9YzuV3qfF3eiyjxt96+Pe+S6+3vpekG3vR1A6ATbH3f93qL8mbXTdOjr5ueeSX2j/t/I7xxN3KKN+3Q+4Ptz2A7Z5Gbdr2zXdVNX2j9Hj+V64h18VYwF/dwoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=13019d9f93f3cb50e2987af08bba105c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Copy Attachment">30fe6cdb0f973300dfd3694e68767e5a</action_type>
+        <action_type_parent display_value="Copy Attachment">95849c2a9353130079b5925cf67ffb91</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>30fe6cdb0f973300dfd3694e68767e5a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>a5d15bd4-f5df-413b-bd6c-5dfba13a8f8d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:50:56</sys_created_on>
+        <sys_id>22e90d5393f3cb50e2987af08bba10df</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:30:38</sys_updated_on>
+        <ui_id>71077c5f-45fb-4475-beee-62e44e0630a9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/82VbW/aMBDHvwry64ASEpLAu6qo06StnUq1N1UVXewzWHIe5jhtGeK7z3kgBNj6INFt4lXOd+e7/90P32+IYGRGOOXoUxbbfBq4rm0zzlx/6qEfBn6AEyAWSSFB4wlaA10lmOpIIc0UM0ePIMvqbLPx/BDART504jAeemMMhvF0DMOx7QS+A/bEcfhoWeiIotKCCwoat1uTgokil7D+3mYyFroSkilMyez+wSI5KHO/RkVmm6OjtzYgIUZpXBdZqSgOLrpGBre7Rl7oUa/z6kghR3Mzxdb0pU1627ObgKpOxyL4rDFlaArkIAu0SAIpA52pNZlpVRqDQmA3qVx3HiuR6kaABJ4L8dNc6o6t3r0zUqyLaF8i6R1GrYzG6aLvwOegYWFupLpUnb6ZoFg0GjLkUEp92bc1Dje5FlnahGiI5S46k2WSXjd6kS5Bb35lYcrBvOq/6qhtjy9W2VMn1pVIa6naQ5lRkD1XBEVXVwJlPWEhMaoHZFUDUiIudVXqhqDEelYJ5LlIl1GuskdR5zVlJqOlNB8jLrMnU08hlukIaNXTyEwCRlfGPq/N30GJqsGvJo0JNh2Iu9OhN8bTsW+tai6XEopir4oJjH6UVU+NRq0aUSNoFUKVyPWFqecR28a3Vsuk2eUXVtq39/uqQS3xtzxyHnuOTe2hExgUPU7pEOKpOwzDiQ/cYdOAeaMm7iwYvqHmHYZ3ddEn7B330nLHMlrWQxbsiLx5ezL4PN+zN/4o9v5A279gDLnnUp95NphfPAlsmwYBn8bcDQPg6O4j5idTPYKz0eMdbP5lAA+nf4hgf/7vh7CR+xUSuffiVgf97a3S7Ql8jsZ2EIaeF5lHT6SRHdWPX5bkUkC1Qkaq6o/tFL1Pi7vBZec3+Nb5vfNdfL30PZBN7UettADWn7v/3z5/ddjgujlo8XPPhV9o/7f4neOJO8SoW/cDrQ+3/UBtUUTN2rZF11mN/WN4PN8L9/ALchWD0ncKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=22e90d5393f3cb50e2987af08bba10df"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:35:35</sys_created_on>
+        <sys_id>2d66c5d793b3cb50e2987af08bba1016</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:30:38</sys_updated_on>
+        <ui_id>b6980aa9-d02c-414d-9a44-c0a11c6559c6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYUW/iOBD+K1GegUsgkNC3UytOK+1tT1tuX/ZWlhM7xTpjZ22nLUX89xvHSUBAC9FSqdU9Idsz9jcz3zd2+L72GfGvfDINpvl0Ok7iIBiNgmAyGWU4TNPRJEuDFEd+zxd4ScHS4JRTGD5gXtrxExoGcZJEEbrXhgkU2F+UyWXBGRYZRYWSOatcCNMFx6tvtecfd3PvurXz/mrtsgXjRFHhX33/0fMLrOBkQ5V/td5bOhc6xynlYDqvse+FYlZFO0TVmpv7vOvmfXELUhELJej59MlQQShgyDHXtOcvsSDYSLVqZxTF5Fbw7cSCCQM7+tb4SbNnODcJrF1OIaqMurV2iOqUuen8Bht8Z1SZmVLVptlCsoxqlw9Cc1xyc7075wxuC8OkcC4ubOctebkUX1w6/HaDpkIwU2oAQQsbqEVeh5HfLeTj1wbljIkqJ/Uilxnm7Qgbo1haGotn7VNOl7ARWuKiYOLekuOBVc6AZTm45zAY5Fw+wqGa3YsBzizwAeQVD2Ywf1NNf8OK2Sj+hG3AGQAxDgxBroRalqpK5QPKeKmrBYWFdnv5m56vV/qaY623kUPK0c/S4nZ5qCNGLmnWJVOsML/DFg+0Dm7Ta9QzfpWC0y3lMikIsyj0joR0WYAIqPqnBHeyXkeTBOMRzfthmqT9aEjjfjod4v4wCONJiINxGOaDxmmzOVTWr2/YUYKn428keL2bgGNJqcV4MPf52Aa1GMOLiTEKgo8kRzj8/amxu75cCk6ILCSvkoxs+aSlsjeQzeWOyg5l0pnnZ0BoeH5rmemlq5dQ1TTPGeXk2J0zswt7d87w/3nnvEuSAyCCXPWY4ExUDwgA+lbsH79KvTTc41lFr50bxs5hnR1qAHtGes+dlXAGnEYJd3C2N3d4jkBs+n1Fmf1e30zWAhhdTACj4WUEsG7DbBN5JOfNm9FWs7F/tvZ43x4ouOMQbo4JrNOZYdczh5tDAY86KXiXbG7l5gXOXfhx+YIie2/ZAhbgWp+HnH7RIyP31GxPb6yINI+Y/3tsvWYcagpVhfcGD9Xw1W+ldOehynK0hMqxAt7TimZADo2woiiXpSCofklviWQrmTMFX37O+LDRfKWgH+FJEKZnFtSrrL3WuuNFfDqOJpWfcq8JpD5NexCIVwXitYF0C7tL04ou+Di9dNOaYcarasBHUrFTTqqUVC80rhOFfIURZ3a1M0GFFwX1623vmASOtr8TWD/EF/flW1NGcRoN8SQehWEQhAGJgySOw2SS5hMcR/lWowhpkUE3hZ1zoApsjxpqNHUOD/tP3Wy79ZkzQDUMvJHCfm4PY+NZVFBer0F1GnfdT1IpOcVir6HMAflvs+pGaOk6fndN5UP8/VSy+X6m3dTRXL/Vs6Fkfwv2s6SfLMUSGgyTkGT9JA7jfpSTSX9K8LiPp+k4HhGaRfklXwI//gMkay3O8hUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2d66c5d793b3cb50e2987af08bba1016"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <order>13</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 08:15:19</sys_created_on>
+        <sys_id>42603b3f93378390e2987af08bba1003</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:30:38</sys_updated_on>
+        <ui_id>2a575fab-90fe-405f-a0cc-e95dbe65b4bc</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VY227bOBD9FUHPtleyZEvO2yKBgQLdBki8fem2BMVLTJSmVJFKmhj+9x2Jkuy1ldhCHTTBPnJ4OzNzznCkL2tXUPfCpTNvxmezSRx5XhB43nQaEOwnSTAliZfg0B24Cq8YrDQ4kQyG91gW5VgrpOUKGay/g5UKnUn8+LmevC2yTAqWOws7TZZC0pwp9+LL14Gb4RzONCx3L9Z7U6eCkjhhEpYualR7IM1j1g5RNWdtH3e3OZ/sRJrTEoo3cNlPwxRlgIFjqdnAXWFFsUnzx9aSM0yvldwalkIZONEtF//U4gnujb1yHWfgFWF2rh2iOlLWzK+wwbcmL4gp8nopWaaCMG3jQRnHhTSXuza74DozIlV2i3Xb7k5lsVKfbDjc9oAmMWApNIBgWeloibx2g98u04ebBuVcqCom9aRMCZbtCBuTi6QwJZ61yyRbwUFohbNMqDuU5em9qDYDltXoTsJgxGX6AJdqcadGmJTARxBXPJqD/aoyf8a5KL34C46BzQBISGAIsinUaZFXobxHRBa6msix0vYsdzNw9aO+lFjrrecQcvSjKHHbONQeIxu0cgvJRWb+hCPuWe3cZtDoYvIiBWdbypFUUVGi0DviAIbDVf8UsJmu13HIaDibBkM25nwY+lEwTMIgHhIWRWPiBzzyktENI0DEzeYbgcDI9A4Jw1b2BOaHAZlM+CyIApJMPDaexRHmXpwk2PcC/5s22DC71j8U4+8F01P6x+PeSP9yN/BdyaiLwIHtY9cBdRHwz1YEQs97T2UALn97VaC/rm0Ijojbpy+SjG75pNPcIBvLHXUfSqw3z0+A0PD8umSmkzw+h6qmORdM0q63bl5O7L114//nW/cmSQ6AKLLZE0oKVTUuAPS12D95kXqJv8ezil47bV9pA/fIoQieHJM6uLcUTsDTSOEWLncWFlAHxqbgV5zZL/aNsVZAcDYFBOPzKGDduonLQD7tBx1XMW+a1TKdzfo28F1Jah62TZfCet3p971zvDlUcNBLwjsg6pmr/3KuhX3mrvYZSQ5eswYsYWt9H7ICRg+C3jGzvb1ZRVPzgOX3rvmacahJVOXeK3TI/osfaclOhyw4WkHmRAaNfF41lhpBS4p4WiiK6hZ+S6Qyk1zk2tSLDwvNDQP9KCcFYTpmyZxqtdOu7vkSH/ejCeUH7jSO1LdpBxxxKkec1pF+bvcpWuEZu9NzF605FrLKBnydZTvpZHme5s8UriOJfIERJ1a1E0H5ZwX162WvSwKd5e8I1nfxqX/+0kQYTsIxnkaB73ue79HIi6PIj6cJn+Io5FuNIqQVgWoKJ3OgChyPGmo0ee74oK6Lbb86cwKohoFXqSq/n8eRcUpUkF6nQXUcd11PkjSVDKu9grIA5H/MqxehpevkzRWVd/HfqxCL/UhbU2esX6ttKMTfSvwo2IeSYjHzxrFPyTCO/GgYcjodziieDPEsmUQBZSTk5+wEvv4LmK43LEUWAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=42603b3f93378390e2987af08bba1003"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>a5d15bd4-f5df-413b-bd6c-5dfba13a8f8d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:38:05</sys_created_on>
+        <sys_id>52f6815b93b3cb50e2987af08bba10fe</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:30:38</sys_updated_on>
+        <ui_id>ffb410c0-17e7-4fcc-ab93-8856af1d97d4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4HOcWDZbuLmNrToLls7tEUvXWvQEp0IkD8myW2zIP99lO18oGuxFRswFFguiUi+p0eKZG7XTEk2Z1OO4dExn4qYx3EUhlGa8Hwa5zySMSAmbMwqKJEiHeQas+4wZg+gW298yqJwlqZJki2sU1UW+u9M1GWjFVQCs8bUhdIeIpVtNKxuBuTHq+vRyS5u9GUXJ5ZKS4MVm9/ejVkDhm50aNh8/cz1u/o15Kgp9Non8Eo+btW8aPt0iB2d947aSK8nHDN8clhJJCEFaItjVkIlwdVmxebOtGQwCPKi0qtdxFJVjgiZj32y6jtdm4Y+rkDKTGDv2x2zoWy9uTgFB1fELFxrhlCxrJVA29dEYgGtdieHtj7gonGqrnpIl+aArnVbVud9SdiOYPtKZGkticDG5+mVD2kUV8v68XKr8kxVXUkGp64F6N0JnDMqb53Xs2aosSSirISmUdXCN8iD6sCkpZwsNB0mha4f6VKrFtUEhBc+obLC5Izsp535BozyWXwmGgJvxsyu7IkGa/e5UBGzb61X0mc25JD1ZfAQYVTjPtAFDzjI3Yy3gyExPH61sXi+b6RuFuzBUNi2obZG87UNw1iu18k0BYixCHie5kES4SzIjyMIopDPphzCI86LyRa02dx3o/QmsB+6DkVojQvQXQ9nts1L5RzKN5PtSYjRGZD4p4x7EmI0aKnJeg7/KtQI93WV12D8z0yAxe0FaYIyOZ7GAUZFESR8Fgd5EqeBwNksEjwuZmE+uURBQ7nZ/Lxm/r/FP3yLN67yX0/cdpWfKdTSvjCC2z2O9McCDrN+JJ/t8sE5uhmcwz7nf2uf82nYfd7RVu+Te/dL/eD/+5X1fvcDT9MzzPkIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=52f6815b93b3cb50e2987af08bba10fe"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>9e55df9c-290b-43f1-9c93-96580e2544d2</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 08:21:02</sys_created_on>
+        <sys_id>7db1733393778390e2987af08bba101e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:30:38</sys_updated_on>
+        <ui_id>7ee9b7c2-f840-4737-9214-13f3aaf8d92c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5Gf2yppmo72baJimsRAoogXxqIb+wYsHCezHaCrKu0/8A/3S3aTOKUCxEDiBa1P9f3yOSfnJudrJgWbswmKMJpFUx5HcTwOw/HeJMqmcRaNRQyIERswDQVSpUFeGkHnG1B1E1ivx5B8SnLIhrMwx+EkTPIhhJwPcZaIDKdJNsn46KTt22yoU0hbKVid+QEU4VdSCYOazc8vBqwCQ3c5NGy+fpR6LVgFGSoqPenRPkbvVlVzFiWvC9QulX3w0HcufCb4uqAMNTVwonDA8M6hFkhAclAWB6wALcCVZsXmztQUMAjiWKvVtuJKatcRLeDOyl908yRs6nIkZtyLsD2mXqAunC/AwZImc1ebrV6l5Gg7TQTmUCu3vxvrCo4rJ0vdtTjIVN9dqrrQR50ibDtg53nUlkBg1fBskHe08uVVeXvSgzyQupXEU1QlB7U9gXNGZrVr4KwZKmw1LqCqpL5MK1PeyLaZoBSjS0WHUa7KW7rTyks9At7gHpGqMDqg+KINn4GRDYlvNIaaNwNmV3ZfgbUPVEjD9GfdIOmIeQppq0IrQdo6oWnmRlbuM111gx74ZuDXIUtechifPRhqZ+bDSlidWlWkDuz1U7sv66pSEk1w2qXf5v1XIOu9f9o+8eeRevs/iR3u9gZHXcKbP3k38+99JPN7Gh/e/f/yfDh+8a2646TW5nbX7w4cfq/DMBbxj9vSXKe6JPZd5MvyNBDoQCob0OsX6WoR/Pl9H3BVWvqbrYKmpFHg6bK84+S37dkr1Oj37ECiEvYZefolw4IoOUw7uR4tmk8GZz65/dK827ZF07D9faCd+28+OBd/AULxuymBCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7db1733393778390e2987af08bba101e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:33:38</sys_created_on>
+        <sys_id>81f5019793b3cb50e2987af08bba105f</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:30:38</sys_updated_on>
+        <ui_id>468aa3ef-1b8b-42e7-b92a-201761a0511f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVW2/bNhT+KwKfBUOUrNry25Yiw4BtHeoiL0VBUORRTIy6lKTsekb++w51sZU4cRKgKbDtUefC853L9+nzgShJViQvopwnPBcJjWgSRfFyTvN3SU5jmXAATkJS8RIw0sDXFqwDyZSDEu1brlvvOByuDHDvoDPRGgOVu7tDv1S20Xx/M4ShRWyUlugnq89fQtJwgy87MGR1eOB6KTTNc9AYum7zUjmEEHzsUV6A7fZNby8A6wkYTL8NT32c2GsjPbooJPDNQSUBYRVcWwhJySvJXW32ZOVMiwYcgfxQ6f0xYqMq17dd8m9W/Y1Fkzic1F0RKxjCG4EdPWyYXIdmQB/82gcV77njaywpXGuOY62VANuPTkLBW+2uprY+4EPjVF31KY7nesyudVtWf/TTIscHJmtrLUKCxg/AtzT0V6w39e44rWtVdbManLoWXE9CgRuxuVag/WKrtswxNiTcOaPy1nmcBwIaSizASt40qrpljam3qnsUMZazW40fs0LXOwRj1W0148I3NMM98Nk12t935htulO/ud3ymq1LjVpg0ddMMTfuFkbuQ2L290tzaU++4Ava19cj7SQw9s35sPkUY1bifsPAWhvbuwpFK+aV7LejpJnGVuF8HTCB0Xd8+ZBTQeSLStMiSRSLyNII4Wy54ES3znNMooefk+rOfVfDL+lMgwXGl7ev59jz+kW+fhgaCq76B7jptgJwIxvEHa3D2+ZZfz0b6Zmx0DC/iHkDL8GG2HVpitm/pMaI+P4j/BHN9rR/FW2VRHcsab6brmU131VEY6YiN4FY8xJNxg/WYaSunSmAdpZiqWN3YrYLd29F/cZk+ixMXxgsb78pOqJ+8E4nIIF0sZBRTGi2XvFgIKSmkPMsgWvmzxGb8BFkFuzClNF5m6eJxrZjTswQOaRzRLH88oYjPEoTM4nkqn0gAfpYwzzI6z+QTkKIzSOdy9j+dwuv0+gUHN+r1qE43k4u7cIyDKFvd2k3eir/APZDltfcEP4+uQZnjy8o8WF4izTSOoui+Oj+hu/9WYb0voSh1Bf4dcXanPeBNQDdJ0qVg0bcS2hcJJh5dJXSLkSWOQhmscoTqf3DHMD+aCQgwbGf6SseQxmCO2fofqgbhuiZHRa9bIwbFR+tDjnw/2f7yD1mOBoQCDQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=81f5019793b3cb50e2987af08bba105f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>564ade7a-5614-4179-971d-09634b0d4166</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:14:15</sys_created_on>
+        <sys_id>884f49df93f3cb50e2987af08bba10fd</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:30:38</sys_updated_on>
+        <ui_id>3562cae1-5362-47e6-8ba1-b8fe119abc60</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVTU/bQBD9K5HPcbTrOCbJrSKiqkShAsSFUmu8Ow4rrT+6XgNplP/eWdtxooAoqFwQuUQ7X/vm7bzxzdpT0pt7IUrGZzwSYz4eB4wF05An0TjhgRwDIveGXg4ZUqRBURhJ53vQtTOs10k0mzKAmS9ZIPyQh9KfQRj6ggHnIppMZiIaXTR5mw1lSlWVGlbXXQGyiDulpcHcm9/cDr0SDN1l0Xjz9YHrtWA1JKgp9GKL9hC9XZXuLAtRZ5jbWG2Np13movMMvi3IQ0kODmdDDx8t5hIJSAq6wqGXQS7BFmblza2pyWAQ5HmuV33Encpt22gGj5X6QzeHzMWlSJ2JjoT+GHcEteZ0ARYuqbKwten5KpTAquVEYgq1tsf7tjbgvLSqyNsUC4neZhe6zvKzlhGvL7D3HnVFILB0fTrkbVvp5V3xcLEFeaLyhpKuRV0I0P0JrDUqqa2Ds/ZQY8NxBmWp8mVcmuJeNckEJRstNR1GqS4e6M5KLfMRCId7RKzC6ITsi8Z8DUa5Jr5TGUreDL1qVR1rqKpdK8Rh/Lt2SNrGuhbihoWGgriZBJcsjCrtF7rqHjvgm2Enh2Ty0oSJ2W6g9mruJPEYB+xoOg3DeFlZlcfM/cfUa6kVuAcmBlKl8akWvl5eDY77uMGPPu5tCnkF/q1Crpq5eL6fTiRPbKf7uYOz1tFJZPJuEpl+JIl0bXx4jfxLGSx4cffuTVIjhmpPFY0WftaMjeV6HUZTgDGmPk+miR8GeOQnswD8gPGjiAObcJ6OnGqarM3ml8Yl6GYI46pOMmUtyjcX2xWhitaAxP+tuCtCFQ1WNCRtDccqPeRTiX9WGt62wV4xZ9sNdqJQy+qZwduuL6R9ChbjdhAPVljnHFx3zv5L/257jEes+X2gbfZpPvi3fwFknvI+AQsAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=884f49df93f3cb50e2987af08bba10fd"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>94cfa590-39b4-4acf-84aa-6166a520436e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 07:28:58</sys_created_on>
+        <sys_id>cbc5e73f93b38390e2987af08bba1032</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:30:38</sys_updated_on>
+        <ui_id>75fb1098-7588-450d-9000-061a019d45f4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVW0+kMBj9KxOeh0m5DAPztnHiZhNXN2p8UUM+2jI2KYVtizpL5r9vCwUnalxNfDHLC+l36zmHHnrdeYx4ay+mBAVZkOAoiKIQoTCNgyKJiiAkEVAaeHNPQEVNpaS4lsSs74G3NtB1RZKlCCDzCQqxHwcx8TOIYx8jCAKcLJcZThbnfd9+bzoJUw2H3ZUbYCL4jnEiqfDW17dzrwFp9tJUeuvuWeq9YDkUlJvS8xHtc/R619g1qXFbUaFzNgZPXOfGZWY/NiZjmiycAM09+qipINQAKYErOvcqEAR0LXfeWsvWBCQFcib4bqq4Y0IPRCt4VOyP2TlGtq6khhl2IkzL3Ak0hMsNaLgwk7Fu5aRXzTBVgyaEltByfXQYGwrOGs1qMbRoKPjYXfO2EqeDIt404OB7tMqAoI3laZEPtMqLu/rhfAR5zEQviaPIawx8WoHWkhWttnA6j3Laa1xB0zCxzRtZ37O+2UCpFltuFouS1w9mT8W2YgHY4l4YVWFxbOKbPnwFklkSP80Y07yfe2qnjjgo9UTFaJj/bi2SgZijkPcq9BLk/UmwzViyRn8zW91TB3w/d3Yolm+dMJw9HaiDmU+WeMxDtErTOM63SjORI/vODdeGM7Af2ChQMk5feuH7xeXsaKqb/ZrqPuaQd+AfHXLZn4vX+TiTvIidHPbOToeEs8jy0yySfiWLOBpf3iP/cgYK3/z3Hpyk3gzqwBW1KGqQxLLDoOhNi1BEui41v/M4SyKfhmVpbo9V5BdxlPqYrlYhDqJyhYo3bo9Pmvoxf71DhdFfx4xyol6RZTQXNW4HTfNBpmcGc8nZlUtO99CnuSxIUP98Ia/9N9fR7V+DsW7xnwkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cbc5e73f93b38390e2987af08bba1032"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:38:39</sys_created_on>
+        <sys_id>d1d45ddf9337cb50e2987af08bba10a7</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:30:38</sys_updated_on>
+        <ui_id>9a4da9e7-3b3d-4c99-86f2-cd2ced87a9f5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5GfqyhpoIK+Ta2YJjGYKOKFsegmvmktHDuzHaCr+t93kzilKogVqS/V8ub75XNOzk3uV0xwNmYnyKP4PB7lSZwkwyganp3E2SjJ4iFPADFmA6agRKo0mGvD6fwEsm4Cq9XEIDjkaRzmtTGo3HpNeS5sJWF558soki+E5JRn4/uHAavA0ESHho1XO6l9IUnIUFLpTY9pF6NbVs2Z67wuCVcq+uCl75z6TPBtShlqauDE0YDhi0PFkYAUIC0OWAmKg9NmycbO1BQg0vxayeWmYiGU64iW8GLFH7r5JGrqCiRmuRdhc0y9QF24mIKDGU3OXW02emmRo+004VhALd1kO9YVXFdOaNW1OMhk361lXaqrThG2GbD1PmpLILBqeDbIO1rFbKGfb3qQF0K1kniKUucgNydwzoisdg2cFUOJrcYlVJVQ87Qy+km0zQSlDOeSDmEh9TPdacVchZA3uENSFcILik/b8B0Y0ZD4TmOoeT1gdmknEqx9pUIapr/rBklHzFNIWxVaCdLWCU1zbkTlvtBVT+iBrwfe9NnpRw7Lz18NtTXz1fhWpVaWqQP7+Nbus7qqpEAT3Hbpz3l/D2S992/bN/4+Um//N7HL7d7gqkt4858ezPxnx2R+T+Po3f8vz0fDD7+qW05qbW63/e7oK/+zjqKEJ7+etXlMlSb2XeTr7Dbg6EBIG0BrfR44HbgFBk1qokuKAWka/DC6EK1ld1bm4PM/t3N7KNPv3IVAye07UvULh4SGyKSddDtL55PBnU9u/joH27x4FLXPEe3ff/PzefgLvE/cHHMJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d1d45ddf9337cb50e2987af08bba10a7"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 07:19:51</sys_created_on>
+        <sys_id>e1b3637793b38390e2987af08bba104d</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:30:38</sys_updated_on>
+        <ui_id>84ed4963-e2ff-4173-b438-ce772c13f70b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VY227jNhD9FUHPtiv5JjtvRQIDC2w3wCbdl+0uQYlUTJQmtSSVrGP43zsURdm1FV9aB03QR87wcmbmnCGlr6uQkfAqJNNomk+no0kSRYNBFI3HgwzHaToYZ2mU4mHYCQVeUJhpcMopDB8xL+1YC6T5AmVYWythuuB4+aV23pVFwRlVwbVzZ3PGiaIivPr6rRMWWMGehqrwarXjOhUUxynlMPW+RrUD0iyLZogqn7N93F4WfHIOqYiFEnVC+tNQQShgyDHXtBMusCDYSLVsLIpiciv4xjBnwsCOoZ38U7NnOHcS2Xk5hagy6nzNENWZcub8Bht8Z1SZmVLVU7O5ZBnVLh+E5rjk5nrb5ibcFoZJ4Za4sN1qycuF+OTSETYb+MKApdQAghY2UIu8DiO/m8unzx7ljIkqJ7WTywzzZoSNUSwtjcWzCimnC9gILXBRMPGACiUfWbUYsCx6DxwGvZzLJzhUswfRw5kF3oO84t4M7DeV+QtWzEbxG2wDiwEQ48AQ5EqoZamqVD6ijJe6cigstNsrXHdCvdTXHGu9iRxSjn6UFrfLQx0xckmzSzLFCvMrbPFI6+DWHa+L0UEKTjeUy6QgzKLQ2+Ko+f9HCcvJajUcTzAe0Lwbp5O0O+zTpJtO+7jbj+JkHONoFMd5zy9ar79bVSFLWLeB9wD2VGJFIM/fcYXb+YFALSL8b0CcKfXjefZSv95OdFvya9Hv2T62bVCLPr6Y6IdR9J5kb6v15lR/vo5dCo6IOSYHSUY2fNJSGeRyua3mpUYZcMBQYk/dF9qu/zwNnADPa+DWsjZIly8hriWQM8pJ2703s46de6///7z33qQAABBBrnpMcCaqR4ztq6+kjNFB6qXxDs8qem3pwtogvGxfEs+BkQE+Wwon4PFSuIPDg3sHqAWjvwwqzuxeBN5YK2BwMQUM+pdRwKoJE9tEPu8mHVc59w9XW04/v0l8W5H8pbduU9hZZ8bnntlf7yt4cJaEt0DUnpu/c66BfeEX7guS7LxmD5jD0vo85ASMnhh5oGZzup9FpHnC/M82f8045AtVhfcKr+X44AdbuvVaZjlaQOVYAY96RTMgh0ZYUZTLUhBUP+c3RLKVzJnSpp6832g+U9CPCCQIMzBzGlSzg2b2mTfx8Th8Kj/kgQ+kPk0HEEhQBRI0gZwX9jlNa3jBl+ulm9YMM15VA77Uiq1yUqWkeqFxHSnkAUac2NVOBBVfFNS/b3ttEmhtf0ewvovP/su3pozidNjH42QQx1EURySJJkkST8ZpPsbJMN9oFCEtMuimsHMOVIHtkaeGr3O833/+0VfvCaA8A2+ksJ/X/cQEFhWUN/CojuOu+0kqJadY7DSUe0D+y6y6ERq6jt5cU3kX/8BKdr+baWdqzfVrPRtK9rtgP0r6wVJsQqP+JCZZd5LESXeYk3F3SvCoi6fpKBkQmg3zS74Evv0FKfZWD1EWAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e1b3637793b38390e2987af08bba104d"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=72a5811793b3cb50e2987af08bba10ae"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=72a5811793b3cb50e2987af08bba10ae^sys_idNOT IN213fcd139337cb50e2987af08bba1082,3f65e7fb93b38390e2987af08bba10ed,49b6451b93b3cb50e2987af08bba10ec,cf6173ff93378390e2987af08bba104f"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">70e1911b9337cb50e2987af08bba10d8</block>
+        <comment/>
+        <connected_to>a5d15bd4-f5df-413b-bd6c-5dfba13a8f8d</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:14:05</sys_created_on>
+        <sys_id>213fcd139337cb50e2987af08bba1082</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:03</sys_updated_on>
+        <ui_id>564ade7a-5614-4179-971d-09634b0d4166</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3e262b7f93b38390e2987af08bba10b7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>564ade7a-5614-4179-971d-09634b0d4166</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 07:27:23</sys_created_on>
+        <sys_id>3f65e7fb93b38390e2987af08bba10ed</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:03</sys_updated_on>
+        <ui_id>94cfa590-39b4-4acf-84aa-6166a520436e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V22obMRD9FaNn2+zF97fQNmBI4hKbQClhmZVGtqgsbVdaJ67xv3e0u45Dm5DS5rFv1pnbObNz8IHZyheVdyt74ZxaGzb7et9lygSMfh+Y1Pbhyq4VnxvnwXBc7t1csBlL5WiIY5lP0zydpNMIk+lkDDKa5DnEEQrWZQa2SJncGqG8siargS7bga5CYC471uQWSqHMusPBYUfayoRSoVyhYX/3dibfKC1KbJkXUNIMjyWbHX4J+X2BmYYcNTVc+pI6UbkKWmQEMp7ymKfJKE2iKJkM4nyU5nEiUkBIKe9U+OEkpnNVI6+rDPMId6dJthSBVhx1GT56NIJ2NJOgHXbZFowAb8v9E1IiiIXRZ2CjjKd2LCQ/OvWDeifDYUiUSBo5NsGnZ9ausIH5xiqOiyIQbBAPuW5ruNXV1tw0OsLyUUKl/Wn5hFSO+mERSAcWLSW53NiH29PAS2VqgW1QWw766QWe1pBXHl34MKhxS42yLRQFLScrSrtTdTFx2fbXmh79cHk0NFxlH3gg3qcdQf+S8I81fAelCiquqQ0VNzRzcIpn9QVTO1+ShGO9lux7FQg1AlspWbMNSnC8VIW/oDk7bFkfu+97/s8u/3CYDFAMpqO0h4mUvUE8Tnv5IJ30OI7HCY9TOY7y/i1yuprjcb68Waw+XX9effndGv/S6j28M4WhHMbR8GXvDEYveefl5bximOQNw4RP/Id+iaLov2GeG0a5rDn8Vls9/K/9ch8OvJngmrsRyJUjIquAzU//KiGwpwMIrjpDD7b8FiScseNPuUoqfp8GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">274e459f93f3cb50e2987af08bba1086</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:36:55</sys_created_on>
+        <sys_id>49b6451b93b3cb50e2987af08bba10ec</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:03</sys_updated_on>
+        <ui_id>a5d15bd4-f5df-413b-bd6c-5dfba13a8f8d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K8HPSZA/F+etdOsItOtoQmGMYq7l60RMljxLTpuF/Pdd2U5TtpZtpY97s47uxzlX9+C9p1tbt9as9JkxYq28+de7sSeUw+h775VS31/qteALZSwojsudWRTe3IvSPIliP0/DPOR5zDBIZ++gZLM8B58h98aeggopkmtVCCu0yjpg7G1Btu5iUY4+Llejc13VUrjao7rRpZA4EmaEVW13FFwIU0vY3f5LDt8IWTQ4qKmhob4WG2++/+XK7mrMJOQoqfTSNkKtKV04fSWD0k+5z8MgCQPGglnk50mY+0ERAkJIccfE86PA0WWHvKzc9SPcHDvppnC0fDb28MGiKpBalyANjr0KVAFWN7tHpEEorpU8ARuhLJXzXPCDET+odhDHLrBE0sixv3w8ZsMwe5hvtOB4XTuCPWIhl0MO17Kt1Kdeh3sGLKGV9vgMhLSG6mHtSDsWA6VyudH3N8eGF0J1AodLqTnIxxNYGkPeWjTuYVBiRYWyCuqahpPRs25Fl0xcqula0mHqtpGauk2dAnfEpzQjmF4Q/r6Db6ERTsUVlaHknmYORvCs22oqZxuScOjGkn1vHaFe4CAl66dBAYY3orZn1GeLA+vD+G0t8cQN+32epDMGkE4KFvBJ5EfFJIUomnAGvs+TOE55Mr1BTltzOCyWH64+r7787pBX13kL16QQl7HP4uddEyXPueb5sbxgleAPVnGP+5dOYYz9t8pTqwiT9Ss/aOuav9opd261+w6m35sCuTBEZOWwxfEf4y52tADOTyfoXjffnIQTdvgJxagwya0GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f052fb7393778390e2987af08bba1018</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 08:19:45</sys_created_on>
+        <sys_id>cf6173ff93378390e2987af08bba104f</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:03</sys_updated_on>
+        <ui_id>9e55df9c-290b-43f1-9c93-96580e2544d2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0HPSZDtOIn7VrZ1BPoxllAYo5hr+SoRUyTPkttmIf99V7bTlq2lY+vj3qJzv865vofsmW181Xi3sqfOqbVhJ19vhkyZgNHvPZPa3p3btRIL4zwYgcudW5TshAk5jWaJlFmSzOZJxjHO5jOQfF4UEPGJZENmYIsh05pSeWVN3gJDdgu6CYGFHNgKzeDjcjXwdlTagbSNKSmjVK7SsLt+NVFslC5r7HlXUNMEjzU72f8S8rsKcw0Fauq39LUyaypXQYnkIKNMRCKJp0nMeTyfRMU0KaK4TAAhobxj4bujlMF5i7ysMcwj3B0n2boMtCI+ZHjv0ZRIoyVoh0O2BVOCt/XuAakRyiujH4GNMp7asZB879QP6h2naUiUSBoFdsGHZ95vsIPFxiqBV1Ug2CEeCt3XCKubrbnsdITdo4RG++PuCWkc9cMqkA4sekpyubF3n48Dz5RpBfZBbQXohxd4WkPReHThw6DGLTXKt1BVtJy8qu2taouJy3a81vQYh7ujoeEmxyAC8THtCMZnhL9v4WuoVVBxQW2ouKNZgFMib++X2vmaJBzateTfm0CoE9hLybttUIITtar8Kc25xZ71Yfi2x//k7vf7GNJZKqEYZVziaMJTOQIuxAiztCxwmhaTQow/o6CrORwWy8ur1YeLT6svvzvjX1q9hXcySGUa8fR570ymz3nn+eW8YJj4FcOET/yHfuGc/zfMU8Mol3eH32trh/+1X27CgXcTXHc3JQrliMgqYIvjf0oI7OgAgqseoTtbfwsSHrHDT+YzheudBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=72a5811793b3cb50e2987af08bba10ae"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=72a5811793b3cb50e2987af08bba10ae"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_72a5811793b3cb50e2987af08bba10ae</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:32:40</sys_created_on>
+        <sys_id>3ab5095793b3cb50e2987af08bba1009</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 06:32:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_72a5811793b3cb50e2987af08bba10ae</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:32:40</sys_created_on>
+        <sys_id>b2b5c55793b3cb50e2987af08bba10e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 06:32:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_72a5811793b3cb50e2987af08bba10ae"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_72a5811793b3cb50e2987af08bba10ae"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow for submitting the gst related details by contact supplier</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>gst__apply_submitted_gst_details</internal_name>
+        <label_cache>[{"name":"2a575fab-90fe-405f-a0cc-e95dbe65b4bc.Record","label":"13 - Look Up Record➛Supplier Task Record","reference":"sn_slm_task","reference_display":"Supplier Task","type":"reference","base_type":"reference","usedInstances":{"7ee9b7c2-f840-4737-9214-13f3aaf8d92c":["record"],"9e55df9c-290b-43f1-9c93-96580e2544d2":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"84ed4963-e2ff-4173-b438-ce772c13f70b.Table","label":"2 - Look Up Record➛Supplier Case Table","reference":"sn_slm_case","reference_display":"Supplier Case","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"84ed4963-e2ff-4173-b438-ce772c13f70b.Record","label":"2 - Look Up Record➛Supplier Case Record","reference":"sn_slm_case","reference_display":"Supplier Case","type":"reference","base_type":"reference","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["onboarding_case"],"94cfa590-39b4-4acf-84aa-6166a520436e":["condition"],"75fb1098-7588-450d-9000-061a019d45f4":["onboarding_case"],"2a575fab-90fe-405f-a0cc-e95dbe65b4bc":[null],"7ee9b7c2-f840-4737-9214-13f3aaf8d92c":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Supplier Task Record","reference":"sn_slm_task","reference_display":"Supplier Task","type":"reference","base_type":"reference","usedInstances":{"468aa3ef-1b8b-42e7-b92a-201761a0511f":["requested_item"],"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["onboarding_case"],"19ce7f4e-faa9-4677-9fd5-38b3bef3f466":["record"],"9a4da9e7-3b3d-4c99-86f2-cd2ced87a9f5":["record"]},"attributes":{}},{"name":"468aa3ef-1b8b-42e7-b92a-201761a0511f.supplier","label":"1 - Get Catalog Variables➛supplier","reference":"sn_fin_supplier","reference_display":"Supplier","type":"reference","base_type":"reference","usedInstances":{"b6980aa9-d02c-414d-9a44-c0a11c6559c6":[null],"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["supplier"],"84ed4963-e2ff-4173-b438-ce772c13f70b":[null]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"b6980aa9-d02c-414d-9a44-c0a11c6559c6.Record","label":"3 - Look Up Record➛GST Compliance Profile Record","reference":"x_2078844_gstin_0_gst_compliance_profile","reference_display":"GST Compliance Profile","type":"reference","base_type":"reference","usedInstances":{"a5d15bd4-f5df-413b-bd6c-5dfba13a8f8d":["condition"],"3562cae1-5362-47e6-8ba1-b8fe119abc60":["record"],"e7f121af-be85-414f-a293-af8f62fd17f1":["target_record"],"75fb1098-7588-450d-9000-061a019d45f4":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"468aa3ef-1b8b-42e7-b92a-201761a0511f.gst_gstin","label":"1 - Get Catalog Variables➛gst_gstin","reference":"","reference_display":"gst_gstin","type":"string","base_type":"string","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["gstin"],"3562cae1-5362-47e6-8ba1-b8fe119abc60":["gstin"]},"attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"468aa3ef-1b8b-42e7-b92a-201761a0511f.gst_legal_name","label":"1 - Get Catalog Variables➛gst_legal_name","reference":"","reference_display":"gst_legal_name","type":"string","base_type":"string","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["legal_name_submitted"],"3562cae1-5362-47e6-8ba1-b8fe119abc60":["legal_name_submitted"]},"attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"468aa3ef-1b8b-42e7-b92a-201761a0511f.gst_trade_name","label":"1 - Get Catalog Variables➛gst_trade_name","reference":"","reference_display":"gst_trade_name","type":"string","base_type":"string","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["trade_name_submitted"],"3562cae1-5362-47e6-8ba1-b8fe119abc60":["trade_name_submitted"]},"attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"Created_1.current.supplier.parent","label":"Trigger - Record Created➛Supplier Task Record➛Supplier➛Parent entity","reference":"sn_fin_organization","reference_display":"Organization","type":"reference","base_type":"reference","parent_table_name":"sn_fin_supplier","column_name":"parent","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["onboarding_case"]}},{"name":"Created_1.current.service_request","label":"Trigger - Record Created➛Supplier Task Record➛Related case","reference":"sn_spend_sdc_service_request","reference_display":"Finance Case","type":"reference","base_type":"reference","parent_table_name":"sn_slm_task","column_name":"service_request","usedInstances":{"ffb410c0-17e7-4fcc-ab93-8856af1d97d4":["onboarding_case"]}},{"name":"468aa3ef-1b8b-42e7-b92a-201761a0511f.gst_certificate","label":"1 - Get Catalog Variables➛gst_certificate","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","usedInstances":{"71077c5f-45fb-4475-beee-62e44e0630a9":["attachment_record"],"e7f121af-be85-414f-a293-af8f62fd17f1":["attachment_record"]},"attributes":{"catalogType":"33","catalogTypeLabel":"Attachment"}},{"name":"ffb410c0-17e7-4fcc-ab93-8856af1d97d4.table_name","label":"5 - Create Record➛GST Compliance Profile Table","reference":"x_2078844_gstin_0_gst_compliance_profile","reference_display":"GST Compliance Profile","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ffb410c0-17e7-4fcc-ab93-8856af1d97d4.record","label":"5 - Create Record➛GST Compliance Profile Record","reference":"x_2078844_gstin_0_gst_compliance_profile","reference_display":"GST Compliance Profile","type":"reference","base_type":"reference","usedInstances":{"71077c5f-45fb-4475-beee-62e44e0630a9":["target_record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>GST – Apply submitted GST details</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="GST – Apply submitted GST details">72a5811793b3cb50e2987af08bba10ae</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>935e099f93f3cb50e2987af08bba1034</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:08</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=935e099f93f3cb50e2987af08bba1034"/>
+    <sys_variable_value action="delete_multiple" query="document_key=935e099f93f3cb50e2987af08bba1034"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=935e099f93f3cb50e2987af08bba1034"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=935e099f93f3cb50e2987af08bba1034^sys_idNOT IN135e099f93f3cb50e2987af08bba1036"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>935e099f93f3cb50e2987af08bba1034</id>
+        <name>GST – Apply submitted GST details</name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:23</sys_created_on>
+        <sys_id>135e099f93f3cb50e2987af08bba1036</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 07:10:23</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=135e099f93f3cb50e2987af08bba1036"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=935e099f93f3cb50e2987af08bba1034^sys_idNOT IN535e099f93f3cb50e2987af08bba108f,c46e499f93f3cb50e2987af08bba100c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</model>
+        <model_id>935e099f93f3cb50e2987af08bba1034</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_935e099f93f3cb50e2987af08bba1034</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:23</sys_created_on>
+        <sys_id>535e099f93f3cb50e2987af08bba108f</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=535e099f93f3cb50e2987af08bba108f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</model>
+        <model_id>935e099f93f3cb50e2987af08bba1034</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_935e099f93f3cb50e2987af08bba1034</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:26</sys_created_on>
+        <sys_id>c46e499f93f3cb50e2987af08bba100c</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c46e499f93f3cb50e2987af08bba100c"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=935e099f93f3cb50e2987af08bba1034"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=935e099f93f3cb50e2987af08bba1034"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=935e099f93f3cb50e2987af08bba1034^sys_idNOT IN616e499f93f3cb50e2987af08bba1084"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:33</sys_created_on>
+        <sys_id>616e499f93f3cb50e2987af08bba1084</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 07:25:49</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227bOBD9FUFPu4AL6GLHcd66SYoN0G0B2919yAYCJZI2UZpyRUqpt8i/71AXW9bFsSOldV4CiGSGZw7PnCF9/8PkyCfcvDLnyOfEHJhMKBIJxOebNYFhpYc9gVZ6boUERiqMNuaVimIyMGkUruZkteZIwWKKuITBMMIkMq/sgZkgHpPZRt5hiAT/n4bJY5r5NHxL4Um+8hSSX2EUMwnxNn/nk7N4veaMRMY8mw6WjOOICPPq/mFgrlEEMZXe70dliulNAxqgiUOswLVdx7Es53Jo+xeubzvYRcSyIGCVgApI1cDDLkPyXRGBCd4mX6MoIgh/FnyzXbEEhjM6Vui7ZP9B9EtLr6MEsAckm9t+ejkf2XCwDFlAPq8VC0U2kuHMJkMer8SnDL9mklAUc1UwCSOxhHhkrSFrEDkiOluGj9Niww9MpNnlkzwMEN9+IaUi5seKSE04ZRyo9zJuZBhHKfrp7fXn6Y33z/v59Z+3U296O5tP767ntzfmU5qX9y3WETOEORYvS+dpe/wfGOH6AEW88gHNwJRBxNbqfaBYUkjtabCT73UoMEtZqUk4KKbkvoSL7A9p2LJaVRyUdiyUHIRRRCAQjBbn9m9sWS5eSAXEK8S4PFnDFxcIYYJaNOzTkobLLDTAVA2ElDM9pOZ85Bg5Dy3rFwk6d6WX6nkVYsJvduFMmFwsQOFMrGOl2XpEQklPhR7C2CvxqJcCpucEnuVWV/nz+o5iASG87QnVVZ4SuWX0I5OQwD3U6Ix8i7NjeAeGRQvy0h1gOf2Y7zCNhRHCycIfI4hBx0IZhQnSuxVa5JRDQE4CVVIJ/SLLX38xKZlYlJJow5ByVoOw3R3EZxQJZ1BkRywPfRpA/UiSCreVVnZy5ds2pT6hjjXWdW9brk9ta2yNEMWuZQVOqfLrYFpRqopgXsUBTqt/mUqVH6HEKsU5eKtcK0fJKNnXYEGClkhuM9f9QLN7guZoaBW7dE/yy60ss+GbfXUeSq3newPCCYL/wMfapl5whD9SHj6CVXf3Rh8FXxdRGAtcdSe9hcGEsVth/JbT+fvr+SQNI3IYz/6Kc3LI3aEUskZi04M3utT2J2RILLBEF9zQH00mfoAcSscXY+LYFW/cwWjE9iY88RnxJU3qbfPHRuEkTXo7wRk7AKy55MkAu/tjLsxGd8zm3oYPPi6J8ABq5HHtdDU7XHCGSTHXb7XXtk529d214unlJBjZ43EwhjcQVDwdEh/ZQ2eEJuML93JUqfgalEMwVQMzP+VlJDcyBdLiBl+yqfN69r+mbCVRSrejzj1cwKU3DYGyPUuNU5+SkXpMGBmfQvHubrfOmBHoh+lr+ZWa+TGg9LEbPxWVH6pl7XIBSP6A8T0k+srawtnZvc4qikr2c+38OiPDy9GEus1+RCdNfrQD0w7z7O8iR9ZP0lqJTZeSY/WfNJZR6y3iBRKuyKR8vThw/+mLFLt3UpzXI8XtfOcqarH1SfoSsG+o36WXkB6bnoZAvJCWvfwmNGDCgD0NRo38N02CDX9jqCUBhjnctWF/Q4PpauIHekwd2VbfvxRXdrevtT4YNvKr2fl1tYpu+n1bEzxGo5HbctOeVN/WTYCewXv2Pe7kmkmaSvBgozstbjVmY6srSXZfEUc2sV6zbu5k3bJu7GXPZd29Sx36ZaABxZn2n4f/Ab+OuR3vHwAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=935e099f93f3cb50e2987af08bba1034^sys_idNOT IN37266b7f93b38390e2987af08bba10ed,386e499f93f3cb50e2987af08bba107d,3c6e499f93f3cb50e2987af08bba107e,55e1151b9337cb50e2987af08bba1019,71523f7393778390e2987af08bba1081,b3266b7f93b38390e2987af08bba10eb,b46e499f93f3cb50e2987af08bba1080,d51559139377cb50e2987af08bba10de,dde1151b9337cb50e2987af08bba101a,ec6e499f93f3cb50e2987af08bba107b,f5523f7393778390e2987af08bba1082"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>94cfa590-39b4-4acf-84aa-6166a520436e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 07:30:39</sys_created_on>
+        <sys_id>37266b7f93b38390e2987af08bba10ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 07:30:39</sys_updated_on>
+        <ui_id>75fb1098-7588-450d-9000-061a019d45f4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVW0+kMBj9KxOeh0m5DAPztnHiZhNXN2p8UUM+2jI2KYVtizpL5r9vCwUnalxNfDHLC+l36zmHHnrdeYx4ay+mBAVZkOAoiKIQoTCNgyKJiiAkEVAaeHNPQEVNpaS4lsSs74G3NtB1RZKlCCDzCQqxHwcx8TOIYx8jCAKcLJcZThbnfd9+bzoJUw2H3ZUbYCL4jnEiqfDW17dzrwFp9tJUeuvuWeq9YDkUlJvS8xHtc/R619g1qXFbUaFzNgZPXOfGZWY/NiZjmiycAM09+qipINQAKYErOvcqEAR0LXfeWsvWBCQFcib4bqq4Y0IPRCt4VOyP2TlGtq6khhl2IkzL3Ak0hMsNaLgwk7Fu5aRXzTBVgyaEltByfXQYGwrOGs1qMbRoKPjYXfO2EqeDIt404OB7tMqAoI3laZEPtMqLu/rhfAR5zEQviaPIawx8WoHWkhWttnA6j3Laa1xB0zCxzRtZ37O+2UCpFltuFouS1w9mT8W2YgHY4l4YVWFxbOKbPnwFklkSP80Y07yfe2qnjjgo9UTFaJj/bi2SgZijkPcq9BLk/UmwzViyRn8zW91TB3w/d3Yolm+dMJw9HaiDmU+WeMxDtErTOM63SjORI/vODdeGM7Af2ChQMk5feuH7xeXsaKqb/ZrqPuaQd+AfHXLZn4vX+TiTvIidHPbOToeEs8jy0yySfiWLOBpf3iP/cgYK3/z3Hpyk3gzqwBW1KGqQxLLDoOhNi1BEui41v/M4SyKfhmVpbo9V5BdxlPqYrlYhDqJyhYo3bo9Pmvoxf71DhdFfx4xyol6RZTQXNW4HTfNBpmcGc8nZlUtO99CnuSxIUP98Ia/9N9fR7V+DsW7xnwkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=37266b7f93b38390e2987af08bba10ed"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:29</sys_created_on>
+        <sys_id>386e499f93f3cb50e2987af08bba107d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 07:30:40</sys_updated_on>
+        <ui_id>b6980aa9-d02c-414d-9a44-c0a11c6559c6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYUW/iOBD+K1GegUsgkNC3UytOK+1tT1tuX/ZWlhM7xTpjZ22nLUX89xvHSUBAC9FSqdU9Idsz9jcz3zd2+L72GfGvfDINpvl0Ok7iIBiNgmAyGWU4TNPRJEuDFEd+zxd4ScHS4JRTGD5gXtrxExoGcZJEEbrXhgkU2F+UyWXBGRYZRYWSOatcCNMFx6tvtecfd3PvurXz/mrtsgXjRFHhX33/0fMLrOBkQ5V/td5bOhc6xynlYDqvse+FYlZFO0TVmpv7vOvmfXELUhELJej59MlQQShgyDHXtOcvsSDYSLVqZxTF5Fbw7cSCCQM7+tb4SbNnODcJrF1OIaqMurV2iOqUuen8Bht8Z1SZmVLVptlCsoxqlw9Cc1xyc7075wxuC8OkcC4ubOctebkUX1w6/HaDpkIwU2oAQQsbqEVeh5HfLeTj1wbljIkqJ/Uilxnm7Qgbo1haGotn7VNOl7ARWuKiYOLekuOBVc6AZTm45zAY5Fw+wqGa3YsBzizwAeQVD2Ywf1NNf8OK2Sj+hG3AGQAxDgxBroRalqpK5QPKeKmrBYWFdnv5m56vV/qaY623kUPK0c/S4nZ5qCNGLmnWJVOsML/DFg+0Dm7Ta9QzfpWC0y3lMikIsyj0joR0WYAIqPqnBHeyXkeTBOMRzfthmqT9aEjjfjod4v4wCONJiINxGOaDxmmzOVTWr2/YUYKn428keL2bgGNJqcV4MPf52Aa1GMOLiTEKgo8kRzj8/amxu75cCk6ILCSvkoxs+aSlsjeQzeWOyg5l0pnnZ0BoeH5rmemlq5dQ1TTPGeXk2J0zswt7d87w/3nnvEuSAyCCXPWY4ExUDwgA+lbsH79KvTTc41lFr50bxs5hnR1qAHtGes+dlXAGnEYJd3C2N3d4jkBs+n1Fmf1e30zWAhhdTACj4WUEsG7DbBN5JOfNm9FWs7F/tvZ43x4ouOMQbo4JrNOZYdczh5tDAY86KXiXbG7l5gXOXfhx+YIie2/ZAhbgWp+HnH7RIyP31GxPb6yINI+Y/3tsvWYcagpVhfcGD9Xw1W+ldOehynK0hMqxAt7TimZADo2woiiXpSCofklviWQrmTMFX37O+LDRfKWgH+FJEKZnFtSrrL3WuuNFfDqOJpWfcq8JpD5NexCIVwXitYF0C7tL04ou+Di9dNOaYcarasBHUrFTTqqUVC80rhOFfIURZ3a1M0GFFwX1623vmASOtr8TWD/EF/flW1NGcRoN8SQehWEQhAGJgySOw2SS5hMcR/lWowhpkUE3hZ1zoApsjxpqNHUOD/tP3Wy79ZkzQDUMvJHCfm4PY+NZVFBer0F1GnfdT1IpOcVir6HMAflvs+pGaOk6fndN5UP8/VSy+X6m3dTRXL/Vs6Fkfwv2s6SfLMUSGgyTkGT9JA7jfpSTSX9K8LiPp+k4HhGaRfklXwI//gMkay3O8hUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=386e499f93f3cb50e2987af08bba107d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>a5d15bd4-f5df-413b-bd6c-5dfba13a8f8d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:29</sys_created_on>
+        <sys_id>3c6e499f93f3cb50e2987af08bba107e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 07:30:40</sys_updated_on>
+        <ui_id>ffb410c0-17e7-4fcc-ab93-8856af1d97d4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4HOcWDZbuLmNrToLls7tEUvXWvQEp0IkD8myW2zIP99lO18oGuxFRswFFguiUi+p0eKZG7XTEk2Z1OO4dExn4qYx3EUhlGa8Hwa5zySMSAmbMwqKJEiHeQas+4wZg+gW298yqJwlqZJki2sU1UW+u9M1GWjFVQCs8bUhdIeIpVtNKxuBuTHq+vRyS5u9GUXJ5ZKS4MVm9/ejVkDhm50aNh8/cz1u/o15Kgp9Non8Eo+btW8aPt0iB2d947aSK8nHDN8clhJJCEFaItjVkIlwdVmxebOtGQwCPKi0qtdxFJVjgiZj32y6jtdm4Y+rkDKTGDv2x2zoWy9uTgFB1fELFxrhlCxrJVA29dEYgGtdieHtj7gonGqrnpIl+aArnVbVud9SdiOYPtKZGkticDG5+mVD2kUV8v68XKr8kxVXUkGp64F6N0JnDMqb53Xs2aosSSirISmUdXCN8iD6sCkpZwsNB0mha4f6VKrFtUEhBc+obLC5Izsp535BozyWXwmGgJvxsyu7IkGa/e5UBGzb61X0mc25JD1ZfAQYVTjPtAFDzjI3Yy3gyExPH61sXi+b6RuFuzBUNi2obZG87UNw1iu18k0BYixCHie5kES4SzIjyMIopDPphzCI86LyRa02dx3o/QmsB+6DkVojQvQXQ9nts1L5RzKN5PtSYjRGZD4p4x7EmI0aKnJeg7/KtQI93WV12D8z0yAxe0FaYIyOZ7GAUZFESR8Fgd5EqeBwNksEjwuZmE+uURBQ7nZ/Lxm/r/FP3yLN67yX0/cdpWfKdTSvjCC2z2O9McCDrN+JJ/t8sE5uhmcwz7nf2uf82nYfd7RVu+Te/dL/eD/+5X1fvcDT9MzzPkIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3c6e499f93f3cb50e2987af08bba107e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>564ade7a-5614-4179-971d-09634b0d4166</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:25:49</sys_created_on>
+        <sys_id>55e1151b9337cb50e2987af08bba1019</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 07:30:40</sys_updated_on>
+        <ui_id>3562cae1-5362-47e6-8ba1-b8fe119abc60</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVTU/bQBD9K5HPcbTrOCbJrSKiqkShAsSFUmu8Ow4rrT+6XgNplP/eWdtxooAoqFwQuUQ7X/vm7bzxzdpT0pt7IUrGZzwSYz4eB4wF05An0TjhgRwDIveGXg4ZUqRBURhJ53vQtTOs10k0mzKAmS9ZIPyQh9KfQRj6ggHnIppMZiIaXTR5mw1lSlWVGlbXXQGyiDulpcHcm9/cDr0SDN1l0Xjz9YHrtWA1JKgp9GKL9hC9XZXuLAtRZ5jbWG2Np13movMMvi3IQ0kODmdDDx8t5hIJSAq6wqGXQS7BFmblza2pyWAQ5HmuV33Encpt22gGj5X6QzeHzMWlSJ2JjoT+GHcEteZ0ARYuqbKwten5KpTAquVEYgq1tsf7tjbgvLSqyNsUC4neZhe6zvKzlhGvL7D3HnVFILB0fTrkbVvp5V3xcLEFeaLyhpKuRV0I0P0JrDUqqa2Ds/ZQY8NxBmWp8mVcmuJeNckEJRstNR1GqS4e6M5KLfMRCId7RKzC6ITsi8Z8DUa5Jr5TGUreDL1qVR1rqKpdK8Rh/Lt2SNrGuhbihoWGgriZBJcsjCrtF7rqHjvgm2Enh2Ty0oSJ2W6g9mruJPEYB+xoOg3DeFlZlcfM/cfUa6kVuAcmBlKl8akWvl5eDY77uMGPPu5tCnkF/q1Crpq5eL6fTiRPbKf7uYOz1tFJZPJuEpl+JIl0bXx4jfxLGSx4cffuTVIjhmpPFY0WftaMjeV6HUZTgDGmPk+miR8GeOQnswD8gPGjiAObcJ6OnGqarM3ml8Yl6GYI46pOMmUtyjcX2xWhitaAxP+tuCtCFQ1WNCRtDccqPeRTiX9WGt62wV4xZ9sNdqJQy+qZwduuL6R9ChbjdhAPVljnHFx3zv5L/257jEes+X2gbfZpPvi3fwFknvI+AQsAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=55e1151b9337cb50e2987af08bba1019"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <order>13</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 08:23:46</sys_created_on>
+        <sys_id>71523f7393778390e2987af08bba1081</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:23:46</sys_updated_on>
+        <ui_id>2a575fab-90fe-405f-a0cc-e95dbe65b4bc</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VY227bOBD9FUHPtleyZEvO2yKBgQLdBki8fem2BMVLTJSmVJFKmhj+9x2Jkuy1ldhCHTTBPnJ4OzNzznCkL2tXUPfCpTNvxmezSRx5XhB43nQaEOwnSTAliZfg0B24Cq8YrDQ4kQyG91gW5VgrpOUKGay/g5UKnUn8+LmevC2yTAqWOws7TZZC0pwp9+LL14Gb4RzONCx3L9Z7U6eCkjhhEpYualR7IM1j1g5RNWdtH3e3OZ/sRJrTEoo3cNlPwxRlgIFjqdnAXWFFsUnzx9aSM0yvldwalkIZONEtF//U4gnujb1yHWfgFWF2rh2iOlLWzK+wwbcmL4gp8nopWaaCMG3jQRnHhTSXuza74DozIlV2i3Xb7k5lsVKfbDjc9oAmMWApNIBgWeloibx2g98u04ebBuVcqCom9aRMCZbtCBuTi6QwJZ61yyRbwUFohbNMqDuU5em9qDYDltXoTsJgxGX6AJdqcadGmJTARxBXPJqD/aoyf8a5KL34C46BzQBISGAIsinUaZFXobxHRBa6msix0vYsdzNw9aO+lFjrrecQcvSjKHHbONQeIxu0cgvJRWb+hCPuWe3cZtDoYvIiBWdbypFUUVGi0DviAIbDVf8UsJmu13HIaDibBkM25nwY+lEwTMIgHhIWRWPiBzzyktENI0DEzeYbgcDI9A4Jw1b2BOaHAZlM+CyIApJMPDaexRHmXpwk2PcC/5s22DC71j8U4+8F01P6x+PeSP9yN/BdyaiLwIHtY9cBdRHwz1YEQs97T2UALn97VaC/rm0Ijojbpy+SjG75pNPcIBvLHXUfSqw3z0+A0PD8umSmkzw+h6qmORdM0q63bl5O7L114//nW/cmSQ6AKLLZE0oKVTUuAPS12D95kXqJv8ezil47bV9pA/fIoQieHJM6uLcUTsDTSOEWLncWFlAHxqbgV5zZL/aNsVZAcDYFBOPzKGDduonLQD7tBx1XMW+a1TKdzfo28F1Jah62TZfCet3p971zvDlUcNBLwjsg6pmr/3KuhX3mrvYZSQ5eswYsYWt9H7ICRg+C3jGzvb1ZRVPzgOX3rvmacahJVOXeK3TI/osfaclOhyw4WkHmRAaNfF41lhpBS4p4WiiK6hZ+S6Qyk1zk2tSLDwvNDQP9KCcFYTpmyZxqtdOu7vkSH/ejCeUH7jSO1LdpBxxxKkec1pF+bvcpWuEZu9NzF605FrLKBnydZTvpZHme5s8UriOJfIERJ1a1E0H5ZwX162WvSwKd5e8I1nfxqX/+0kQYTsIxnkaB73ue79HIi6PIj6cJn+Io5FuNIqQVgWoKJ3OgChyPGmo0ee74oK6Lbb86cwKohoFXqSq/n8eRcUpUkF6nQXUcd11PkjSVDKu9grIA5H/MqxehpevkzRWVd/HfqxCL/UhbU2esX6ttKMTfSvwo2IeSYjHzxrFPyTCO/GgYcjodziieDPEsmUQBZSTk5+wEvv4LmK43LEUWAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=71523f7393778390e2987af08bba1081"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 07:30:39</sys_created_on>
+        <sys_id>b3266b7f93b38390e2987af08bba10eb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 07:37:16</sys_updated_on>
+        <ui_id>84ed4963-e2ff-4173-b438-ce772c13f70b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VY227jNhD9FUHPtiv5JjtvRQIDC2w3wCbdl+0uQYlUTJQmtSSVrGP43zsURdm1FV9aB03QR87wcmbmnCGlr6uQkfAqJNNomk+no0kSRYNBFI3HgwzHaToYZ2mU4mHYCQVeUJhpcMopDB8xL+1YC6T5AmVYWythuuB4+aV23pVFwRlVwbVzZ3PGiaIivPr6rRMWWMGehqrwarXjOhUUxynlMPW+RrUD0iyLZogqn7N93F4WfHIOqYiFEnVC+tNQQShgyDHXtBMusCDYSLVsLIpiciv4xjBnwsCOoZ38U7NnOHcS2Xk5hagy6nzNENWZcub8Bht8Z1SZmVLVU7O5ZBnVLh+E5rjk5nrb5ibcFoZJ4Za4sN1qycuF+OTSETYb+MKApdQAghY2UIu8DiO/m8unzx7ljIkqJ7WTywzzZoSNUSwtjcWzCimnC9gILXBRMPGACiUfWbUYsCx6DxwGvZzLJzhUswfRw5kF3oO84t4M7DeV+QtWzEbxG2wDiwEQ48AQ5EqoZamqVD6ijJe6cigstNsrXHdCvdTXHGu9iRxSjn6UFrfLQx0xckmzSzLFCvMrbPFI6+DWHa+L0UEKTjeUy6QgzKLQ2+Ko+f9HCcvJajUcTzAe0Lwbp5O0O+zTpJtO+7jbj+JkHONoFMd5zy9ar79bVSFLWLeB9wD2VGJFIM/fcYXb+YFALSL8b0CcKfXjefZSv95OdFvya9Hv2T62bVCLPr6Y6IdR9J5kb6v15lR/vo5dCo6IOSYHSUY2fNJSGeRyua3mpUYZcMBQYk/dF9qu/zwNnADPa+DWsjZIly8hriWQM8pJ2703s46de6///7z33qQAABBBrnpMcCaqR4ztq6+kjNFB6qXxDs8qem3pwtogvGxfEs+BkQE+Wwon4PFSuIPDg3sHqAWjvwwqzuxeBN5YK2BwMQUM+pdRwKoJE9tEPu8mHVc59w9XW04/v0l8W5H8pbduU9hZZ8bnntlf7yt4cJaEt0DUnpu/c66BfeEX7guS7LxmD5jD0vo85ASMnhh5oGZzup9FpHnC/M82f8045AtVhfcKr+X44AdbuvVaZjlaQOVYAY96RTMgh0ZYUZTLUhBUP+c3RLKVzJnSpp6832g+U9CPCCQIMzBzGlSzg2b2mTfx8Th8Kj/kgQ+kPk0HEEhQBRI0gZwX9jlNa3jBl+ulm9YMM15VA77Uiq1yUqWkeqFxHSnkAUac2NVOBBVfFNS/b3ttEmhtf0ewvovP/su3pozidNjH42QQx1EURySJJkkST8ZpPsbJMN9oFCEtMuimsHMOVIHtkaeGr3O833/+0VfvCaA8A2+ksJ/X/cQEFhWUN/CojuOu+0kqJadY7DSUe0D+y6y6ERq6jt5cU3kX/8BKdr+baWdqzfVrPRtK9rtgP0r6wVJsQqP+JCZZd5LESXeYk3F3SvCoi6fpKBkQmg3zS74Evv0FKfZWD1EWAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b3266b7f93b38390e2987af08bba10eb"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Copy Attachment">30fe6cdb0f973300dfd3694e68767e5a</action_type>
+        <action_type_parent display_value="Copy Attachment">95849c2a9353130079b5925cf67ffb91</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>30fe6cdb0f973300dfd3694e68767e5a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>a5d15bd4-f5df-413b-bd6c-5dfba13a8f8d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:29</sys_created_on>
+        <sys_id>b46e499f93f3cb50e2987af08bba1080</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 07:30:40</sys_updated_on>
+        <ui_id>71077c5f-45fb-4475-beee-62e44e0630a9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/82VbW/aMBDHvwry64ASEpLAu6qo06StnUq1N1UVXewzWHIe5jhtGeK7z3kgBNj6INFt4lXOd+e7/90P32+IYGRGOOXoUxbbfBq4rm0zzlx/6qEfBn6AEyAWSSFB4wlaA10lmOpIIc0UM0ePIMvqbLPx/BDART504jAeemMMhvF0DMOx7QS+A/bEcfhoWeiIotKCCwoat1uTgokil7D+3mYyFroSkilMyez+wSI5KHO/RkVmm6OjtzYgIUZpXBdZqSgOLrpGBre7Rl7oUa/z6kghR3Mzxdb0pU1627ObgKpOxyL4rDFlaArkIAu0SAIpA52pNZlpVRqDQmA3qVx3HiuR6kaABJ4L8dNc6o6t3r0zUqyLaF8i6R1GrYzG6aLvwOegYWFupLpUnb6ZoFg0GjLkUEp92bc1Dje5FlnahGiI5S46k2WSXjd6kS5Bb35lYcrBvOq/6qhtjy9W2VMn1pVIa6naQ5lRkD1XBEVXVwJlPWEhMaoHZFUDUiIudVXqhqDEelYJ5LlIl1GuskdR5zVlJqOlNB8jLrMnU08hlukIaNXTyEwCRlfGPq/N30GJqsGvJo0JNh2Iu9OhN8bTsW+tai6XEopir4oJjH6UVU+NRq0aUSNoFUKVyPWFqecR28a3Vsuk2eUXVtq39/uqQS3xtzxyHnuOTe2hExgUPU7pEOKpOwzDiQ/cYdOAeaMm7iwYvqHmHYZ3ddEn7B330nLHMlrWQxbsiLx5ezL4PN+zN/4o9v5A279gDLnnUp95NphfPAlsmwYBn8bcDQPg6O4j5idTPYKz0eMdbP5lAA+nf4hgf/7vh7CR+xUSuffiVgf97a3S7Ql8jsZ2EIaeF5lHT6SRHdWPX5bkUkC1Qkaq6o/tFL1Pi7vBZec3+Nb5vfNdfL30PZBN7UettADWn7v/3z5/ddjgujlo8XPPhV9o/7f4neOJO8SoW/cDrQ+3/UBtUUTN2rZF11mN/WN4PN8L9/ALchWD0ncKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b46e499f93f3cb50e2987af08bba1080"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:39:44</sys_created_on>
+        <sys_id>d51559139377cb50e2987af08bba10de</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 07:30:40</sys_updated_on>
+        <ui_id>9a4da9e7-3b3d-4c99-86f2-cd2ced87a9f5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5GfqyhpoIK+Ta2YJjGYKOKFsegmvmktHDuzHaCr+t93kzilKogVqS/V8ub75XNOzk3uV0xwNmYnyKP4PB7lSZwkwyganp3E2SjJ4iFPADFmA6agRKo0mGvD6fwEsm4Cq9XEIDjkaRzmtTGo3HpNeS5sJWF558soki+E5JRn4/uHAavA0ESHho1XO6l9IUnIUFLpTY9pF6NbVs2Z67wuCVcq+uCl75z6TPBtShlqauDE0YDhi0PFkYAUIC0OWAmKg9NmycbO1BQg0vxayeWmYiGU64iW8GLFH7r5JGrqCiRmuRdhc0y9QF24mIKDGU3OXW02emmRo+004VhALd1kO9YVXFdOaNW1OMhk361lXaqrThG2GbD1PmpLILBqeDbIO1rFbKGfb3qQF0K1kniKUucgNydwzoisdg2cFUOJrcYlVJVQ87Qy+km0zQSlDOeSDmEh9TPdacVchZA3uENSFcILik/b8B0Y0ZD4TmOoeT1gdmknEqx9pUIapr/rBklHzFNIWxVaCdLWCU1zbkTlvtBVT+iBrwfe9NnpRw7Lz18NtTXz1fhWpVaWqQP7+Nbus7qqpEAT3Hbpz3l/D2S992/bN/4+Um//N7HL7d7gqkt4858ezPxnx2R+T+Po3f8vz0fDD7+qW05qbW63/e7oK/+zjqKEJ7+etXlMlSb2XeTr7Dbg6EBIG0BrfR44HbgFBk1qokuKAWka/DC6EK1ld1bm4PM/t3N7KNPv3IVAye07UvULh4SGyKSddDtL55PBnU9u/joH27x4FLXPEe3ff/PzefgLvE/cHHMJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d51559139377cb50e2987af08bba10de"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Copy Attachment">30fe6cdb0f973300dfd3694e68767e5a</action_type>
+        <action_type_parent display_value="Copy Attachment">95849c2a9353130079b5925cf67ffb91</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>30fe6cdb0f973300dfd3694e68767e5a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>564ade7a-5614-4179-971d-09634b0d4166</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:25:49</sys_created_on>
+        <sys_id>dde1151b9337cb50e2987af08bba101a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 07:30:40</sys_updated_on>
+        <ui_id>e7f121af-be85-414f-a293-af8f62fd17f1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/81VyW7bMBD9FUNnyZAsWYtvQYwUBdqkiINegkAYkUObALWUopK4hv+91GJZttssgNMWOnE2znszT7zfGJwaM4MRhj6hic2iwHVtmzLq+pGHfhj4AU7BMI0MUtSRoBSQVYqZiiWSXFLtegRR1b7NxvNDABeZ5SRhYnkTDKwkmoA1sZ3Ad8CeOg4bL0sVE5SKM05A4XarS1BeFgLW37tK2kJWXFCJmTG7fzCNAqS+X6E0Zpsj11sBCEhQ6NBFXkmCo4seyOh2B+QFjGpd1C6JDPXNBDvTl67o7cCuE+o+HdPAZ4UZRd0gA1GiaaSQUVC5XBszJSttkAj0JhPrPmLFM9USkMJzyX/qS92JObh3ZpTrMt63aAyccUejDroYBrA5KFjoG4mqZM9vzgmWLYcUGVRCXQ5tbcBNoXietSkKErHLzkWVZtctX0ZfYDC/qtTtYFHjrxF18NhilT/1ZF3xrKGqc4qcgBiEIkiyuuIomglzgXEzILMekORJpepWNwYKbGaVQlHwbBkXMn/kTV3dZjpeCn0YM5E/6X5KvszGQGpMYz0JGF9p+7wxfwfJa4BfdRmdrBHwu9Oht8bTsW/Nei6XAspyz4pOjH9UNaaWo46NuCW0TiGSF+pC9/OIHfCt2WlS7/ILK+3b+31VIJf4Wz0mfhTaAJFF7QmxPMejVgSeZxEbHIf402lE/HG7/meR4Rt63snwrmn6RHvHWDrd0ZxUzZA5PVLevPOMPs/32pt8lPb+oLZ/oTFknkt86tmgv2Qa2DYJAhYlzA0DYOjuM+YnUz0SZ8vHO7T5lwV4OP1DCQ7n/34RtnS/okTmvbjVwXB763J7BT7HEzsIQ8+L9aPHs9iOm8cvTwvBoV4hTVX9YzuV3qfF3eiyjxt96+Pe+S6+3vpekG3vR1A6ATbH3f93qL8mbXTdOjr5ueeSX2j/t/I7xxN3KKN+3Q+4Ptz2A7Z5Gbdr2zXdVNX2j9Hj+V64h18VYwF/dwoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=dde1151b9337cb50e2987af08bba101a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:29</sys_created_on>
+        <sys_id>ec6e499f93f3cb50e2987af08bba107b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 07:10:29</sys_updated_on>
+        <ui_id>468aa3ef-1b8b-42e7-b92a-201761a0511f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVW2/bNhT+KwKfBUOUrNry25Yiw4BtHeoiL0VBUORRTIy6lKTsekb++w51sZU4cRKgKbDtUefC853L9+nzgShJViQvopwnPBcJjWgSRfFyTvN3SU5jmXAATkJS8RIw0sDXFqwDyZSDEu1brlvvOByuDHDvoDPRGgOVu7tDv1S20Xx/M4ShRWyUlugnq89fQtJwgy87MGR1eOB6KTTNc9AYum7zUjmEEHzsUV6A7fZNby8A6wkYTL8NT32c2GsjPbooJPDNQSUBYRVcWwhJySvJXW32ZOVMiwYcgfxQ6f0xYqMq17dd8m9W/Y1Fkzic1F0RKxjCG4EdPWyYXIdmQB/82gcV77njaywpXGuOY62VANuPTkLBW+2uprY+4EPjVF31KY7nesyudVtWf/TTIscHJmtrLUKCxg/AtzT0V6w39e44rWtVdbManLoWXE9CgRuxuVag/WKrtswxNiTcOaPy1nmcBwIaSizASt40qrpljam3qnsUMZazW40fs0LXOwRj1W0148I3NMM98Nk12t935htulO/ud3ymq1LjVpg0ddMMTfuFkbuQ2L290tzaU++4Ava19cj7SQw9s35sPkUY1bifsPAWhvbuwpFK+aV7LejpJnGVuF8HTCB0Xd8+ZBTQeSLStMiSRSLyNII4Wy54ES3znNMooefk+rOfVfDL+lMgwXGl7ev59jz+kW+fhgaCq76B7jptgJwIxvEHa3D2+ZZfz0b6Zmx0DC/iHkDL8GG2HVpitm/pMaI+P4j/BHN9rR/FW2VRHcsab6brmU131VEY6YiN4FY8xJNxg/WYaSunSmAdpZiqWN3YrYLd29F/cZk+ixMXxgsb78pOqJ+8E4nIIF0sZBRTGi2XvFgIKSmkPMsgWvmzxGb8BFkFuzClNF5m6eJxrZjTswQOaRzRLH88oYjPEoTM4nkqn0gAfpYwzzI6z+QTkKIzSOdy9j+dwuv0+gUHN+r1qE43k4u7cIyDKFvd2k3eir/APZDltfcEP4+uQZnjy8o8WF4izTSOoui+Oj+hu/9WYb0voSh1Bf4dcXanPeBNQDdJ0qVg0bcS2hcJJh5dJXSLkSWOQhmscoTqf3DHMD+aCQgwbGf6SseQxmCO2fofqgbhuiZHRa9bIwbFR+tDjnw/2f7yD1mOBoQCDQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ec6e499f93f3cb50e2987af08bba107b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>9e55df9c-290b-43f1-9c93-96580e2544d2</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 08:23:46</sys_created_on>
+        <sys_id>f5523f7393778390e2987af08bba1082</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:23:46</sys_updated_on>
+        <ui_id>7ee9b7c2-f840-4737-9214-13f3aaf8d92c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5Gf2yppmo72baJimsRAoogXxqIb+wYsHCezHaCrKu0/8A/3S3aTOKUCxEDiBa1P9f3yOSfnJudrJgWbswmKMJpFUx5HcTwOw/HeJMqmcRaNRQyIERswDQVSpUFeGkHnG1B1E1ivx5B8SnLIhrMwx+EkTPIhhJwPcZaIDKdJNsn46KTt22yoU0hbKVid+QEU4VdSCYOazc8vBqwCQ3c5NGy+fpR6LVgFGSoqPenRPkbvVlVzFiWvC9QulX3w0HcufCb4uqAMNTVwonDA8M6hFkhAclAWB6wALcCVZsXmztQUMAjiWKvVtuJKatcRLeDOyl908yRs6nIkZtyLsD2mXqAunC/AwZImc1ebrV6l5Gg7TQTmUCu3vxvrCo4rJ0vdtTjIVN9dqrrQR50ibDtg53nUlkBg1fBskHe08uVVeXvSgzyQupXEU1QlB7U9gXNGZrVr4KwZKmw1LqCqpL5MK1PeyLaZoBSjS0WHUa7KW7rTyks9At7gHpGqMDqg+KINn4GRDYlvNIaaNwNmV3ZfgbUPVEjD9GfdIOmIeQppq0IrQdo6oWnmRlbuM111gx74ZuDXIUtechifPRhqZ+bDSlidWlWkDuz1U7sv66pSEk1w2qXf5v1XIOu9f9o+8eeRevs/iR3u9gZHXcKbP3k38+99JPN7Gh/e/f/yfDh+8a2646TW5nbX7w4cfq/DMBbxj9vSXKe6JPZd5MvyNBDoQCob0OsX6WoR/Pl9H3BVWvqbrYKmpFHg6bK84+S37dkr1Oj37ECiEvYZefolw4IoOUw7uR4tmk8GZz65/dK827ZF07D9faCd+28+OBd/AULxuymBCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f5523f7393778390e2987af08bba1082"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=935e099f93f3cb50e2987af08bba1034"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=935e099f93f3cb50e2987af08bba1034^sys_idNOT IN35523f7393778390e2987af08bba108c,606e499f93f3cb50e2987af08bba1039,7b266b7f93b38390e2987af08bba10f5,99e1151b9337cb50e2987af08bba101f"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f052fb7393778390e2987af08bba1018</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 08:23:46</sys_created_on>
+        <sys_id>35523f7393778390e2987af08bba108c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:08</sys_updated_on>
+        <ui_id>9e55df9c-290b-43f1-9c93-96580e2544d2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V0W7aMBT9FeTngJyEAOlbRdcJibZTQZWmqYpuHBusGTuLnbYM8e+7TgJUW6euah/3hs+9vvecEx+xI6Z2Ze3s0pxbK1eanH27D4jUHsPfOyKUeZyblWQzbR1oxhdbOyvIGWFiFI5jIdI4Hk/ilPIonYxB0EmeQ0iHggREw4b7TqML6aTRWQME5AFU7Qsz0TMl173Pi2XPmX5hesLUusCOQtpSwfbu1Ua2lqqoeMe7hAo3OF6Rs91vJek5CwoiTFnI4mgUR5RGk2GYj+I8jIoYOMQ4UEHOFbZOD6R78wb5uxq3LT1uXSX1qjvPuymLA2iqwrMKaUD4k+O64MhHgLI8IBvQBThTbY9IxaG40eoErKV2OI745icrf+LCKEl8o+AokfG2eDxmnYEtLC7AAVKpmaurrpWtjWTctuYUXECt3PQ51jbclF5qe8VBrg63jao3+rp1hBwHHL4XIrVFErz0Sj31TodYrM3j7YHlpdSNK11RGQbqeAKH3uW183x2hCu+wUHZBsoSHc3KyjzI5jJy2QxWCg8D/1ZxqX/HA2Ce+ACNhcEl4hcNfAeV9CqucAxebmnmYCXLmjeP49AmTvYBsVs7VWDtSSS6m/2oPcVWcicua/3xV1glS3eOmx94p2MffGyEnqVnt4sgGScC8n5KBe8PaSL6QBnr8zQpcj5K8mHOBrec4ePb72eL65vlp6svy69/5us9o96WwBQSkYQ0eTmBw9FLCXzZhrfELnoldv6b/2PqKKX/Y/fu2EmbtWHptDXLPzB19z4m7c6j10xapLb02Ozw/+YLW3xcPpsn6NFU372oE7b/BVegEospBwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">274e459f93f3cb50e2987af08bba1086</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:28</sys_created_on>
+        <sys_id>606e499f93f3cb50e2987af08bba1039</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:07</sys_updated_on>
+        <ui_id>a5d15bd4-f5df-413b-bd6c-5dfba13a8f8d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/TMBT9K5Wf08r5pNnb1DFUaWOIVpMQmqIbx2ktHDvEzrZQ9b9znaTtBEMw2CNv9fH9OOfER90R3dq6tWatz40RG0XOPt95RCiH4e8dKaV+uNIbwZbKWFCMrzqzLMgZidI8iWI/T8M8ZHlMeZDO30BJ53kOPuWMeERBxbGSaVUIK7TKesAj9yBbd7EsJ+9W68lCV7UUbvakbnQpJJ8IM+FVbTssLoSpJXS3L+lhWyGLho9qamhwr+UNOdv9cCWckpJC6afMZ2GQhAGlwTzy8yTM/aAIgUOIAyXkXGLp4iBlctUjv9Zou9rhxjZCbcbz1ThldQB1UzhWPvUIf7RcFRz5lCAN90gFqgCrm+6INByKGyVPwFYoi+OIK3404hsuDOLYFZYcJTI+XB6P2ejlAJcXYAGptMy2zVjKtlowbgZzCl5CK+3iKTYU3NRO6tBiIZeHbi3bSr0fHCHHAYdPh0hrkASvnVJHfdRRrrb64eOB5aVQvSvjpdQM5PEEFr3LW+v47AiXvMJBWQV1jY5m+BTuRd+MXKrZRuJh5l4wLnWvewbMEZ+hsTC7RPyih2+hEU7FNY7B5oFmDkawrE8CjkObONl7xHRmIcGYk0h0N/vaOoqD5FFcNvjjWlgjanuOm+/5qGPvvW6wnmRqt8uTdE4B0mlBAzaN/KiYphBFU0bB91kSxylLZh85w8e33y9Xb68/rD/9nLO/nvOy7KUQl7FP4+ezFyXPZe95A14SuOA3gXNf+w/zRin9H7h/Dpww2RCTUVu//BXzducCMuw8es2EQWprhy0P/3fuosPH5VJ5gh5088WJOmH7758LtHM5BwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3e262b7f93b38390e2987af08bba10b7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>564ade7a-5614-4179-971d-09634b0d4166</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-15 07:30:39</sys_created_on>
+        <sys_id>7b266b7f93b38390e2987af08bba10f5</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:08</sys_updated_on>
+        <ui_id>94cfa590-39b4-4acf-84aa-6166a520436e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VW2vbMBj9K0HPTvAl97eSrhDoZTShUEYxn+VPiZgieZbcNgv57/tkO0nZOrrSPu4tOvou5xzrkB0zlSsqZ5fmzFq50mz67SFgUnuMfu+YUObp0qwkn2vrQHNcbO08Z1OWiOEARyKbJFkyTiYhxpPxCEQ4zjKIQsxZwDRskCq50bl00ui0BgL2CKryF3PRMTozUOZSrzocLHaEqbRvzaUtFGzv3q7ka6nyElvmBZS0w2HJprvfrqRnLUIQ0YRHPImHSRyG8bgfZcMki+I8AYSEBirIUFHp7EC7c1kjf9fjtoXHrSuJXXu+bKcsDqApc88qCgOGzw51ThZNBSiLAduAzsGZcntESoT8RqsTsJba0Tjmi5+t/EkL48HAFwokiRyby+MxbR1sYHEODohKxV1VtqV8bSRH25iTo4BKudlLrCm4KbzUpsVBpg7dRlUbfd04wo4DDh+MkMoSCSy8Uk+91SEWa/N0e2B5IXXtSnupDAd1PIEj77LKeT47hgo3NCjdQFGQo2lRmkdZNxOXTW+l6NDzr5WW+pfcA+6J98hY6F0Qfl7Dd1BKr+KKxlBzQzMDK3lav3oaRzYh2wfMbu1MgbUnkeRu+qPyFBvJrbi08ce38FIW7ow2P2KrYx98bohe5Ge3G/cx70+GSRdjIbr9aJR0s34y7nIcjWIeJWIUZr1b5PT49vv54vpm+eXq6/L+z4B9ZNT7EjiBgRhE4eD1BPaHryXwdRveE7v4jdj5b/6PqQvD8H/sPhw7adMmLK22evknpu7Bx6TZefSaS0vUlh6bH/7h/MWWHpfP5gl6MuV3L+qE7X8Buz8sUSsHAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">70e1911b9337cb50e2987af08bba10d8</block>
+        <comment/>
+        <connected_to>a5d15bd4-f5df-413b-bd6c-5dfba13a8f8d</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST – Apply submitted GST details">935e099f93f3cb50e2987af08bba1034</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:25:49</sys_created_on>
+        <sys_id>99e1151b9337cb50e2987af08bba101f</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:08</sys_updated_on>
+        <ui_id>564ade7a-5614-4179-971d-09634b0d4166</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=935e099f93f3cb50e2987af08bba1034"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=935e099f93f3cb50e2987af08bba1034"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_935e099f93f3cb50e2987af08bba1034</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:25</sys_created_on>
+        <sys_id>7b5e099f93f3cb50e2987af08bba10c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 07:10:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_935e099f93f3cb50e2987af08bba1034</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:27</sys_created_on>
+        <sys_id>dc6e499f93f3cb50e2987af08bba1013</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 07:10:27</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_935e099f93f3cb50e2987af08bba1034"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_935e099f93f3cb50e2987af08bba1034"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>72a5811793b3cb50e2987af08bba10ae</sys_id>
+        <latest_snapshot>935e099f93f3cb50e2987af08bba1034</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch3-05-25-2026_06-12-2026_1106.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=72a5811793b3cb50e2987af08bba10ae^sys_idNOT IN4f6ec99f93f3cb50e2987af08bba1028"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"4f6ec99f93f3cb50e2987af08bba1028","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>72a5811793b3cb50e2987af08bba10ae</plan_id>
+        <snapshot>a5022c9893845790e2987af08bba10b3</snapshot>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 07:10:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4f6ec99f93f3cb50e2987af08bba1028</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-15 08:25:10</sys_updated_on>
+        <trigger display_value="">9aa2bfb393778390e2987af08bba1082</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=72a5811793b3cb50e2987af08bba10ae"/>
+</record_update>

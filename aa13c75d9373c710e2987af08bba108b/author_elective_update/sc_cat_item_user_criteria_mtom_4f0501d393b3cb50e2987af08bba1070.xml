@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_mtom">
+    <sc_cat_item_user_criteria_mtom action="DELETE">
+        <sc_cat_item display_value="Provide GST details">e143c55f9373cb50e2987af08bba1031</sc_cat_item>
+        <sys_class_name>sc_cat_item_user_criteria_mtom</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:29:41</sys_created_on>
+        <sys_id>4f0501d393b3cb50e2987af08bba1070</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Provide GST details.Users with Supplier roles</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sc_cat_item_user_criteria_mtom_4f0501d393b3cb50e2987af08bba1070</sys_update_name>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 06:29:41</sys_updated_on>
+        <user_criteria display_value="Users with Supplier roles">b3a0ef2688e1322099bf9dee2e6baa1d</user_criteria>
+    </sc_cat_item_user_criteria_mtom>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</application>
+        <file_path/>
+        <instance_id>3eada58eebff9a108326ff72dad0cd14</instance_id>
+        <instance_name>dev297253</instance_name>
+        <name>sc_cat_item_user_criteria_mtom_4f0501d393b3cb50e2987af08bba1070</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_mtom"><sc_cat_item_user_criteria_mtom action="INSERT_OR_UPDATE"><sc_cat_item display_value="Provide GST details">e143c55f9373cb50e2987af08bba1031</sc_cat_item><sys_class_name>sc_cat_item_user_criteria_mtom</sys_class_name><sys_created_by>rahul.basutkar</sys_created_by><sys_created_on>2026-10-13 06:29:41</sys_created_on><sys_id>4f0501d393b3cb50e2987af08bba1070</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Provide GST details.Users with Supplier roles</sys_name><sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package><sys_policy/><sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope><sys_update_name>sc_cat_item_user_criteria_mtom_4f0501d393b3cb50e2987af08bba1070</sys_update_name><sys_updated_by>rahul.basutkar</sys_updated_by><sys_updated_on>2026-10-13 06:29:41</sys_updated_on><user_criteria display_value="Users with Supplier roles">b3a0ef2688e1322099bf9dee2e6baa1d</user_criteria></sc_cat_item_user_criteria_mtom></record_update>]]></payload>
+        <payload_hash>2116742394</payload_hash>
+        <record_name>Provide GST details.Users with Supplier roles</record_name>
+        <reverted_from/>
+        <source>7d5ef45b9333cb50e2987af08bba1018</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:29:41</sys_created_on>
+        <sys_id>470501d393b3cb50e2987af08bba1077</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a133f3da9d0000001</sys_recorded_at>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 06:29:41</sys_updated_on>
+        <type>Catalog Item Available for</type>
+        <update_guid>070501d31db3cb5090490dae67316b76</update_guid>
+        <update_guid_history>070501d31db3cb5090490dae67316b76:2116742394</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Provide GST details.Users with Supplier roles">0eec3d13933fcb50e2987af08bba1021</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 10:33:44</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_user_criteria_mtom">sc_cat_item_user_criteria_mtom</sys_db_object>
+        <sys_id>3046956290024ae88c90e3730cc77824</sys_id>
+        <sys_metadata>4f0501d393b3cb50e2987af08bba1070</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Provide GST details.Users with Supplier roles</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_scope_delete display_value="">98144267b5ce4cfaaa6e4c5c012ea504</sys_scope_delete>
+        <sys_update_name>sc_cat_item_user_criteria_mtom_4f0501d393b3cb50e2987af08bba1070</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_user_criteria_mtom_4f0501d393b3cb50e2987af08bba1070">470501d393b3cb50e2987af08bba1077</sys_update_version>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-13 10:33:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

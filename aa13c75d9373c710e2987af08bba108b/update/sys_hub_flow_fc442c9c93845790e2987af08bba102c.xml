@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Synchronize verified GSTINs to Organization Tax Details and deactivate outdated tax records.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>gste310_tax_record_sync</internal_name>
+        <label_cache>[{"name":"Updated_1.current.state_code","label":"Trigger - Record Updated➛GST Compliance Profile Record➛State code","reference":"","reference_display":"State code","type":"string","base_type":"string","parent_table_name":"x_2078844_gstin_0_gst_compliance_profile","column_name":"state_code","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{"8bc02bea-941f-43eb-bacd-19ad104267b3":["state"],"10a03ad9-c0c8-4920-bfcb-cdf3d1688cb3":["state"]},"attributes":null},{"name":"8bc02bea-941f-43eb-bacd-19ad104267b3.record.sys_id","label":"8➛Organization Tax Details Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_fin_org_tax_detail","column_name":"sys_id","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{"ac0a3fb9-0756-4998-9771-c58c2285a547":["tax_detail"]},"attributes":null},{"name":"19140014-3863-4d18-9c4b-a315be500156.Record","label":"5➛Organization Tax Details Record","reference":"sn_fin_org_tax_detail","reference_display":"Organization Tax Details Record","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛GST Compliance Profile Record","reference":"x_2078844_gstin_0_gst_compliance_profile","reference_display":"GST Compliance Profile","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{"6bdf3da6-0f99-434b-b845-29c41f5c494b":["record"],"ac0a3fb9-0756-4998-9771-c58c2285a547":["record"],"adb376da-def4-4a89-a03a-b64efea3723d":["record"]},"attributes":{"":""}},{"name":"161e3366-dac1-47ae-a874-bd3ee4aa7614.Record","label":"1➛Organization Tax Details Record","reference":"sn_fin_org_tax_detail","reference_display":"Organization Tax Details Record","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"10a03ad9-c0c8-4920-bfcb-cdf3d1688cb3.record.sys_id","label":"11➛Organization Tax Details Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_fin_org_tax_detail","column_name":"sys_id","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{"adb376da-def4-4a89-a03a-b64efea3723d":["tax_detail"]},"attributes":null},{"name":"19140014-3863-4d18-9c4b-a315be500156.Record.tax_id","label":"5➛Organization Tax Details Record➛Tax ID","reference":"","reference_display":"Tax ID","type":"string","base_type":"string","parent_table_name":"sn_fin_org_tax_detail","column_name":"tax_id","choices":null,"usedInstances":{},"attributes":null},{"name":"161e3366-dac1-47ae-a874-bd3ee4aa7614.Record.sys_id","label":"1➛Organization Tax Details Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_fin_org_tax_detail","column_name":"sys_id","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{"6bdf3da6-0f99-434b-b845-29c41f5c494b":["tax_detail"]},"attributes":null},{"name":"977a52de-a45c-4127-ac48-087315952096.Record","label":"5➛Organization Tax Details Record","reference":"sn_fin_org_tax_detail","reference_display":"Organization Tax Details Record","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"977a52de-a45c-4127-ac48-087315952096.status","label":"5➛Status","reference":null,"reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":null,"column_name":null,"choices":[{"label":null,"value":null,"order":0}],"usedInstances":{},"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"977a52de-a45c-4127-ac48-087315952096.Record.tax_id","label":"5➛Organization Tax Details Record➛Tax ID","reference":"","reference_display":"Tax ID","type":"string","base_type":"string","parent_table_name":"sn_fin_org_tax_detail","column_name":"tax_id","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{},"attributes":null},{"name":"Updated_1.current.gstin","label":"Trigger - Record Updated➛GST Compliance Profile Record➛GSTIN","reference":"","reference_display":"GSTIN","type":"string","base_type":"string","parent_table_name":"x_2078844_gstin_0_gst_compliance_profile","column_name":"gstin","choices":null,"usedInstances":{"8bc02bea-941f-43eb-bacd-19ad104267b3":["tax_id"],"cb8e9668-8580-4c6a-8a09-2c445d9d866c":["condition"],"10a03ad9-c0c8-4920-bfcb-cdf3d1688cb3":["tax_id"]},"attributes":null},{"name":"161e3366-dac1-47ae-a874-bd3ee4aa7614.Record.tax_id","label":"1➛Organization Tax Details Record➛Tax ID","reference":"","reference_display":"Tax ID","type":"string","base_type":"string","parent_table_name":"sn_fin_org_tax_detail","column_name":"tax_id","choices":null,"usedInstances":{},"attributes":null},{"name":"161e3366-dac1-47ae-a874-bd3ee4aa7614.status","label":"1 - Look Up Record➛Status","reference":null,"reference_display":null,"type":"choice","base_type":"choice","parent_table_name":null,"column_name":null,"choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"usedInstances":{"a28a2df5-2e1b-4d97-ae54-8b5aad16cfd4":["condition"]},"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"Updated_1.current.supplier","label":"Trigger - Record Updated➛GST Compliance Profile Record➛Supplier","reference":"sn_fin_supplier","reference_display":"Supplier","type":"reference","base_type":"reference","parent_table_name":"x_2078844_gstin_0_gst_compliance_profile","column_name":"supplier","choices":null,"usedInstances":{"8bc02bea-941f-43eb-bacd-19ad104267b3":["organization"],"10a03ad9-c0c8-4920-bfcb-cdf3d1688cb3":["organization"],"d6e506cc-1d10-4b51-ba1e-fd6759a3b3fe":["conditions"]},"attributes":null},{"name":"Updated_1.current.tax_detail","label":"Trigger - Record Updated➛GST Compliance Profile Record➛Tax detail","reference":"sn_fin_org_tax_detail","reference_display":"Organization Tax Details","type":"reference","base_type":"reference","parent_table_name":"x_2078844_gstin_0_gst_compliance_profile","column_name":"tax_detail","choices":null,"usedInstances":{"cb8e9668-8580-4c6a-8a09-2c445d9d866c":["condition"]},"attributes":null}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>GST-E3-10 Tax record sync</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 06:40:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fc442c9c93845790e2987af08bba102c</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_name>GST-E3-10 Tax record sync</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_hub_flow_fc442c9c93845790e2987af08bba102c</sys_update_name>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:23:17</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>5bf4e15c93809790e2987af08bba1025</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=fc442c9c93845790e2987af08bba102c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=fc442c9c93845790e2987af08bba102c"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=fc442c9c93845790e2987af08bba102c"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=fc442c9c93845790e2987af08bba102c^sys_idNOT INf4442c9c93845790e2987af08bba102e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>fc442c9c93845790e2987af08bba102c</id>
+        <name>GST-E3-10 Tax record sync</name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 06:40:22</sys_created_on>
+        <sys_id>f4442c9c93845790e2987af08bba102e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:40:22</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=f4442c9c93845790e2987af08bba102e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=fc442c9c93845790e2987af08bba102c^sys_idNOT IN2e54ec9093c45790e2987af08bba10fb,9654ec9093c45790e2987af08bba10e3,d254ec9093c45790e2987af08bba1098"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</model>
+        <model_id>fc442c9c93845790e2987af08bba102c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_fc442c9c93845790e2987af08bba102c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 06:40:45</sys_created_on>
+        <sys_id>2e54ec9093c45790e2987af08bba10fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:40:45</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2e54ec9093c45790e2987af08bba10fb"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</model>
+        <model_id>fc442c9c93845790e2987af08bba102c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_fc442c9c93845790e2987af08bba102c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 06:40:45</sys_created_on>
+        <sys_id>9654ec9093c45790e2987af08bba10e3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 08:56:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9654ec9093c45790e2987af08bba10e3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</model>
+        <model_id>fc442c9c93845790e2987af08bba102c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_fc442c9c93845790e2987af08bba102c</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 06:40:44</sys_created_on>
+        <sys_id>d254ec9093c45790e2987af08bba1098</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 08:56:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d254ec9093c45790e2987af08bba1098"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=fc442c9c93845790e2987af08bba102c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fc442c9c93845790e2987af08bba102c"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=fc442c9c93845790e2987af08bba102c^sys_idNOT IN8654ec9093c45790e2987af08bba102c"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 06:40:43</sys_created_on>
+        <sys_id>8654ec9093c45790e2987af08bba102c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 08:59:43</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9Va23LbNhD9FQ6f2hmlw4uu7pMr24lnkrgjKelDmnJAAJQwpUCFBGmrmfx7F7yJ4kWWTCpRXiwLgICzu2fPLkR9+qq6yKaueqUukO1StacyLqjPkbvYbigMCzlscbSWc2vECRKev1WvhB/Snur43npB1xsXCVjsIDeAQc8n1Fev9J4aITek821wT2An+Hy8Tbqnmk7D+yfL0Ebjcb9vLQPBuKXJVwt7sC9DHFNr43sOiz9CWACHbT+mn3w9XyjTfJ3yZ74Or5hLfMrVq0+fe+oG+XCykKi+lqaYhKYTgnSDatjUTcPQNGPc1+2haesGMRFFY9iw7KaSKaLGWzs/0CdBOaEkd1HFkT5F5IG728KKp4D9B3uONTnrUECMaeLG/K2VuiMZxiuPYfqwEczjyUiCLpn03HDN3yeopSOpg0JXZI6EkTCA/ehGAuUix+HMV97jLDvwjvHYpnTS9TBy83dICJ/ZoaCBdDMEAhxuJR4JvNCP0c9upw+zG+uv68X0ze3Mmt3OF7P76eL2Rv0W22V9CeWOCcIUi5WY8y2P/h2jrgwbD9c2oOmpAfbZRlxjwaKMht96O2pPPU5Y7JUKvXE2FezTO7P+EL81rZHhuHBixnKfBuDwv0NNM0lEfeYwSv55mHnwv88ItdAGaB5RkqyQtDiZx7Y9QYSiBh4PRwUeF31SA1rUuKdo9yFGpyPNlO5r2g8idapaL+X02iPUvdltp8LkcgksZ3wTCumjR8RFYAnPQoRYBe/JpXFAM8dZ3ob60mFy7uP12+mb6/evb+e/p693s4d32f+Lh2eTI/FJNUOezw0/5LCFlcezmiFxAPJIvGUBGP4J8ntOv4RJ+F6BxDmZ0+MTYLnzNj1hFnLFAx7AHwWHPvhcKJlsOvdrtExDBRu6FIsCp5wPQfHdOxYEjC8LRjRhSH1dgpCfDlRVMoMTKEFLLJ+7FI9qSKKSb0tV8GSdGGKi9+3RUBtJldA103Z0baQNkENMTZuYBZ2ogmlEKUqE6VAvTlOLICaoewT/yo5NIWvFDDmKPNE+8zLTJTFSUZp2A03vCJohoZXE1TxJXXMyJsM3+5w8ZFrHnQYikez+SGbjMZ3EEarouN4jCHt7RbQR/nfpeyEnZU2SRyiMK7sVyi+pO389nzo6nk8P49lfcUm6uAtKRmvEtx0oYp9iMhr2hxoIoQkaaA8mExsjw3FGwxHVSEkRdzBqsV2wEj5DuaiOs02qWEuXqI5lJ+hhC4AVbTwZYHtVTOlYq4nJ3M+hfo8ryi2A6luu1LeKCC5deWdJ57rN8crR0S6r2+a56YzJYDAa4RHcjiDPnT61kd43BmgyGpp0WMrzCpRDMEWNZ854Zwq2QXx8gwZ8SKYu60uBc5I1oELI0tO6XnNoa+MtUHJmoUjK2Cixsni+8t7jr+5365Q5hdoX357PVLiPASXDrnxXVLYnVpVGApD8AeN7SGR72uCzi7t/lRgV7dvautsYm5MBccx6FRoZdSq0A9MM80L7jiOzJmrMv7oG5FjWR7XJ09gxvIC4JXIUW4kDvU5XTtE7d4pxPqeYrfurLAMbL50vAfsTVbm44eiw1EkI1PKcooLfeApMKHCmwhwl/Y6TEsXeKmJFwcMu9NVwviLBtJXuA5Wliizn9w/FlfTxlYIHw0rakF1eLSvxptvbM3YmNpmYDV31oLmrbi5qpekLrWwnZ0pUl3gHy9tp+5b3rC1wBaLu8+DI0tWp1fX1q53VtRXsOavb16ZDd/8aFJdfdSToRRKG9rXG47h0bcFnfAQUcgbjFl4hvkwe72Tn3kEUKMIrJVmiJEvOWC3cR7QN1HIVA4bLJEq/G4cBSCeeiN2ZgNCI+tuKJ+SgEm6ILCzfvXAd+I1I+mQ1ED58crktZG1mx4k1Sp8MDJOMsalPzOpvPPRCjdqnfTOgxqL0zE8+morSisUPlQvHp+ERbE1jCcyfKCtrJPCKBj0FYhg/Z4kVkvmBiFf/pnZ4e8PF51FpGtfVrMbMipqSsrEGHMiOqJxXdaJfQ+0yfYqyf/CedsB8vRPzjS7MN19mfr911Us9Ul/2Uu91W+pe8FMhtb7Wff4f9+9jLQEnAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=fc442c9c93845790e2987af08bba102c^sys_idNOT IN00a60594934c5790e2987af08bba10aa,431fdd5c93409790e2987af08bba104f,5306e81093c45790e2987af08bba1085,58a3a95893809790e2987af08bba102c,8304a99893809790e2987af08bba106e,9adb9d9493009790e2987af08bba103f,cf3e5dd093409790e2987af08bba100e,f0b401dc930c5790e2987af08bba1049"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>9b9aae64-bf86-4ddb-ad3d-37e758b1769c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 09:10:30</sys_created_on>
+        <sys_id>00a60594934c5790e2987af08bba10aa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 09:11:15</sys_updated_on>
+        <ui_id>977a52de-a45c-4127-ac48-087315952096</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VY227bOBD9FUHPjlfy3XlbxDBQoNsAjZuXbpcYiZRNLE2qJJXEMfLvO5Qo27UdXzbuIsU+GRqOOLdzZkb+ugw5Da/DLo2G2XDYHfSjqN2Ool6vnUKcJO1emkRJEoeNUMKcoaZR2hK7yBmKHkAUKxmYFEWUm1zA4t6fQGBV8IzydMYF1UyG11+/NcIcNN5mmQ6vl1tHp7ojIGECVe/QdjCp/NnjYvlzjTYUT+vnj/7Vm1qoNHWutBshe7JMUoY+ZCAMa4RzkBSs0ouVRDOgt1KsBTMuLd4WOuUnw5/RXrvl9DKGUaWsOls9Ep+iSpyNwMKd1UVqC+1VK2cN5mO5CnOVyD059+5HL421/rPTh219yjZfiF8w35RlUAh78+9sxufabDmbVYC3ueUKqx62XV0gEXX4ShRz+amqZbjy8H4P2KqT0SuYKwwmm+WuoK5CvlzZ3Uw9fq6rMeay9MsfCpWCWD2BtZonhXV5WYYZJRlnghIuBZfOEpbNwYcJNkcLZA55zuWU5Fo98PJWjGXenAp8aGZCPbpc8KlsQuoibyKwoDlG+agU34PmLgt/4DX4csMZnOGr3h4xqea5JY+cTpldW6+1qLKPIP7ed+4RR+pCleGFL43QLMyNAGPWyUaYku+Fy0GVep89UhaqfKX04neM4IH5RDkMlLSND9IW6BZFq0Jv4GW3f5zdOU5woc7CrUNkkCxe88q3jqrmpcaP7WPsDoJP1UEN74u1kEF0mRayj+K7FDyLgbvUclD7dZh1PvCr3BxD//Dg0BquccYzMsd88lwwolmK2DEENCOZKiQlVQwbtHDJzrg21ivv0uQzw9LLQCGmAjtjQakdrLTPpNDxOGoKfciCOhBvzQQYSFAGEqwCOS/sc0Z252J861yIb+txOAYuymoYy/KNcjKtlX5lbB8p5AFEnDjTT3QqvqhTbx/6+yiwd/gf8fXCK8F76U/HWlPKIOm0oNdvx3EUxRHtR4N+Px70kqwH/U625ighRqa4S+DNGUIFryc1NOo6R7v9p1oozm00J3hVQ3Ck5J9FFLX6NnBuYX2D2q3jjvuGkiglGMitjjLBSfPb2Pvv8dp9d13lP5nib2VDwSevJfZnrciVyR+KW/Avkn8v2AcHsQGLWoOYpleDfty/6mS0dzWk0L2CYdLttylLO9nPWIRp9+AWurEKpEpS7kI1GwxTegqSP4OTO9i36XL5JcdcMEriZlporIxtmiLPBWf65eUvKL2oVP3qtMXQS1x5HrtPyEHN7pvNJOxLTL0SbMs+7rugHmEXJHH0K9H4jcv4e5lpJ+3c9OCuCp01nqrrNv6bkLhQSIK8IBaeMBaLU2OXN7cbvAkm8BSMSkVzPh2Oe1rTYeJd3fLck6B83Pc9Wr629T0a/T+/R9/nXocOcYEIIVUJjSp0mcoHkorClAcapPEfQpebSt/+ARNrP8nmFQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=00a60594934c5790e2987af08bba10aa"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>708ab7cd-ae0a-436e-928a-263bfccbb8a8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 10:57:28</sys_created_on>
+        <sys_id>431fdd5c93409790e2987af08bba104f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 10:58:01</sys_updated_on>
+        <ui_id>ac0a3fb9-0756-4998-9771-c58c2285a547</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Ty07bQBT9lWjWieUXIcmuIqKqRKECmg0g63rmOow0fnQ8hqRW/r3X9thJKUUgsShSs4nuc845vuemZlKwBQtRuN7cm/LACwLfdf1Z6MXTIPZ8EQCix8YsgxSpUyPPtaD4AVTVJOr6eyHAoIg8h1daY2Z2O6oLWRYKtivbRhl+L5WgOlvc3I1ZAZo2GtRsUT8pvRaSghgVtV72mJ5iNNuiiUXOq5RwRbJPntnJpa2MviypQkMNHM8dM9wYzAQSkARUiWOWQkYsc71lC6MrSmgEcZGp7dBxLzPTEU1hU8qf9HLoNn0JEjNuRRjCyArUpZMlGLiizdxUetArlxzLThOBCVTKnBzmuoaLwsg860YMxKqfzlWVZuedImxYcPA9qpJAYNHwbJB3tJKr+/zxsgd5KrNWEktR5RzUEIExWsaVaeDUDBW2GqdQFDJbR4XOH2Q7TFBSZ60ocBKVP9KbpVxnDvAGt0OqgnNK+WWbXoGWDYmvtIaGd2NWbssTBWW5p0IaRj+qBklHzFKIWhVaCaL2EpphrmVhPtFTD2iB78b26F3/xQvD/UG1t14eHL2BDdEwINVt5bqBqOtZzF0/RpjMQy+ZhAHGkxi4mHhzEJ4b+tPjOHC6w3SIEZ3icy55t71v89orlOi9dipRifIZaazXDKZEyGDUSfW73a5tcbSyxcFx72Y5b+q2v//G+3eNFx+9dG58vr+ug517820i3z2ezcIwWpdGZpHb/EfEtVASmg9MCiRS4Z/2+nx1PToZ+kbfhr632eUV+Hu7XLd38Tyf3jFPc2eHs6PzrmCdcvRuRpl9JItYGh/eI39zxt0v6EStyIkJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=431fdd5c93409790e2987af08bba104f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 06:48:11</sys_created_on>
+        <sys_id>5306e81093c45790e2987af08bba1085</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 08:59:43</sys_updated_on>
+        <ui_id>161e3366-dac1-47ae-a874-bd3ee4aa7614</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VY227bOBD9FUHPjleybMvO26KBgQK7DdCmfcmmBCVSNrE0qZJUbob/fYeiJCu+x3G36SPJuZyZOTOkdLvwGfEvfTIOxtl4PBjFQRBFQTAcRikOkyQapkmQ4L7f8QWeU5A0OOEUlveYF3atBcqYQFJNkcGPiFCDGYdzwnTO8dO3SuxaTbFgz9gwKbwb/OhdlYIaJNMZ40RR4V/e3nX8HCtwZKjyLxdrR+Ypp4jjhHIweGNxeJ8sqM7RMbxQ3ozJOqiXSDjTUhGLJej49NFQQSi4yjDXtOPPsSDYSPXU7CiKybXgq40ZEwYs+lb4UbNnMD8KrFxGIayUurNmiaqsue10JllKr3ObM7fjgLpDyYu5+OQCsPmmGS64qfMNO4UGezS3mC2IClH2ZSYfPtcOJ0yU4VWHXKaYNytsjGJJYai2taCczsEQmuM8Z2KKciXvWakMWObdKYdFN+PyAZxqNhVdnFrgXUgR7k5g/6rc/oYVs1H8DWZAGQAxDtVGLulaFqrMyj1KeaHLA4WFdrb8ZZkr9KOwKF3UVXzIpQgEdKpYbv4EhXtahbLs1DQf7KXIeEWJVArCrE/d4rpskfifAkyQxeJrDgFSgsJuWijIqenqIs85o2q5/I5LFE7UqIJ+ty3CyG7dqTZMLJeb/fN/uj6tIT+0M3ZstrcqbytB1Zov9qrWDM/Wmv0g+EXNaSv07nrzULe5gA+0XEj2koCs6q2lMshlrtVzm61wMkMnjHLy4so4AlytfG3J5iVPu/BWBM2sj7W7o/fb3x3vkp4AiCCXbyY4E+XVDUDPw9vBXmok4RoPyvK3XkV2D+t0k73YM9J7Pn3KlnWt+XsEyFrxCyDybhzKLcDr+Vqbr6gbnY26Ue911AXi3C4a9E3WtiS4fqHZ0tXyz1Yer8sDu1oK4fKuof6H03yGr/XZsz7XejN6VXO2meVOrnYQ7Mzvvx3N1vmZ3T0D1cofcs2KHhiZUrPyXksRaR4w/3fbecWupofK8N78lgz3fm4krbcky9Ac6sRyeOAqmgIVNMKKokwWgqDqabuija1bxpQ2lfDmDPlMTaGEJ6HlPDOjXintNdLnmCxHRFcrfsy8OrwKg/YgPK8Mz2vCe10ydsyj/hnfem+ZRxP4di1TD58oeat2VCmpdsykA1XbU/4jB9aRoMKzgnr7RNvG962T7QDW3+J7961TJ6U46ffwMI7CMAjCgMTBKI7D0TDJhjjuZ6tGQ0iLFMYiWM6AGGAe1USoqxpsjhY3G0/+KQMz949JZeJYvLXylfuy7cXGs4Chzl4N+HBI1bxIpOQUixU9B79sYLyX/zYFu1nPjdv6a1vRftZlXrCvgv0o6EdLihENeqOQpBejOIwv+hkZXowJHlzgcTKII0LTfnb6/Xz3HyfSVpvUFAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5306e81093c45790e2987af08bba1085"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>77b3a259-11ad-4dc0-8240-e2c7546a6095</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 11:17:13</sys_created_on>
+        <sys_id>58a3a95893809790e2987af08bba102c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:18:47</sys_updated_on>
+        <ui_id>10a03ad9-c0c8-4920-bfcb-cdf3d1688cb3</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UUU/bMBD+K5WfoygmrLR9QyCkSQykwXihEDn2pbXk2JntQEuV/76zk5aKwWDSXpDWp/ruu/P3Xe7z7YZIQWZkLCCbTumY5zTPD7LsYHJIy3Fe0gORM6AlSYhmNSDygakWHJ7jHwww7uUDzNssy4W3Ldwbu2BaPjEvje7Dm82PRjAPoqApb60F7VPXNo2SYLvu3rNVIcXb0IXzUiOOm1Z7ux6AcyKkaxRbz8lsTr5qIdmcJPOeV4xNpvmkPKKUogxKs+xonIspBSh5dkRz4BHu1i5c/jF8d+88kvuDqpAuuBHQdTijgeHN/1G9Oyq+lEpggsxu7xLSMIvr5sGS2eZF6qP7qlgJCqFnEpRwryywXzfh7KHG0SCVfqH7+PlQfD0kRzdD0lgRSNGEwMqDFoBsKqYcJKRmGjUauyaz8HETYoGJS63WO8RSao9NScCunHzC6+k4i7+ArgBFcugRu2MxfLs+XJ0yz66wP/etHaB8aSRHSXE8AirWKn+yH+sBl01Ys77Es1Jtq41qa33RD4fsGmx3FiOtQxLQBLWBfy+uulqax+9bkmdSx7kMQpXhTO1OzHsry9YHOhsCCmrsU9SsaaReFI01DzIWI5U6XSg8pJUyj3inkwudBtcYneJsWXqG8dMYvmFWBhHfsA0Wd0lYzxPFnHuWgjMsfraBSS9skFDEKcQRFHEpQjG3svHH0aAD8S7ZPo4Usi9vLhscPu/WXs/nB9LpopK6QK8Xwb4CPJPq98fhcu8tGF2z1eg0At3fe+N9ultvXMc1eJ3+1h4vY+f7taOLPjHYIvtXtph8JkMMMj69I97ywd0vk6c59CYIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=58a3a95893809790e2987af08bba102c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id>77b3a259-11ad-4dc0-8240-e2c7546a6095</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 11:19:02</sys_created_on>
+        <sys_id>8304a99893809790e2987af08bba106e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:19:36</sys_updated_on>
+        <ui_id>adb376da-def4-4a89-a03a-b64efea3723d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1TXU/bMBT9K5Wf28hpSpf2baJimsRgAsYLQ9GN7RRLzsdsB9pF/e+7Tpy0YwyBxMOQ1pfqfvqck3tuGiI5WZKZ4DRchHMWhVE0pXQaz8J0HqXhlEcgREjGpIBcYKcWrNQc43tQtUs0zbeKgxU8CQNWay0Ku9thnUtTKdhe+zbMsDupONbJ8uZ2TCrQuNEKTZbNo9JLISlIhcLWix7TY4x2W7mYl6zOEVci++Spn1z5yujzCis45OCEdEzExoqCCwSSgTJiTHIokGWpt2RpdY0JLYCfF2o7dNzJwnZEc9gY+RNfnlHXlwlkxrwIQ5h4gbp0tgILl7iZ2VoPepWSCdNpwkUGtbLHh7mu4byysiy6EQup6qdLVefFWacIGRYcfI/aIAhROZ4OeUcru7wrHy56kCeyaCXxFFXJQA0RWKtlWlsHpyFCiVbjHKpKFuuk0uW9bIcRSh6sFQZBpsoHfNPIdREAc7gDVBWCE8yv2vQ1aOlIfME1OLwbE7M1xwqM2VNBDZMftUPSEfMUklaFVoKkvQQ3zLSs7Ed86l544LuxP3o6ffbCxP6g2ls3B0dvYYM0LEj1vaY04k0TUqAR8MWEURZPZospnaQZSyeMZxEP53HM0ijoDjNARniKT7nkzfa+zmsvUKL32okUipsnpPFesyJHQlYknVS/2+3KF0fXvjg47s0sF85p+/tvvH/XeOnRc+fGFvvrOti5N98mmdIPcTybJWtjZZFQ958g10pJcB8YFcikEn/a69Pl1eh46Bt9HfpeZ5cX4O/tctXexdN8esc8zp0ezo7OuoJ3ytGbGSV+TxbxNN69R/7mjNtfXZ5YKYkJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8304a99893809790e2987af08bba106e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>708ab7cd-ae0a-436e-928a-263bfccbb8a8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 10:43:13</sys_created_on>
+        <sys_id>9adb9d9493009790e2987af08bba103f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 10:43:34</sys_updated_on>
+        <ui_id>5db41eb3-80c9-4a54-a084-065c896e2e75</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Ty2rjMBT9laB1EvzIezc0BAY6LbQhm04xN9J1KpBljyS3SUP+fWRZTjJppqTQxRTGu/vUOcf3PGwJZ2RCesiCcBwOaBzGcRQE0agXLgfxMoxYDIghaRMJGdpOhTRXzMbPIMoqsd2Oh0PoRww70OvTTi+Mhh2gvVEnGA3jsD/uR8F40L1zc7udnWRcFwI2C7/AZugTF0yhJJOHxzYpQNm3DCoy2Z6ULgUrYInCtt41aE/Rm01RxSynZYbSJLxJXvvJqa+0vk9txQ5VcMKgTXBtUDK0QFIQGtskA8nA5GpDJkaVNqEQ2K0Um33HE5emJprBWvNX+3IvqPpStMyoF2EfJl6gOp1OwcC93UxNqfZ65ZyirjVhmEIpzNVxrm64LQzPZT1iYCma6VyUmbypFSH7BUf/o9QWBBYVzwp5TSu9f8pf7hqQMy6dJJ6iyCmIfQTGKL4sTQVnS1Cg0ziDouBylRQqf+Zu2ELJuithg24q8hf7puYr2QVa4e5aVaE7s/mpSy9A8YrED7vGDu/aRG/0lQCtD1SshsmvskJSE/MUEqeCkyBxl1ANU8UL880+9Ywe+K7t7RBE714YHg7KuUAf2QHcwp9lEMTMLX178OdaPuaAC/A1DphxFEyfAewdYDCz2AwmNYE/TTD3xdbCF/c++DQjhIPAff/t8O/aYdl/79zo+HBdRzsPltAySblMcrVKDKwtKwNcvLXFrVqB5K9QkW3NYd2aukb9YXdcALdxx9ydwXn4jUFOc9fHs62buuCN0f80X4y+kiM8jS9vib8Z4fE34YSKkCgJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9adb9d9493009790e2987af08bba103f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>708ab7cd-ae0a-436e-928a-263bfccbb8a8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 10:53:39</sys_created_on>
+        <sys_id>cf3e5dd093409790e2987af08bba100e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 10:55:17</sys_updated_on>
+        <ui_id>8bc02bea-941f-43eb-bacd-19ad104267b3</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UUU/bMBD+K5WfoygmrLR9QyCkSQykwXihEDn2pbXk2JntQEvV/76zk5SKwWDSXpDWp/juu/P3Xb/z7YZIQWZkLCCbTumY5zTPD7LsYHJIy3Fe0gORM6AlSYhmNSDygakWHJ7jBwaMXTAtn5iXRs/bLMvFZvOjEcyDKGjKW2tB+9S1TaMk2O323rNVIcXb0IXzUiOOm1Z7u+6BcyKkaxRbz8lsTr5qIdmcJPOORoxNpvmkPKKUImtKs+xonIspBSh5dkRz4BHu1i5c/jH89t55JPcHVSFdcCMA+TLu5UMP9hZnkwyUb/6P6t1R8aVUApFkdnuXkIZZtJsHS2abF6mP+lWxEhRCzyQo4V4xsF834eyhxlkht87QXfy8L77uk6ObPmmsCKRoQmDlQQtANhVTDhJSM42ijV2TWdCUEAtMXGq13iGWUntsSgJ25eQTXk/HWfwFdAUokkOH2B2L/s/swtUp8+wK+3Pf2h7Kl0ZylBTHI6BirfIn+7EOcNkE33UlnpVqqDaqrfVFNxyyazB4FiOtQxLQBLWBfyeuulqax+8DyTOp41x6ocpwpnYn5r2VZesDnQ0BBTX2KWrWNFIvisaaBxmLkUqdLhQe0kqZR7zTyYVOg1mMTnG2LD3D+GkM3zArg4hv2AaLt0nw64lizj1LwRkWP9vApBPWSyjiFOIIimiKUMytbPxx9GVPfJsMjyOF7MubZoPDZ2/t9Xx+IJ0uKqkLXP4i7LMAz6T6/XG43HscRtdsNTqNQPf3u/E+3WE3rqMNXqc/rMfL2Pl+7eiiS/Rrkf2rtZh8poXoZXz6jXhrD+5+AYiEQPYmCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cf3e5dd093409790e2987af08bba100e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>a28a2df5-2e1b-4d97-ae54-8b5aad16cfd4</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 09:02:05</sys_created_on>
+        <sys_id>f0b401dc930c5790e2987af08bba1049</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 09:06:13</sys_updated_on>
+        <ui_id>6bdf3da6-0f99-434b-b845-29c41f5c494b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1TTU/bQBD9K9GeE8uOjRNyq4ioKlGogOYCyBp7x2Gl9UfXa0hq5b931l47KaUIJA5Fai7RfO57z/NuGiY4W7AAuesde2Hie74/dd3pPPDi0I+9KfcB0WNjlkOG1KkwKRSn+AFkbRJN873koJFHnpPUSmGudzuqc1GVErYr20aZ5F5ITnW2uLkbsxIUbdSo2KJ5UnotJAkxSmq97DE9xai3pYl5kdQZ4YpEnzyzk0tbGX1ZUoWGDBzPHTPcaMw5EpAUZIVjlkFOLAu1ZQutakooBH6Ry+3QcS9y3RHNYFOJn/Ry4Jq+FIlZYkUYwsgK1KXTJWi4os2JrtWgVyESrDpNOKZQS31ymOsaLkotirwb0RDLfrqQdZafd4qwYcHB96grAoGl4WmQd7TSq/vi8bIHeSryVhJLURYJyCECrZWIa23gNAwlthpnUJYiX0elKh5EO0xQMmctKXBSWTzSm5VY5w4kBrdDqoJzSvllm16BEobEV1pDw7sxq7bViYSq2lMhDaMftUHSEbMUolaFVoKovQQznChR6k/01ANa4LuxPXp3+uKF4f6g2luvDo5ew4ZoaBDytnZdnzeNF3ro+2E44ZB4k2AGOIH5LJjE3EcMAGahFzjdoTrEiE7xOZe82963ee0VSvReOxUoefWMNNZrGjMipDHqpPrdbte2OFrZ4uC4d7OcF7rt77/x/l3jxUcvnVtyvL+ug517822iqTubz4MgWlda5JFr/iPiWkoB5gOTAqmQ+Ke9Pl9dj06GvtG3oe9tdnkF/t4u1+1dPM+nd8zT3Nnh7Oi8K1inHL2bUeYfySKWxof3yN+ccfcLafUviIkJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f0b401dc930c5790e2987af08bba1049"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=fc442c9c93845790e2987af08bba102c"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=fc442c9c93845790e2987af08bba102c^sys_idNOT IN3863051c930c5790e2987af08bba1025,7663215893809790e2987af08bba10b4,84460154934c5790e2987af08bba10c3,d68b151493409790e2987af08bba100a"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3463051c930c5790e2987af08bba1024</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 08:56:21</sys_created_on>
+        <sys_id>3863051c930c5790e2987af08bba1025</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 10:53:39</sys_updated_on>
+        <ui_id>a28a2df5-2e1b-4d97-ae54-8b5aad16cfd4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYNnWdDLcuJb4CBAgbQBmiCXNhBWJGUToURVJO24gv+9Sz1so3GRpu2xN3N2uTsz4sAtUdbU1ugHdaW1WFVk8eXJI6JyGP5uSQUlJwtCVcWEEarKOsAjG5DWFUQxkUo923oi9ERbSrnWhZXYwYSuJewe32ykayFZw4fdNTS4wfCGLNqfSoLhnCKAIrykIY2jNI6CILpIwjyN8zBiMXCIcaCEnEtsXY6kJ7cd4v1SjdnVDtemEdVqON8OU+5HUDXMsQoDj/AXwyvGkU8BUnOPlFAxMKrZHZCGA7ur5BFYi8rgOOKaX7T4jguj2cw1FhwlUt4XD8dsMLCHi2swgFQsNbYZWulaCbSxN4fxAqw0y1Osb7irndT+ioFcjreVtGX1qXeEHAaM3wsRq5EEr51SR33QUdyv1fbzyPJGVJ0rQ1EqCvJwAoPe5dY4Pi3hkpc4KCuhrtHRrG7URnSXkUvpryQe/EKqLS51b9EH6oj7aCz4N4hfd/AjNMKp+Ihj8HJPMwctaNa9WxyHNnGy94je6aUErY8i0d3sm3UUe8mDuKz3x12hjajNFW7e8EHH3nsdg5MEtG2YhjyO03TKgIbTZA58ChfzZJqzmPMEYJ6Gia8NGKv3+682CGIWvA7IH895X34uYVbMwmB2Pj9Jei4/Z5LzztBEb4TGfbHfzEwQBP9D89ehETrrn/qgrVv+DzPz5ALS7zx4TYVGag8O+zD+w7jCDh+XoKfQVjXPTtQR2/8ArsLIn6sGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7e63215893809790e2987af08bba10b3</block>
+        <comment/>
+        <connected_to>708ab7cd-ae0a-436e-928a-263bfccbb8a8</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <parent_ui_id>9b9aae64-bf86-4ddb-ad3d-37e758b1769c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 11:16:17</sys_created_on>
+        <sys_id>7663215893809790e2987af08bba10b4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:19:02</sys_updated_on>
+        <ui_id>77b3a259-11ad-4dc0-8240-e2c7546a6095</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">8c460154934c5790e2987af08bba10c2</block>
+        <comment/>
+        <connected_to>a28a2df5-2e1b-4d97-ae54-8b5aad16cfd4</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 09:08:52</sys_created_on>
+        <sys_id>84460154934c5790e2987af08bba10c3</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:16:17</sys_updated_on>
+        <ui_id>9b9aae64-bf86-4ddb-ad3d-37e758b1769c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">968b151493409790e2987af08bba1009</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GST-E3-10 Tax record sync">fc442c9c93845790e2987af08bba102c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id>9b9aae64-bf86-4ddb-ad3d-37e758b1769c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 10:41:52</sys_created_on>
+        <sys_id>d68b151493409790e2987af08bba100a</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:23:07</sys_updated_on>
+        <ui_id>708ab7cd-ae0a-436e-928a-263bfccbb8a8</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V224aMRD9lZWfAe2FhcBbRBSpUttITZSXNloNtheseu2tL1yK+PeOd5eLGqoSpY99w8cz43MOc2BHtHe1d/ZJ31orFopMv770iFABw887IhiZkgnkZZ7EOc3SUZbGcXozTOajbJ6kLAM+HJEeUVBxrKRaMeGEVgitQPqA7XaT8RjylPE+DHPaHybpuA90eNOPb8ZZkk/yNJ6MBtaB83a//+bjOGMxDmDC1hK2z++dQ5dCMsM7cTUY5Oq4IdPdb1fXipUw5xJLZ2dqLxjgtnWArDNCLbrzx6718QBqwwKVNO4RvnFcMY4kSpCW90gFioHTZkumzngEDAf2oOT2WLEUyuE0Emo3VvzkYVIch8qSoy7K29vjsehMbeHyDhwgFU+dN10pXWpBuW0dYbwEL93sHGsLHupGZdPiYC4P3Vr6Sn1uzSDHAYfvEBFvkQSvg9LAvRNSPi71+suB5b1QjSvdpdQU5PEEDr2bexf47AiXvMJBRQV1jY4WtdEr0TQjl2qwkHgYlFKv8dGw4QOggfgAjYXBPeJ3DfwMRgQVn3AMNuMu2MJSI+qDtuZxsu8Ru7UzCdaeNKK5xQ8fGLaKO21Fa09oaQbd4sMr3snY97pslTGUyYQml9cNsgurVTTAKWCijKyohAQTOdhEhlNcqmgt3DJioiyjhXVCvc7TtW1vi88Vel7FJ2pT8Welb0lS8pckdchVUcrz/0l6d5ICzTlYQYvmfwXHhR+zfxillxCF9tGj2VRY5PYUsA+Hf7NwscWNEvQcWmvzPag6YftfH33C1xcHAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=fc442c9c93845790e2987af08bba102c"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=fc442c9c93845790e2987af08bba102c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_fc442c9c93845790e2987af08bba102c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 06:40:45</sys_created_on>
+        <sys_id>225420d093c45790e2987af08bba1004</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:40:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_fc442c9c93845790e2987af08bba102c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 06:40:44</sys_created_on>
+        <sys_id>9e54ec9093c45790e2987af08bba10c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:40:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_fc442c9c93845790e2987af08bba102c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-16 06:40:45</sys_created_on>
+        <sys_id>aa54ec9093c45790e2987af08bba10ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>hitesh.gohad</sys_updated_by>
+        <sys_updated_on>2026-10-16 06:40:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_fc442c9c93845790e2987af08bba102c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_fc442c9c93845790e2987af08bba102c"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=fc442c9c93845790e2987af08bba102c"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=fc442c9c93845790e2987af08bba102c"/>
+</record_update>

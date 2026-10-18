@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="159edb2993738b10e2987af08bba1086" label="GST Verification Log" max_length="40" name="x_2078844_gstin_0_gst_verification_log" type="collection">
+    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="159edb2993738b10e2987af08bba1086" label="GST Verification Log" max_length="40" name="x_2078844_gstin_0_gst_verification_log" text_index="true" type="collection">
         <element label="Provider reference" max_length="100" name="provider_reference" type="string"/>
         <element choice="1" label="Decision" max_length="40" name="decision" type="choice">
             <choice>

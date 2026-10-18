@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope) {
+  var c = this;
+  c.setValue = function() {
+    $scope.page.g_form.setValue('gst_widget_test', 'hello_gst_ok');
+    c.done = true;
+  };
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>x_2078844_gst_hello</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>GST Hello (E3-02 test)</name>
+        <option_schema/>
+        <public>false</public>
+        <roles>snc_external,snc_internal</roles>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 13:13:06</sys_created_on>
+        <sys_id>78ff929f93730f50e2987af08bba101f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>GST Hello (E3-02 test)</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sp_widget_78ff929f93730f50e2987af08bba101f</sys_update_name>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-14 08:12:47</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+  <div class="panel-body">
+    <h4>Hello GST</h4>
+    <p>Test widget running inside the supplier task.</p>
+    <button type="button" class="btn btn-primary" ng-click="c.setValue()">Set test value</button>
+    <span ng-if="c.done" style="margin-left:10px">Value set ✔</span>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

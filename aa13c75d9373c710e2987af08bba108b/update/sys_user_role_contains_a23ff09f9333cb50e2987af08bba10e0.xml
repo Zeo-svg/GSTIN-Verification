@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="canvas_user" name="canvas_user">8536f54bc713330072b211d4d8c26080</contains>
+        <role display_value="x_2078844_gstin_0.gst_verification_log_user" name="x_2078844_gstin_0.gst_verification_log_user">3cde136993738b10e2987af08bba1064</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>rutul.jadhav</sys_created_by>
+        <sys_created_on>2026-10-13 06:04:15</sys_created_on>
+        <sys_id>a23ff09f9333cb50e2987af08bba10e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>canvas_user.x_2078844_gstin_0.gst_verification_log_user</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_user_role_contains_a23ff09f9333cb50e2987af08bba10e0</sys_update_name>
+        <sys_updated_by>rutul.jadhav</sys_updated_by>
+        <sys_updated_on>2026-10-13 06:04:15</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

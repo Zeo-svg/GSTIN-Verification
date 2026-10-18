@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_pd_activity_definition">
+    <sys_pd_activity_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <activity_type display_value="Instructional">d4dde0875b00001070e4492c11f91a90</activity_type>
+        <additional_functionality/>
+        <ai_agent_execution_mode>off</ai_agent_execution_mode>
+        <ai_agent_field_display_preferences>enable_ai_agent=all;ai_agent_objective=all;ai_agent_run_as=all;ai_agent_execution_mode=all;</ai_agent_field_display_preferences>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
+        <badge/>
+        <category display_value="Non-Interactive">5db890441bff0010affd0e55cc4bcb2b</category>
+        <description/>
+        <enable_ai_agent>off</enable_ai_agent>
+        <experience_display_preferences/>
+        <input_display_preferences/>
+        <inputs/>
+        <label>Create GST details task</label>
+        <name>create_gst_details_task</name>
+        <outputs/>
+        <public_access>false</public_access>
+        <required_roles/>
+        <source>80174f6793b3cf50e2987af08bba10fe</source>
+        <source_type>sys_hub_action_type_definition</source_type>
+        <sys_class_name>sys_pd_activity_definition</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-14 10:48:19</sys_created_on>
+        <sys_id>5fe883eb93b3cf50e2987af08bba10c7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Create GST details task</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_pd_activity_definition_5fe883eb93b3cf50e2987af08bba10c7</sys_update_name>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-14 10:49:20</sys_updated_on>
+        <system_level>false</system_level>
+        <table>global</table>
+        <type_vals/>
+        <wait_for_completion>true</wait_for_completion>
+    </sys_pd_activity_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=5fe883eb93b3cf50e2987af08bba10c7"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5fe883eb93b3cf50e2987af08bba10c7"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_80174f6793b3cf50e2987af08bba10fe^id=5fe883eb93b3cf50e2987af08bba10c7"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_80174f6793b3cf50e2987af08bba10fe^id=5fe883eb93b3cf50e2987af08bba10c7"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_pd_activity_type_prop_d4dde0875b00001070e4492c11f91a90^id=5fe883eb93b3cf50e2987af08bba10c7"/>
+</record_update>

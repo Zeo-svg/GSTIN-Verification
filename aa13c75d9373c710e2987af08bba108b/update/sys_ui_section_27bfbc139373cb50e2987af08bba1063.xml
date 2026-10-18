@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="27bfbc139373cb50e2987af08bba1063" sys_domain="global" table="x_2078844_gstin_0_gst_mock_registry" version="3" view="workspace-gst-compliance-workspace-0">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>gstin</element>
+            <position>0</position>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-13 06:06:31</sys_created_on>
+            <sys_id>b7bfbc139373cb50e2987af08bba1068</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2078844_gstin_0_gst_mock_registry" sys_domain="global" view="a0befcdba033cb5026b9cff033711d56">27bfbc139373cb50e2987af08bba1063</sys_ui_section>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-13 06:06:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>legal_name</element>
+            <position>1</position>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-13 06:06:31</sys_created_on>
+            <sys_id>bfbfbc139373cb50e2987af08bba106b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2078844_gstin_0_gst_mock_registry" sys_domain="global" view="a0befcdba033cb5026b9cff033711d56">27bfbc139373cb50e2987af08bba1063</sys_ui_section>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-13 06:06:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>trade_name</element>
+            <position>2</position>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-13 06:06:31</sys_created_on>
+            <sys_id>3bbfbc139373cb50e2987af08bba1067</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2078844_gstin_0_gst_mock_registry" sys_domain="global" view="a0befcdba033cb5026b9cff033711d56">27bfbc139373cb50e2987af08bba1063</sys_ui_section>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-13 06:06:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>3</position>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-13 06:06:31</sys_created_on>
+            <sys_id>33bfbc139373cb50e2987af08bba106b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2078844_gstin_0_gst_mock_registry" sys_domain="global" view="a0befcdba033cb5026b9cff033711d56">27bfbc139373cb50e2987af08bba1063</sys_ui_section>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-13 06:06:31</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state_code</element>
+            <position>4</position>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-13 06:06:31</sys_created_on>
+            <sys_id>bbbfbc139373cb50e2987af08bba1066</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2078844_gstin_0_gst_mock_registry" sys_domain="global" view="a0befcdba033cb5026b9cff033711d56">27bfbc139373cb50e2987af08bba1063</sys_ui_section>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-13 06:06:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>5</position>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-13 06:06:31</sys_created_on>
+            <sys_id>b3bfbc139373cb50e2987af08bba106a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2078844_gstin_0_gst_mock_registry" sys_domain="global" view="a0befcdba033cb5026b9cff033711d56">27bfbc139373cb50e2987af08bba1063</sys_ui_section>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-13 06:06:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-13 06:06:31</sys_created_on>
+            <sys_id>2fbfbc139373cb50e2987af08bba1065</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2078844_gstin_0_gst_mock_registry" sys_domain="global" view="a0befcdba033cb5026b9cff033711d56">27bfbc139373cb50e2987af08bba1063</sys_ui_section>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-13 06:06:31</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>simulate</element>
+            <position>7</position>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-13 06:06:31</sys_created_on>
+            <sys_id>bbbfbc139373cb50e2987af08bba106d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2078844_gstin_0_gst_mock_registry" sys_domain="global" view="a0befcdba033cb5026b9cff033711d56">27bfbc139373cb50e2987af08bba1063</sys_ui_section>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-13 06:06:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>registration_date</element>
+            <position>8</position>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-13 06:06:31</sys_created_on>
+            <sys_id>37bfbc139373cb50e2987af08bba1069</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2078844_gstin_0_gst_mock_registry" sys_domain="global" view="a0befcdba033cb5026b9cff033711d56">27bfbc139373cb50e2987af08bba1063</sys_ui_section>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-13 06:06:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>9</position>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-13 06:06:31</sys_created_on>
+            <sys_id>3fbfbc139373cb50e2987af08bba106c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2078844_gstin_0_gst_mock_registry" sys_domain="global" view="a0befcdba033cb5026b9cff033711d56">27bfbc139373cb50e2987af08bba1063</sys_ui_section>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-13 06:06:31</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_2078844_gstin_0_gst_mock_registry</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>rutul.jadhav</sys_created_by>
+            <sys_created_on>2026-10-13 06:06:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>27bfbc139373cb50e2987af08bba1063</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2078844_gstin_0_gst_mock_registry</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+            <sys_update_name>sys_ui_section_27bfbc139373cb50e2987af08bba1063</sys_update_name>
+            <sys_updated_by>rutul.jadhav</sys_updated_by>
+            <sys_updated_on>2026-10-13 06:06:30</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Workspace GST Compliance Workspace 0" name="workspace-gst-compliance-workspace-0">a0befcdba033cb5026b9cff033711d56</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

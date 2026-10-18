@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile_ais_search_source_m2m">
+    <ais_search_profile_ais_search_source_m2m action="INSERT_OR_UPDATE">
+        <exclude_attachments_in_now_assist_genius_results>false</exclude_attachments_in_now_assist_genius_results>
+        <exclude_in_now_assist_genius_results>false</exclude_in_now_assist_genius_results>
+        <exclude_in_regular_search>false</exclude_in_regular_search>
+        <profile display_value="gst-compliance-workspace Search Profile">34befcdb4d33cb50d338b35d4cf83b9f</profile>
+        <search_source display_value="GST Review Task">ea8fb0139373cb50e2987af08bba10be</search_source>
+        <sys_class_name>ais_search_profile_ais_search_source_m2m</sys_class_name>
+        <sys_created_by>rutul.jadhav</sys_created_by>
+        <sys_created_on>2026-10-13 06:05:38</sys_created_on>
+        <sys_id>7e8fb0139373cb50e2987af08bba10c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>gst-compliance-workspace Search Profile.GST Review Task</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>ais_search_profile_ais_search_source_m2m_7e8fb0139373cb50e2987af08bba10c2</sys_update_name>
+        <sys_updated_by>rutul.jadhav</sys_updated_by>
+        <sys_updated_on>2026-10-13 06:05:38</sys_updated_on>
+    </ais_search_profile_ais_search_source_m2m>
+</record_update>

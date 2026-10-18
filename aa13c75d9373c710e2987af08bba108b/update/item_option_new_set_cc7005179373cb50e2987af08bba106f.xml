@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set">
+    <item_option_new_set action="INSERT_OR_UPDATE">
+        <create_roles/>
+        <description/>
+        <display_title>true</display_title>
+        <internal_name>gst_details</internal_name>
+        <layout>normal</layout>
+        <name/>
+        <order>100</order>
+        <read_roles/>
+        <set_attributes/>
+        <sys_class_name>item_option_new_set</sys_class_name>
+        <sys_created_by>rahul.basutkar</sys_created_by>
+        <sys_created_on>2026-10-13 06:14:13</sys_created_on>
+        <sys_id>cc7005179373cb50e2987af08bba106f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Gst details</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>item_option_new_set_cc7005179373cb50e2987af08bba106f</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-13 06:20:44</sys_updated_on>
+        <title>Gst details</title>
+        <type>one_to_one</type>
+        <version>4</version>
+        <write_roles/>
+    </item_option_new_set>
+</record_update>

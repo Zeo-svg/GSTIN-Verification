@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>public</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_fin_supplier</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>GST - Block Unverified Indian Supplier A</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+
+    // Run only when Onboarded changes to Yes.
+    var newOnboarded = (current.getValue('onboarded') || '')
+        .toLowerCase();
+    var oldOnboarded = previous ?
+        (previous.getValue('onboarded') || '').toLowerCase() :
+        '';
+
+    if (newOnboarded != 'yes' || oldOnboarded == 'yes') {
+        return;
+    }
+
+    var supplierId = current.getUniqueValue();
+    var isIndianSupplier = false;
+
+    // 1. Check Country of Registration (String field).
+    var registrationCountry =
+        (current.getValue('registration_country') || '')
+        .trim().toLowerCase();
+
+    if (registrationCountry == 'india') {
+        isIndianSupplier = true;
+    }
+
+    // 2. Check the supplier's shipping location.
+    // cmn_location.country is a String choice field.
+    if (!isIndianSupplier &&
+        current.getValue('goods_shipped_from') != '') {
+
+        var location = current.goods_shipped_from.getRefRecord();
+
+        if (location && location.isValidRecord()) {
+            var locationCountry =
+                (location.getValue('country') || '')
+                .trim().toLowerCase();
+
+            if (locationCountry == 'india') {
+                isIndianSupplier = true;
+            }
+        }
+    }
+
+    // 3. Check linked supplier payment records.
+    // country references core_country.
+    if (!isIndianSupplier) {
+        var payment = new GlideRecord('sn_fin_supplier_payment');
+        payment.addQuery('supplier', supplierId);
+        payment.addQuery('country.name', 'India');
+        payment.setLimit(1);
+        payment.query();
+
+        if (payment.next()) {
+            isIndianSupplier = true;
+        }
+    }
+
+    // Non-Indian suppliers are unaffected.
+    if (!isIndianSupplier) {
+        return;
+    }
+
+    // 4. Check for a verified profile or approved override.
+    var hasVerifiedProfile = false;
+    var hasApprovedOverride = false;
+
+    var profile = new GlideRecord(
+        'x_2078844_gstin_0_gst_compliance_profile'
+    );
+    profile.addQuery('supplier', supplierId);
+    profile.query();
+
+    while (profile.next()) {
+        if (profile.getValue('result') == 'verified') {
+            hasVerifiedProfile = true;
+        }
+        var ov = profile.getValue('override_approved');
+        if (ov == '1' || ov == 'true') {
+            hasApprovedOverride = true;
+        }
+    }
+
+    // Allow activation only if verified or approved override exists.
+    if (hasVerifiedProfile || hasApprovedOverride) {
+        return;
+    }
+
+    gs.addErrorMessage(
+        'This supplier is registered in India. Activation needs a verified GSTIN or an approved override.'
+    );
+
+    // setAbortAction is blocked cross-scope (sn_fin_supplier is in Finance Common Architecture),    // so revert the field instead: the supplier stays not onboarded.
+
+    current.setValue('onboarded', previous.getValue('onboarded'));
+    current.setValue('onboarded_date', previous.getValue('onboarded_date'));
+    current.setValue('onboarded_by', previous.getValue('onboarded_by'));
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>hitesh.gohad</sys_created_by>
+        <sys_created_on>2026-10-13 06:46:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0188895f93b3cb50e2987af08bba10df</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>GST - Block Unverified Indian Supplier A</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>sys_script_0188895f93b3cb50e2987af08bba10df</sys_update_name>
+        <sys_updated_by>rahul.basutkar</sys_updated_by>
+        <sys_updated_on>2026-10-16 13:35:54</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=0188895f93b3cb50e2987af08bba10df"/>
+</record_update>

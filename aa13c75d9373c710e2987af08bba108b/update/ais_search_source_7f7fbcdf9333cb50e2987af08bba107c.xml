@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_source">
+    <ais_search_source action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <datasource display_value="">x_2078844_gstin_0_gst_compliance_profile</datasource>
+        <has_dynamic_filters>false</has_dynamic_filters>
+        <name>GST Compliance Profile</name>
+        <sys_class_name>ais_search_source</sys_class_name>
+        <sys_created_by>rutul.jadhav</sys_created_by>
+        <sys_created_on>2026-10-13 06:05:25</sys_created_on>
+        <sys_id>7f7fbcdf9333cb50e2987af08bba107c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GST Compliance Profile</sys_name>
+        <sys_package display_value="GSTIN Compliance &amp; Verification" source="x_2078844_gstin_0">aa13c75d9373c710e2987af08bba108b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GSTIN Compliance &amp; Verification">aa13c75d9373c710e2987af08bba108b</sys_scope>
+        <sys_update_name>ais_search_source_7f7fbcdf9333cb50e2987af08bba107c</sys_update_name>
+        <sys_updated_by>rutul.jadhav</sys_updated_by>
+        <sys_updated_on>2026-10-13 06:05:25</sys_updated_on>
+    </ais_search_source>
+</record_update>
